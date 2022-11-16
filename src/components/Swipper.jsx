@@ -11,7 +11,7 @@ const Swipper =()=>{
         </div>
         <div className='lefty'>
         <h1>Category Overview</h1>
-        <div className='spread'>
+        <div className='grid grid-flow-row-dense grid-cols-3 md:grid-cols-2 grid-rows-3 gap-2'>
             <div className='now'>
             <img src="https://res.cloudinary.com/mindset/image/upload/v1667204033/furniture_1_neaxdv.png" alt="" />
             <p>Mobile</p>
