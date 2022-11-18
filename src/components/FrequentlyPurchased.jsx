@@ -8,7 +8,7 @@ const FeaturedProduct = () => {
     return(
         <div className="cover">
             <h1>Frequently Purchased Products</h1>
-           <div className="grid grid-cols-1 md:grid-cols-4 gap-2">
+           <div className="grid grid-cols-1 md:grid-cols-4 gap-2 place-items-center">
            <div className="inner">
             <img src={place} alt="" />
             <p style={{fontWeight: 300, fontSize: 15, textAlign: 'left' }}>Product name and brief description...</p>
