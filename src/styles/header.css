@@ -335,4 +335,32 @@ p{
     display: flex;
     justify-content: space-between;
 }
+
+
+}
+
+@media (max-width: 380px) {
+    .midd{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     
+    } 
+    .mobile2 .search{
+        border: solid 1px #1B5958;
+        background: #F6F8F8;
+        height: 45px;
+        width: 190px;
+    }
+    .icon{
+        height: 45px;
+        width: 45px; 
+        border: solid 1px #1B5958;
+        background: #F6F8F8;
+        border-radius: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 20px;
+    }
 }
