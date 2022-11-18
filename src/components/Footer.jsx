@@ -96,13 +96,13 @@ const Footer = () => {
        </div>
        
        </div>
-       <div className="bottom-nav">
+       {/* <div className="bottom-nav">
             <div><FiHome className="fix"/>Home</div>
             <div><BiCategory className="fix"/> Category</div>
             <div><MdOutlineRssFeed className="fix"/> Feed</div>
             <div><FiShoppingCart className="fix"/> Cart</div>
             <div><MdOutlineAccountCircle className="fix"/> Account</div>
-        </div>
+        </div> */}
       </div>
       </div>
     )
