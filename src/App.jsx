@@ -4,6 +4,10 @@ import './App.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Swipper from './components/Swipper'
+import FeaturedProduct from './components/FeaturedProduct'
+import AddedProduct from './components/AddedProduct'
+import MoreProduct from './components/MoreProducts'
+import FrequentlyPurchased from './components/FrequentlyPurchased'
 
 function App() {
 
@@ -11,6 +15,10 @@ function App() {
     <div className="">
       <Header/>
       <Swipper/>
+      <FeaturedProduct/>
+      <AddedProduct/>
+      <MoreProduct/>
+      <FrequentlyPurchased/>
       <Footer/>
       {/* <div>
         <a href="https://vitejs.dev" target="_blank">
