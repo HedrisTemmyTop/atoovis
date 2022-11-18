@@ -35,3 +35,76 @@
     color: #000;
     width: 220px;
 }
+.till{
+    font-weight: 300;
+    font-size: 15px;
+    text-align: left;
+}
+.little{
+    font-size: 20px;
+    font-weight: 700;
+}
+.lit{
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: line-through;
+    opacity: .5px;
+    
+}
+.contain{
+    width: 130px;
+}
+
+@media (max-width: 450px) {
+    .inner{
+        background: #FFFFFF;
+        width: 120px;
+        height:auto;
+        border-radius: 15.85px;
+        padding: 10px;
+    
+    }
+    .inner button{
+        background: #4CC5D2;
+        width:98px;
+        height: 39px;
+        border-radius: 9px;
+        text-align: center;
+        color: #fff;
+        margin-top: 10px;
+    }
+    .cover h1{
+        font-size: 14px;
+        font-weight: 700;
+        color: #1B5958;
+        text-align: left;
+        padding: 20px 0;
+    }
+    .inner p{
+        color: #000;
+        width: 220px;
+    }
+    .till{
+        font-weight: 300;
+        font-size: 8px;
+        text-align: left;
+        max-width: 70px;
+    }
+    .little{
+        font-size: 15px;
+        font-weight: 700;
+    }
+    .lit{
+        font-size: 8px;
+        font-weight: 400;
+        text-decoration: line-through;
+        opacity: .5px;
+        
+    }
+    .contain{
+        max-width: 60px;
+    }
+    .love{
+        display: none;
+    }
+}
