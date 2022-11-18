@@ -7,6 +7,7 @@ import notify from "../assets/images/Header/notifications 2.png"
 import Modal from 'react-modal';
 import '../styles/header.css'
 import SignIn from "./Auth/SignIn";
+import {BiCart} from 'react-icons/bi'
 const Header = () => {
 
     const customStyles = {
@@ -51,7 +52,7 @@ const Header = () => {
                 </div>
                 <div style={{display: 'flex', alignItems: 'center'}}>
                     <p>My Cart</p>
-                    <img src={account} alt="" width={20} height={20}/>
+                    <BiCart width={20} height={20}/>
                 </div>
             </div>
         </div>
@@ -66,8 +67,9 @@ const Header = () => {
                 </div>
                 
                 <div className="icons">
+                <div className="icon"> <BiCart style={{width: 30, height: 40, color: '#1B5958'}}/></div>
                     <div className="icon"> <img src={notify} alt="" width={30} height={30}/></div>
-                    <div className="icon"> <img src={notify} alt="" width={30} height={30}/></div>
+                    
                 </div>
             </div>
         </div>

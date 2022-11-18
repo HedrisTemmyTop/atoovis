@@ -9,7 +9,7 @@
 
 .inner{
     background: #FFFFFF;
-    width: 220px;
+    width: 150px;
     height:auto;
     border-radius: 15.85px;
     padding: 10px;
@@ -17,7 +17,7 @@
 }
 .inner button{
     background: #4CC5D2;
-    width:198px;
+    width:122px;
     height: 39px;
     border-radius: 9px;
     text-align: center;
@@ -37,8 +37,11 @@
 }
 .till{
     font-weight: 300;
-    font-size: 15px;
+    font-size: 12px;
     text-align: left;
+    max-width: 100px;
+    line-height: 15px;
+    margin-top: 10px;
 }
 .little{
     font-size: 20px;
@@ -87,8 +90,10 @@
     .till{
         font-weight: 300;
         font-size: 8px;
+        line-height: 10px;
         text-align: left;
         max-width: 70px;
+        margin-top: 10px;
     }
     .little{
         font-size: 15px;

@@ -8,7 +8,7 @@ const FeaturedProduct = () => {
     return(
         <div className="cover">
             <h1>Featured Products</h1>
-           <div className="grid grid-cols-3 md:grid-cols-4 gap-2 mx-auto place-items-center">
+           <div className="grid grid-cols-3 md:grid-cols-6 gap-2 mx-auto place-items-center">
            <div className="inner">
             <img src={place} alt="" />
             <p className="till">Product name and brief description...</p>
