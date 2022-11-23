@@ -7,6 +7,7 @@ import {FiHome} from 'react-icons/fi'
 import {BiCategory} from 'react-icons/bi'
 import {MdOutlineRssFeed, MdOutlineAccountCircle} from 'react-icons/md'
 import {FiShoppingCart} from 'react-icons/fi'
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -35,7 +36,7 @@ const Footer = () => {
                    <li>FAQs</li>
                    <li>Privacy Policy</li>
                    <li>Terms and Conditions</li>
-                   <li>Sell on Atoovis</li>
+                   <li> <Link to='/vendor'>Sell on Atoovis</Link></li>
                </ul>
            </div>
            <div className="connect">
@@ -86,7 +87,7 @@ const Footer = () => {
                    <li>FAQs</li>
                    <li>Privacy Policy</li>
                    <li>Terms and Conditions</li>
-                   <li>Sell on Atoovis</li>
+                   <li> <Link to='/vendor'>Sell on Atoovis</Link></li>
                </ul>
            </div>
            <div className="bot">

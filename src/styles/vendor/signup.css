@@ -1,0 +1,323 @@
+.contain{
+    display: flex;
+    
+}
+.left1{
+    background: url('../mask.png');
+    height: 866px;
+    width: 610px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+   
+    
+}
+.left1 h1{
+    font-size: 48px;
+    font-weight: 800;
+    color: #fff;
+    width: 403px;
+    margin-top: 40px;
+    text-align: left;
+    
+}
+.righty{
+    padding: 10px 20px;
+}
+.righty h1{
+    font-size: 38px;
+    font-weight: 800;
+    color: #000;
+    width: 453px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.formy3{
+    display: flex;
+    flex-direction: column; 
+    margin: 21px 0; 
+}
+
+
+.log{
+    color: #fff;
+    background-color: #1B5958;
+    border-radius: 100px;
+    margin-top: 21px;
+    height: 64px;
+    width: 531px;
+    font-size: 22px;
+}
+.formy3 label{
+    background: #fff;
+    color: #1B5958;
+    position: absolute;
+              top: 190px;
+              left: 660px;
+              padding: 2px;
+              z-index: 1;
+  }
+  .formy4 label{
+    background: #fff;
+    color: #1B5958;
+    position: absolute;
+              top: 280px;
+              left: 660px;
+              padding: 2px;
+              z-index: 1;
+  }
+  .formy5 label{
+    background: #fff;
+    color: #1B5958;
+    position: absolute;
+              top: 370px;
+              left: 660px;
+              padding: 2px;
+              z-index: 1;
+  }
+  .formy6 label{
+    background: #fff;
+    color: #1B5958;
+    position: absolute;
+              top: 500px;
+              left: 660px;
+              padding: 2px;
+              z-index: 1;
+  }
+  .formy7 label{
+    background: #fff;
+    color: #1B5958;
+    position: absolute;
+              top: 585px;
+              left: 660px;
+              padding: 2px;
+              z-index: 1;
+  }
+@media (max-width: 1200px) {
+    .left1{
+        background: url('../mask.png');
+        height: 866px;
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+       
+        
+    } 
+    .formy input{
+        border: 0.5px solid #757E7E;
+        width: 412px;
+        height: 66px;  
+        border-radius: 30px;
+        background: #F6F8F8;
+        
+    }
+    .formy2 input{
+        border: 0.5px solid #757E7E;
+        width: 412px;
+        height: 66px;  
+        border-radius: 30px;
+        background: #F6F8F8;
+        
+    }
+    .log{
+        color: #fff;
+        background-color: #1B5958;
+        border-radius: 100px;
+        margin-top: 21px;
+        height: 64px;
+        width: 412px;
+        font-size: 22px;
+    }
+    .lefty h1{
+        font-size: 38px;
+        font-weight: 800;
+        color: #fff;
+        width: 303px;
+        margin-top: 40px;
+        text-align: left;
+        
+    }
+    .formy3 label{
+        background: #fff;
+        color: #1B5958;
+        position: absolute;
+                  top: 190px;
+                  left: 400px;
+                  padding: 2px;
+                  z-index: 1;
+      }
+      .formy4 label{
+        background: #fff;
+        color: #1B5958;
+        position: absolute;
+                  top: 280px;
+                  left: 400px;
+                  padding: 2px;
+                  z-index: 1;
+      }
+      .formy5 label{
+        background: #fff;
+        color: #1B5958;
+        position: absolute;
+                  top: 370px;
+                  left: 400px;
+                  padding: 2px;
+                  z-index: 1;
+      }
+      .formy6 label{
+        background: #fff;
+        color: #1B5958;
+        position: absolute;
+                  top: 500px;
+                  left: 400px;
+                  padding: 2px;
+                  z-index: 1;
+      }
+      .formy7 label{
+        background: #fff;
+        color: #1B5958;
+        position: absolute;
+                  top: 585px;
+                  left: 400px;
+                  padding: 2px;
+                  z-index: 1;
+      }
+}
+@media (max-width: 420px) {
+    .left1{
+        display: none;
+    }
+    
+    .formy input{
+        border: 0.5px solid #757E7E;
+        width: 378px;
+        height: 64px;  
+        border-radius: 30px;
+        background: #F6F8F8;
+        
+    }
+    .formy3 label{
+        position: absolute;
+                  top: 250px;
+                  left: 120px;
+      }
+      .formy4 label{
+        position: absolute;
+                  top: 340px;
+                  left: 120px;
+      }
+      .formy5 label{
+        position: absolute;
+                  top: 425px;
+                  left: 120px;
+                 
+      }
+      .formy6 label{
+        position: absolute;
+                  top: 550px;
+                  left: 120px;
+                  
+      }
+      .formy7 label{
+        position: absolute;
+                  top: 635px;
+                  left: 120px;
+                 
+      }
+      .righty{
+        padding: 10px 20px;
+        margin-left: 70px;
+        height: 100vh;
+    }
+    .righty h1{
+        font-size: 28px;
+        font-weight: 800;
+        color: #000;
+        width: 453px;
+        margin-top: 40px;
+        text-align: left;
+    }
+    .contain{
+        height: auto;
+        padding-top: 80px;
+    }
+    .log{
+        color: #fff;
+        background-color: #1B5958;
+        border-radius: 100px;
+        margin-top: 21px;
+        height: 64px;
+        width: 378px;
+        font-size: 22px;
+    }
+  }
+  @media (max-width: 400px) {
+    .left1{
+        display: none;
+    }
+    
+    .formy input{
+        border: 0.5px solid #757E7E;
+        width: 338px;
+        height: 64px;  
+        border-radius: 30px;
+        background: #F6F8F8;
+        
+    }
+    .formy3 label{
+        position: absolute;
+                  top: 250px;
+                  left: 60px;
+      }
+      .formy4 label{
+        position: absolute;
+                  top: 340px;
+                  left: 60px;
+      }
+      .formy5 label{
+        position: absolute;
+                  top: 425px;
+                  left: 60px;
+                 
+      }
+      .formy6 label{
+        position: absolute;
+                  top: 550px;
+                  left: 60px;
+                  
+      }
+      .formy7 label{
+        position: absolute;
+                  top: 640px;
+                  left: 60px;
+                 
+      }
+      .righty{
+        padding: 10px 20px;
+        margin-left: 10px;
+        height: 100vh;
+    }
+    .righty h1{
+        font-size: 20px;
+        font-weight: 800;
+        color: #000;
+        width: 223px;
+        margin-top: 40px;
+        text-align: left;
+    }
+    .contain{
+        height: auto;
+        padding-top: 80px;
+    }
+    .log{
+        color: #fff;
+        background-color: #1B5958;
+        border-radius: 100px;
+        margin-top: 21px;
+        height: 64px;
+        width: 338px;
+        font-size: 22px;
+    }
+  }

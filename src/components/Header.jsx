@@ -7,6 +7,9 @@ import notify from "../assets/images/Header/notifications 2.png"
 import Modal from 'react-modal';
 import '../styles/header.css'
 import SignIn from "./Auth/SignIn";
+import SignUp from "./Auth/SignUp";
+import ForgotPassword from "./Auth/ForgotPassword"
+import ResetPassword from "./Auth/ResetPassword"
 import {BiCart} from 'react-icons/bi'
 const Header = () => {
 
@@ -17,6 +20,8 @@ const Header = () => {
           right: 'auto',
           bottom: 'auto',
           marginRight: '-50%',
+          borderRadius: '30px',
+          padding: 40,
           transform: 'translate(-50%, -50%)',
         },
       };
@@ -80,8 +85,9 @@ const Header = () => {
         onRequestClose={closeModal}
         style={customStyles}
         contentLabel="Example Modal"
+        // className=" mode"
       > 
-        <SignIn/>
+        <ResetPassword/>
      
       </Modal>
        </div>

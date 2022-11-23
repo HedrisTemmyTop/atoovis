@@ -5,9 +5,9 @@ const SignIn = () => {
     return(
         <div className="sign">
            <div className="wel">
-           <h1> Welcome!</h1>
-           <p>Sign-in to get access to great shopping
-            deals from trusted vendors</p>
+           <h1> Sign Up</h1>
+           <p>Create an account and get upto 50% on
+selected products</p>
            </div>
             <form action="">
                <div className="signin">
@@ -16,18 +16,17 @@ const SignIn = () => {
                     <input type="text" />
                 </div>
                 <div className="new2">
+                    <label htmlFor="">Phone Number</label>
+                    <input type="number" />
+                </div>
+                <div className="new3">
                     <label htmlFor="">Password</label>
                     <input type="password" />
                 </div>
                </div>
-                <div className="forgot">
-                    <div><input type="checkbox" /> <span>Remember me</span></div>
-                    <div>
-                        <p>Forgot password?</p>
-                    </div>
-                </div>
+              
 
-                <button className="btn1">Sign In</button>
+                <button className="btn1">Sign Up</button>
                 <div className="or">
                     <p>OR</p>
                 </div>
@@ -37,7 +36,7 @@ const SignIn = () => {
                 </button>
             </form>
             <div className="account">
-                <p>Don’t have an account?<a href=""> Sign up</a></p>
+                <p>Don’t have an account?<a href="">Sign in</a></p>
             </div>
         </div>
     )

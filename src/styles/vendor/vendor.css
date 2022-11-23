@@ -1,0 +1,37 @@
+.body{
+    background: url('../masked.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.body h1{
+    color: #fff;
+    font-weight: 800;
+    font-size: 68px;
+    width: 790px;
+    text-align: center;
+}
+.body p{
+    color: #fff;
+    font-weight: 300;
+    font-size: 18px;
+    width: 700px;
+    text-align: center;
+}
+.body button{
+    color: #fff;
+    background-color: #4CC5D2;
+    border-radius: 100px;
+    margin-top: 21px;
+    height: 64px;
+    width: 431px;
+    font-size: 22px;
+}

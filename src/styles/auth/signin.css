@@ -1,0 +1,198 @@
+.sign{
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center; 
+}
+.wel p{
+    width: 400px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 21.6px;
+    color: #495454;
+    padding: 20px 0;
+}
+.wel h1{
+    width: 400px;
+    color: #000;
+    font-weight: 700;
+    font-size: 36px;
+}
+.weli h1{
+  width: 400px;
+  color: #000;
+  font-weight: 700;
+  font-size: 26px;
+}
+.weli p{
+  width: 400px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21.6px;
+  color: #495454;
+  padding: 20px 0;
+}
+.btn1{
+  text-align: center;
+  color: #fff;
+  background: #4CC5D2;
+  width: 464px;
+  height: 66px;
+  border-radius: 30px;
+}
+.btn2{
+    text-align: center;
+    color: #4CC5D2;
+    background: #fff;
+    border: solid 1px #4CC5D2;
+    width: 464px;
+    height: 66px;
+    border-radius: 30px;
+  
+}
+.or p{
+  font-weight: 300;
+  font-size: 18px;
+  padding: 12px 0;
+  line-height: 21.6px;
+  color: #1B5958;
+}
+.forgot{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 31.5px;
+  padding-top: 12px;
+}
+.forgot span{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16.8px;
+}
+.forgot p{
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16.8px;
+  color: #1B5958;
+}
+.signin input{
+  border: solid 1px #1B5958;
+  background: #F6F8F8;
+  border-radius: 30px;
+  width: 464px;
+  height: 66px;
+  outline: none;
+  padding-left: 10px;
+}
+.new{
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.new2{
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.new3{
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0;
+}
+.new label{
+  background: #fff;
+  color: #1B5958;
+  position: absolute;
+            top: 180px;
+            left: 70px;
+            padding: 2px;
+            z-index: 1;
+}
+.newi label{
+  background: #fff;
+  color: #1B5958;
+  position: absolute;
+            top: 115px;
+            left: 70px;
+            padding: 2px;
+            z-index: 1;
+}
+.new2 label{
+  background: #fff;
+  color: #1B5958;
+  position: absolute;
+            top: 275px;
+            left: 70px;
+            padding: 2px;
+            z-index: 1;
+}
+.new3 label{
+  background: #fff;
+  color: #1B5958;
+  position: absolute;
+            top: 370px;
+            left: 70px;
+            padding: 2px;
+            z-index: 1;
+}
+.account{
+  padding: 20px 0;
+
+}
+.account p{
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21.6px;
+}
+.account a{
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21.6px;
+  color: #1B5958;
+}
+.remind{
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 31.5px;
+  padding-top: 12px;
+}
+
+.reset{
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center; 
+}
+.reset input{
+  border: solid 1px #1B5958;
+  background: #F6F8F8;
+  border-radius: 30px;
+  width: 464px;
+  height: 66px;
+  outline: none;
+  padding-left: 10px;
+}
+
+.pass{
+  width: 464px;
+  flex: none;
+  font-size: 8px;
+  font-weight: 300;
+}
+.newReset label{
+  background: #fff;
+  color: #1B5958;
+  position: absolute;
+            top: 160px;
+            left: 70px;
+            padding: 2px;
+            z-index: 1;
+}
+.newSet label{
+  background: #fff;
+  color: #1B5958;
+  position: absolute;
+            top: 255px;
+            left: 70px;
+            padding: 2px;
+            z-index: 1;
+}

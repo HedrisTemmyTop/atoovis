@@ -40,13 +40,23 @@ button{
     width: 122px;
     margin-left: -30px;
 }
+.btss{
+    color: #fff;
+    background-color: #4CC5D2;
+    border-radius: 20px;
+    height: 38px;
+    width: 122px;
+    margin-left: -30px;
+}
 .left{
     margin-right: 20px;
     display: flex;
     align-items: center;
     cursor: pointer;
 }
-
+.left p{
+    margin-right: 20px;
+}
 
 .footer {
     display: flex;
