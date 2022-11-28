@@ -3,10 +3,10 @@ import '../../styles/vendor/signup.css'
 import logo from '../../assets/images/Header/Atoovislogo.png'
 const VendorSignIn = () => {
     return(
-        <div className="contain">
+        <div className="container">
             <div className="left1">
                <h1>Sign Up</h1>
-               <p>Lorem ipsum dolor sit amet, consectetur 
+               <p className="lorem">Lorem ipsum dolor sit amet, consectetur 
                 adipiscing elit. Nunc tellus ullamcorper hendrerit quis purus pellentesque. Ac sagittis, convallis non tincidunt interdum eu nullam aliquam maecenas. 
                 Enim sed tortor morbi ut suspendisse. </p>
             </div>
@@ -41,7 +41,7 @@ sell online with Atoovis!</h1>
                    
                     <button className="log">Login</button>
                     <div className="account">
-                <p>Don’t have an account?<a href=""> Sign up</a></p>
+                <p className="dont">Don’t have an account?<a href=""> Sign up</a></p>
             </div>
                 </form>
             </div>

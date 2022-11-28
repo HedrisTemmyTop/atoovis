@@ -1,6 +1,14 @@
-.contain{
+.container{
     display: flex;
     
+}
+.dont{
+    color: #000;
+}
+.lorem{
+    color: #fff;
+    text-align: left;
+    padding-top: 20px;
 }
 .left1{
     background: url('../mask.png');

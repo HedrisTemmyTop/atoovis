@@ -1,9 +1,7 @@
 import React from "react";
 import logo from "../assets/images/Header/Atoovislogo-white 2.png"
 import logo2 from "../assets/images/Header/Atoovislogo.png"
-import search from "../assets/images/Header/search.png"
-import account from "../assets/images/Header/account.png"
-import notify from "../assets/images/Header/notifications 2.png"
+import {CgMenuLeft} from "react-icons/cg"
 import Modal from 'react-modal';
 import '../styles/header.css'
 import {BiCart} from 'react-icons/bi'
@@ -29,21 +27,14 @@ const VendorHeader = () => {
                 </div>
             </div>
         </div>
-        <div className="mobile2">
+        <div className="mobile3">
         <div style={{marginBottom: 20}}>
-            <img src={logo2}/>
-            </div>
-            <div className="midd">
-                <div className="search">
-                <img src={search} alt="" />
-                <input type="text" placeholder="Search Products"/>
-                </div>
-                
-                <div className="icons">
-                <div className="icon"> <BiCart style={{width: 30, height: 40, color: '#1B5958'}}/></div>
-                    <div className="icon"> <img src={notify} alt="" width={30} height={30}/></div>
-                    
-                </div>
+            <img src={logo}/>
+            
+        </div>
+           
+            <div >
+            <CgMenuLeft style={{color: '#fff', width: 20, height:30, fontWeight: 800 }}/>
             </div>
         </div>
 
