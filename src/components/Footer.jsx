@@ -20,7 +20,7 @@ const Footer = () => {
            </div>
 
           <div>
-           <p>Stay updated with our newsletter to get the best offer</p>
+           <p style={{textAlign: 'left'}}>Stay updated with our newsletter to get the best offer</p>
           <div className="mid">
                <div className="email">
                   
@@ -72,7 +72,7 @@ const Footer = () => {
                </ul>
            </div>
            <div style={{marginTop: 20,}}>
-           <p>Stay updated with our newsletter to get the best offer</p>
+           <p style={{textAlign: 'left'}}>Stay updated with our newsletter to get the best offer</p>
           <div className="mid">
                <div className="email">
                   

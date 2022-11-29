@@ -1,0 +1,42 @@
+.side-head{
+    background: #1B5958;
+    height: 100px;
+    align-items: center;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.atoovis{
+    width: 15%;
+}
+.linker{
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.box{
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.see{
+    display: flex;
+    color: #000;
+    background: #fff;
+    align-items: center;
+    border-radius: 20px;
+    padding-left: 10px;
+}
+.see input{
+    outline: none;
+    padding-left: 10px;
+}
+.see button{
+    background: #4CC5D2;
+border-radius: 20px;
+}

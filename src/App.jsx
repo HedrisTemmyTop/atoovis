@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 import Home from './pages/Home'
 import Vendor from './pages/VendorLanding'
+import Sidebar from './pages/Sidebar'
 import { Route, Routes,  } from 'react-router-dom'
 import Footer from './components/Footer'
 
@@ -13,8 +14,7 @@ function App() {
     <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='vendor' element={<Vendor/>}/>
-     
-    
+      <Route path='sidebar/*' element={<Sidebar/>}/>
     </Routes>
     <Footer/>
    </>

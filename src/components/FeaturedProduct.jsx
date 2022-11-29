@@ -13,7 +13,7 @@ const FeaturedProduct = () => {
             <img src={place} alt="" />
             <p className="till">Product name and brief description...</p>
             <div style={{display: 'flex', justifyContent: 'space-between', }}>
-                <div style={{display: 'flex', justifyContent: 'space-between'}} className="contain">
+                <div style={{display: 'flex', justifyContent: 'space-between'}} className="contain1">
                     <p className="little">₦54,500</p>
                     <p  className="lit">₦61,000</p>
                 </div>
@@ -32,7 +32,7 @@ const FeaturedProduct = () => {
             <img src={place} alt="" />
             <p className="till">Product name and brief description...</p>
             <div style={{display: 'flex', justifyContent: 'space-between', }}>
-                <div style={{display: 'flex', justifyContent: 'space-between'}} className="contain">
+                <div style={{display: 'flex', justifyContent: 'space-between'}} className="contain1">
                     <p className="little">₦54,500</p>
                     <p  className="lit">₦61,000</p>
                 </div>
@@ -51,7 +51,7 @@ const FeaturedProduct = () => {
             <img src={place} alt="" />
             <p className="till">Product name and brief description...</p>
             <div style={{display: 'flex', justifyContent: 'space-between', }}>
-                <div style={{display: 'flex', justifyContent: 'space-between'}} className="contain">
+                <div style={{display: 'flex', justifyContent: 'space-between'}} className="contain1">
                     <p className="little">₦54,500</p>
                     <p  className="lit">₦61,000</p>
                 </div>
@@ -70,7 +70,7 @@ const FeaturedProduct = () => {
             <img src={place} alt="" />
             <p className="till">Product name and brief description...</p>
             <div style={{display: 'flex', justifyContent: 'space-between', }}>
-                <div style={{display: 'flex', justifyContent: 'space-between'}} className="contain">
+                <div style={{display: 'flex', justifyContent: 'space-between'}} className="contain1">
                     <p className="little">₦54,500</p>
                     <p  className="lit">₦61,000</p>
                 </div>
@@ -89,7 +89,7 @@ const FeaturedProduct = () => {
             <img src={place} alt="" />
             <p className="till">Product name and brief description...</p>
             <div style={{display: 'flex', justifyContent: 'space-between', }}>
-                <div style={{display: 'flex', justifyContent: 'space-between'}} className="contain">
+                <div style={{display: 'flex', justifyContent: 'space-between'}} className="contain1">
                     <p className="little">₦54,500</p>
                     <p  className="lit">₦61,000</p>
                 </div>
@@ -108,7 +108,7 @@ const FeaturedProduct = () => {
             <img src={place} alt="" />
             <p className="till">Product name and brief description...</p>
             <div style={{display: 'flex', justifyContent: 'space-between', }}>
-                <div style={{display: 'flex', justifyContent: 'space-between'}} className="contain">
+                <div style={{display: 'flex', justifyContent: 'space-between'}} className="contain1">
                     <p className="little">₦54,500</p>
                     <p  className="lit">₦61,000</p>
                 </div>

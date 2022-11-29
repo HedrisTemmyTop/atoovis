@@ -11,6 +11,7 @@ import SignUp from "./Auth/SignUp";
 import ForgotPassword from "./Auth/ForgotPassword"
 import ResetPassword from "./Auth/ResetPassword"
 import {BiCart} from 'react-icons/bi'
+import {IoMdNotificationsOutline} from 'react-icons/io'
 const Header = () => {
 
     const customStyles = {
@@ -53,7 +54,7 @@ const Header = () => {
             <div className="left">
                 <div style={{display: 'flex', alignItems: 'center', marginRight: 30}} onClick={openModal}>
                     <p>Sign In</p>
-                    <img src={account} alt="" width={20} height={20} />
+                    <IoMdNotificationsOutline width={20} height={20}/>
                 </div>
                 <div style={{display: 'flex', alignItems: 'center'}}>
                     <p>My Cart</p>
@@ -73,7 +74,7 @@ const Header = () => {
                 
                 <div className="icons">
                 <div className="icon"> <BiCart style={{width: 30, height: 40, color: '#1B5958'}}/></div>
-                    <div className="icon"> <img src={notify} alt="" width={30} height={30}/></div>
+                    <div className="icon">  <IoMdNotificationsOutline style={{width: 30, height: 40, color: '#1B5958'}}/></div>
                     
                 </div>
             </div>

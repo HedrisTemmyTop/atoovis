@@ -1,0 +1,51 @@
+.side{
+    display: flex;
+}
+.push{
+    background: #1B5958;
+    width: 15%;
+    padding:  20px;
+    color: #fff;
+    align-items: center;
+    align-self: stretch
+}
+.push li{
+    margin: 30px;
+    color: #fff;
+}
+
+.push .link{
+   display: flex;
+   align-items: center;
+   flex-direction: row;
+   width: auto;
+}
+
+ul li:hover{
+    color: #fff;
+    background: #4E7E7EB2;
+    border-radius: 100px;
+    height: 50px;
+    width: 200px;
+    justify-content:center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin: 30px 0;
+    color: #fff;
+}
+.link:hover{
+    color: #fff;
+    background: #4E7E7EB2;
+    border-radius: 100px;
+    height: 50px;
+    width: 200px;
+    justify-content:center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+}
+.link p{
+    padding-left: 10px;
+}

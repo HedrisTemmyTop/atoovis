@@ -54,14 +54,14 @@
     opacity: .5px;
     
 }
-.contain{
+.contain1{
     width: 130px;
 }
 
 @media (max-width: 450px) {
     .inner{
         background: #FFFFFF;
-        width: 120px;
+        width: 100px;
         height:auto;
         border-radius: 15.85px;
         padding: 10px;
@@ -69,8 +69,9 @@
     }
     .inner button{
         background: #4CC5D2;
-        width:102px;
+        width:82px;
         height: 39px;
+        font-size: 15px;
         border-radius: 9px;
         text-align: center;
         color: #fff;
@@ -106,7 +107,7 @@
         opacity: .5px;
         
     }
-    .contain{
+    .contain1{
         max-width: 60px;
     }
     .love{

@@ -1,6 +1,7 @@
 import React from "react";
 import '../../styles/vendor/signup.css'
 import logo from '../../assets/images/Header/Atoovislogo.png'
+import { Link } from "react-router-dom";
 const VendorSignIn = () => {
     return(
         <div className="container">
@@ -39,7 +40,7 @@ sell online with Atoovis!</h1>
                         <input type="password" />
                     </div>
                    
-                    <button className="log">Login</button>
+                    <button className="log"><Link to='/sidebar'>Login</Link></button>
                     <div className="account">
                 <p className="dont">Don’t have an account?<a href=""> Sign up</a></p>
             </div>

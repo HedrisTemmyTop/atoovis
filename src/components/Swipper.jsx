@@ -9,7 +9,7 @@ const Swipper =()=>{
         <div>
         <img src={swipe} alt="" className='imag'/>
         </div>
-        <div className='lefty'>
+        <div className='leftyy'>
         <h1>Category Overview</h1>
         <div className='grid grid-flow-row-dense grid-cols-3 md:grid-cols-2 grid-rows-3 gap-2'>
             <div className='now'>
