@@ -15,7 +15,7 @@ const FeaturedProduct = () => {
             <div style={{display: 'flex', justifyContent: 'space-between', }}>
                 <div style={{display: 'flex', justifyContent: 'space-between'}} className="contain1">
                     <p className="little">₦54,500</p>
-                    <p  className="lit">₦61,000</p>
+                    <p className="lit">₦61,000</p>
                 </div>
                 <div>
                 <img src={love} alt="" className="love"/>
