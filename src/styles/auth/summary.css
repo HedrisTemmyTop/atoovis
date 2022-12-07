@@ -1,0 +1,49 @@
+.summ{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+.summ h2{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+}
+.summ h1{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000;
+}
+.summary{
+    border-bottom: 0.2px solid #B8BCBC;
+    margin-bottom: 20px;
+}
+.mode1{
+    display:flex;
+    flex-direction: column;
+    width: auto;
+    align-items: center;
+    padding: 40px;
+}
+.mode1 h1{
+    text-align: center;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    color: #000;
+}
+.mode1 p{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    width: 500px;
+}
