@@ -1,0 +1,173 @@
+.infor button{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    color: #4CC5D2;
+    border: 1px solid #4CC5D2;
+}
+.infor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+.joint{
+    padding: 20px;
+    width: 555px;
+    background: #FFFFFF;
+    border: 0.2px solid #4CC5D2;
+    border-radius: 27px;
+}
+.joint .sqr{
+    width: 64px;
+    height: 64px;
+    background: #4CC5D2;
+    border-radius: 16px;
+}
+.joint input{
+    width: 495px;
+    height: 66px;
+    background: #F6F8F8;
+    border: 0.5px solid #757E7E;
+    border-radius: 20px;
+    outline: none;
+    padding: 10px;
+}
+.joint form button{
+    width: 495px;
+    height: 64px;
+    background: #4CC5D2;
+    border-radius: 100px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 30px;
+    color: #fff;
+}
+.joint form label{
+    background: #fff;
+    color: #495454;
+    font-size: 12px;
+    position: relative;
+    left: 30px;
+    top: 12px;
+}
+
+.pay{
+    width: 555px;
+    height: 284px;
+    background: #FFFFFF;
+    border-radius: 30px;
+    padding: 20px;
+   
+}
+.payee{
+    display: flex;
+    justify-content: space-between;
+}
+.pay p{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    margin-left: 10px;
+}
+.pay input{
+    width: 24px;
+    height: 24px;
+}
+.pay h1{
+    text-align: left;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    
+}
+.payee h4{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 40px;
+}
+.payee h3{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 16px;
+}
+.terms{
+    width: 635px;
+    height: auto;
+    background: #FFFFFF;
+    border-radius: 30px;
+    padding: 20px;
+}
+.terms h1{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000;
+    text-align: left;
+    margin-bottom: 16px;
+}
+.locate{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.locate h2{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+.locate h1{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+    color: #000;
+    margin-bottom: 20px;
+}
+.locate span{
+    font-weight: 800;
+}
+.terms h2{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.terms h3{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 10px 0;
+}
+.terms p{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+.terms ol{
+    list-style-type: number;
+    padding-left: 20px;
+}

@@ -1,0 +1,111 @@
+.manage{
+    padding: 20px;
+    background: #fff;
+    border-radius: 30px;
+    width: 789px;
+    height: auto;
+    margin: 20px;
+}
+.manage h1{
+    color: #000;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: left;
+}
+
+.enable{
+    background: #53A551;
+    border-radius: 200px;
+    color: #fff;
+}
+.team{
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+}
+.use{
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+.use p{
+    padding-left: 5px;
+}
+.use button{
+    background: #4CC5D2;
+    border-radius: 8px;
+    font-size: 16px;
+    width: auto;
+    color: #fff;
+    padding: 0 5px;
+}
+.mode{
+    width: 555px;
+    height: auto;
+    background: #FFFFFF;
+    border: 1px solid #F2F4F8;
+    border-radius: 8px;
+    display:flex;
+    flex-direction: column;
+    padding: 25px;
+}
+.mode h1{
+    text-align: left;
+    margin-bottom: 20px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    color: #000;
+}
+.divi{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+.divi input{
+    width: 495px;
+    height: 66px;
+    background: #F6F8F8;
+    border: 0.5px solid #757E7E;
+    border-radius: 20px;
+    padding: 10px;
+    position: reltive;
+}
+.divi label{
+    position: fixed;
+    margin-top: -20px;
+    margin-left: 20px;
+    background: #fff;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+ .btnn{
+    width: 243.5px;
+    height: 60px;
+    border: 1px solid #4CC5D2;
+    background: #fff;
+    border-radius: 100px;
+    color: #4cc5d2;
+    font-size: 16px;
+}
+.btnnn{
+    width: 243.5px;
+    height: 60px;
+    background: #4CC5D2;
+    border-radius: 100px;
+    color: #fff;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.mode ol{
+    list-style-type: number;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}

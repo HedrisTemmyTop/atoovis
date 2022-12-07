@@ -1,0 +1,60 @@
+.my-profile {
+    display: flex;
+    margin-top: 20px;
+    
+}
+.my-profile .link{
+    padding: 10px;
+    width: auto;
+    height: auto;
+    background: #9A9FBF;
+    margin-left: 10px;
+    color: #000;
+    border-radius: 8px;
+    font-size: 14px;
+}
+.gen{
+    margin: 20px;
+    width: 200px;
+}
+.gen li{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+}
+.lato{
+    display: flex;
+}
+.commit{
+    display: flex;
+    justify-content: space-between
+}
+.commission{
+    width: 500px;
+    height: auto;
+    background: #FFFFFF;
+    border-radius: 30px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.commission h1{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: left;
+    color: #000;
+    margin-bottom: 20px;
+}
+.commission p{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+}
+.hr{
+    border-bottom: solid 1px #000;
+    margin-top: 20px;
+}

@@ -3,8 +3,8 @@
 }
 .push{
     background: #1B5958;
-    width: 15%;
-    padding:  20px;
+    width: 250px;
+    padding:  10px;
     color: #fff;
     align-items: center;
     align-self: stretch
@@ -21,7 +21,7 @@
    width: auto;
 }
 
-ul li:hover{
+.push ul li:hover{
     color: #fff;
     background: #4E7E7EB2;
     border-radius: 100px;
@@ -48,4 +48,5 @@ ul li:hover{
 }
 .link p{
     padding-left: 10px;
+    width: 100%;
 }
