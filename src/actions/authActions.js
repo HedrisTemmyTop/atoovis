@@ -23,12 +23,13 @@ export const login = (loginCredentials) => async (dispatch) => {
 
     const requestOptions = {
       method: 'POST',
-      // headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ loginCredentials})
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(loginCredentials)
   };
     const response = await fetch(`${apiEndpointURL}/auth/login`, requestOptions);
     const data = await response.json();
-    dispatch(loginSuccess(data));
+    dispatch(loginSuccess(data.user));
+    localStorage.setItem("access", data.acessToken);
     console.log("login - data:", data);
     //   dispatch(load_user());
   } catch (error) {

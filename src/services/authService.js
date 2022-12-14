@@ -9,11 +9,6 @@ const login = (credentials) =>
   });
 
 
-  
-
-
-
-
 const loginService = {
   login,
   register,
