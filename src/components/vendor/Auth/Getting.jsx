@@ -11,7 +11,7 @@ import Summary from './Summary'
 import Identity from './Identity'
 import Congrat from './Congrat';
 
-const Getting =()=> {
+const Getting = () => {
     const [value,setValue] = useState(1)
     return(
         <GeneralLayout values={value} >

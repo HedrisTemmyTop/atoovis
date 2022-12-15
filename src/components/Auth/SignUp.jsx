@@ -1,7 +1,57 @@
 import React from "react";
 import '../../styles/auth/signin.css'
+import { useDispatch, useSelector } from "react-redux";
+import { useState } from "react";
 
 const SignIn = () => {
+    const auth = useSelector((state) => state.auth); //get state
+    const dispatch = useDispatch(); // call to action
+    const { user, isLoading, error } = auth;
+    const [fullname, setFullname] = useState("")
+    const [email, setemail] = useState("")
+    const [password, setPassword] = useState("")
+    const [number, setnumber] = useState("")
+
+    
+
+    const handlePasswordChange = (e) => {
+        setFullname(e.target.value)
+    }
+
+    const handleEmailChange = (e) => {
+        setemail(e.target.value)
+    }
+
+    const handleFullnameChange = (e) => {
+        setFullname(e.target.value)
+    }
+
+    const handlePassChange = (e) => {
+        setPassword(e.target.value)
+    }
+
+    const handleNumberChange = (e) => {
+        setnumber(e.target.value)
+    }
+    
+    
+    const onSignUpSubmit = (e) => {
+        e.preventDefault();
+        const formValues = {
+            email: email,
+            password: password,
+            fullname: fullname,
+            number: number,
+        }
+        if (email.trim() === "" || password.trim() === "") {
+          setErr("email or passsword cannot be empty");
+        } else {
+          dispatch(login(formValues));
+        }
+        console.log(formValues);
+      };
+    console.log("auth", user, error, isLoading);
+
     return(
         <div className="sign">
            <div className="wel">

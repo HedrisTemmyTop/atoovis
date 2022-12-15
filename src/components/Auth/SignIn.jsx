@@ -1,7 +1,37 @@
-import React from "react";
+import React,{useState} from "react";
 import '../../styles/auth/signin.css'
+import { login } from "../../actions/authActions";
+import { useDispatch, useSelector } from "react-redux";
 
 const SignIn = () => {
+    const [password, setPassword] = useState("")
+    const [email, setemail] = useState("")
+    const auth = useSelector((state) => state.auth); //get state
+    const dispatch = useDispatch(); // call to action
+    const { user, isLoading, error } = auth;
+
+
+    const handleEmailChange = (e) => {
+        setemail(e.target.value)
+    }
+
+    const handlePasswordChange = (e) => {
+        setPassword(e.target.value)
+    }
+    const onLoginSubmit = (e) => {
+        e.preventDefault();
+        const formValues = {
+            email: email,
+            password: password
+        }
+        if (email.trim() === "" || password.trim() === "") {
+          setErr("email or passsword cannot be empty");
+        } else {
+          dispatch(login(formValues));
+        }
+        console.log(formValues);
+      };
+      console.log("auth", user, error, isLoading);
     return(
         <div className="sign">
            <div className="wel">
@@ -13,11 +43,11 @@ const SignIn = () => {
                <div className="signin">
                <div className="new">
                     <label htmlFor="">Email Address</label>
-                    <input type="text" />
+                    <input type="text" value={email} onChange={handleEmailChange}/>
                 </div>
                 <div className="new2">
                     <label htmlFor="">Password</label>
-                    <input type="password" />
+                    <input type="password" value={password} onChange={handlePasswordChange}/>
                 </div>
                </div>
                 <div className="forgot">
@@ -27,7 +57,7 @@ const SignIn = () => {
                     </div>
                 </div>
 
-                <button className="btn1">Sign In</button>
+                <button onClick={onLoginSubmit}  className="btn1">Sign In</button>
                 <div className="or">
                     <p>OR</p>
                 </div>

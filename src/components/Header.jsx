@@ -88,7 +88,7 @@ const Header = () => {
         contentLabel="Example Modal"
         // className=" mode"
       > 
-        <ResetPassword/>
+        <SignIn/>
      
       </Modal>
        </div>
