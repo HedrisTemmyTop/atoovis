@@ -58,3 +58,25 @@
     border-bottom: solid 1px #000;
     margin-top: 20px;
 }
+.gen a:hover{
+    color: #4CC5D2;
+}
+
+@media(max-width: 450px){
+    .gen ul{
+        display: flex;
+        width: 100vw;
+        overflow-x: scroll;
+    }
+    .gen li{
+        margin-right: 2px;
+        width: auto;
+    }
+    .lato{
+        display: flex;
+        flex-direction: column;
+    }
+    .gen a:hover{
+        color: #4CC5D2;
+    }
+}

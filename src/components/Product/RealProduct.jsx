@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from "react";
+import  '../../styles/VendorDash/Transaction.css'
 import {buttons} from './Data';
-import '../../styles/VendorDash/Order.css'
 import { getPokemon, filterPokemon } from "./Services";
-
-const Order = () =>{
+import Toggle from './Toggle'
+import {BiPlus} from 'react-icons/bi'
+const Product = () =>{
 
     const [filtredPokemon, setFiltredPokemon] = useState(null);
   useEffect(() => {
@@ -22,75 +23,95 @@ const Order = () =>{
                     <div className="contain">
 
         <div className="filter">
-           {buttons &&
+         <div style={{display: 'flex'}}>
+         {buttons &&
         buttons.map((type, index) => (
           <>
-          
-           <button key={index} value={type.value} onClick={handlePokemon} className="name2">
+            <button key={index} value={type.value} onClick={handlePokemon} className="name">
               {type.name}
             </button>
-       
           </>
         ))}
+        <div style={{display: 'flex', borderColor: '#4CC5D2', borderRadius: 100, width: 107, height: 40, cursor: 'pointer', color:'#4CC5D2', borderWidth: 1, background: '#fff', alignItems: 'center', justifyContent: 'center'}}>
+            <BiPlus/>
+            <p>Export</p>
+        </div>
+         </div>
             <div className="filt">
             <div className="overflow-x-auto">
-                <h1>Orders</h1>
-                <div className="p-1.5  inline-block align-middle">
+                <div style={{display: 'flex', justifyContent: 'space-between'}}>
+                <h1>Product Inventory</h1>
+                <div>
+                <button>Promote Products</button>
+                <button> <BiPlus/> <p>Add Product</p></button>
+                </div>
+                </div>
+                <div className="p-1.5 w-full inline-block align-middle">
                     <div className="overflow-hidden border rounded-lg">
-                        <table className=" divide-y divide-gray-200">
+                        <table className="min-w-full divide-y divide-gray-200">
                             <thead className="bg-gray-50">
                                 <tr>
                                     <th
                                         scope="col"
-                                        className="px-2 py-1"
+                                        className="px-2 py-1   "
                                     >
-                                        <p>S/N</p>
+                                        S/N
                                     </th>
                                     <th
                                         scope="col"
                                         className="px-2 py-1 text-xs font-bold text-center text-gray-500  "
                                     >
-                                        Order ID
+                                        Name
                                     </th>
                                     <th
                                         scope="col"
                                         className="px-2 py-3 text-xs font-bold text-center text-gray-500  "
                                     >
-                                       Desination
+                                        SKU
                                     </th>
                                     <th
                                         scope="col"
                                         className="px-2 py-3 text-xs font-bold text-center text-gray-500"
                                     >
-                                        Date
+                                        Created
+                                    </th>
+                                    <th
+                                        scope="col"
+                                        className="px-2 py-3 text-xs font-bold text-center text-gray-500 "
+                                    >
+                                        Quantity
+                                    </th>
+                                    <th
+                                        scope="col"
+                                        className="px-2 py-3 text-xs font-bold text-center text-gray-500 "
+                                    >
+                                       Actual Price
+                                    </th>
+                                    <th
+                                        scope="col"
+                                        className="px-2 py-3 text-xs font-bold text-center text-gray-500  "
+                                    >
+                                        Sale Price
+                                    </th>
+                                    <th
+                                        scope="col"
+                                        className="px-2 py-3 text-xs font-bold text-center text-gray-500 "
+                                    >
+                                        Subsidize Price
+                                    </th>
+                                    <th
+                                        scope="col"
+                                        className="px-2 py-3 text-xs font-bold text-center text-gray-500 "
+                                    >
+                                        Available
+                                    </th>
+                                    <th
+                                        scope="col"
+                                        className="px-2 py-3 text-xs font-bold text-center text-gray-500  "
+                                    >
+                                         status
                                     </th>
                                    
-                                    <th
-                                        scope="col"
-                                        className="px-2 py-3 text-xs font-bold text-center text-gray-500 "
-                                    >
-                                        Price
-                                    </th>
-                                    <th
-                                        scope="col"
-                                        className="px-2 py-3 text-xs font-bold text-center text-gray-500  "
-                                    >
-                                        Payment Type
-                                    </th>
-                                    <th
-                                        scope="col"
-                                        className="px-2 py-3 text-xs font-bold text-center text-gray-500 "
-                                    >
-                                        Delivery Status
-                                    </th>
-                                
-                                    <th
-                                        scope="col"
-                                        className="px-2 py-3 text-xs font-bold text-center text-gray-500  "
-                                    >
-                                        Action
-                                    </th>
-                                  
                                 </tr>
                             </thead>
                             {filtredPokemon &&
@@ -107,22 +128,27 @@ const Order = () =>{
             <td className="px-6 py-2 text-sm font-medium text-center text-gray-800 whitespace-nowrap flex-wrap">
          
              
-           <p className="new">{type.order}</p>
+           <p className="new">{type.name}</p>
             
             </td>
             <td className="px-6 py-2 text-sm font-medium text-center text-gray-800 whitespace-nowrap">
          
              
-           <p>{type.destination}</p>
+           <p>{type.sku}</p>
             
             </td>
             <td className="px-6 py-2 text-sm font-medium text-center text-gray-800 whitespace-nowrap">
          
              
-           <p>{type.date}</p>
+           <p>{type.created}</p>
             
             </td>
+            <td className="px-6 py-2 text-sm font-medium text-center text-gray-800 whitespace-nowrap">
+         
+             
+           <p>{type.quantity}</p>
             
+            </td>
             <td className="px-6 py-2 text-sm font-medium text-center text-gray-800 whitespace-nowrap">
          
              
@@ -133,55 +159,71 @@ const Order = () =>{
             <td className="px-6 py-2 text-sm font-medium text-center text-gray-800 whitespace-nowrap">
          
              
-         <p>{type.payment}</p>
-         
-          
-          </td>
-       
-        
-          <td className="px-6 py-2 text-sm font-medium text-center text-gray-800">
-         
-             
-         <p className={
-            type.status === 'New' ? 'failed' : type.status === 'Pending' ? 'pending' : 'success'
-         }>{type.status}</p>
+         <p>{type.sale}</p>
          
           
           </td>
           <td className="px-6 py-2 text-sm font-medium text-center text-gray-800 whitespace-nowrap">
          
              
-        <select name="" id="" className="sel" >
-            <option value="" >...</option>
-            <option value="">Ship Order</option>
-            <option value="">Cancel Order</option>
-            <option value="">Track Order</option>
-        </select>
+         <p>{type.delivered}</p>
          
           
           </td>
           <td className="px-6 py-2 text-sm font-medium text-center text-gray-800 whitespace-nowrap">
          
              
-       +
+         <p>{type.payout}</p>
          
           
           </td>
         
+          <td className="px-6 py-2 text-sm font-medium text-center text-gray-800 whitespace-nowrap">
+         
+             
+         {/* <p>{type.payout}</p> */}
+         <Toggle/>
+         
+          
+          </td>
+          <td
+                                        scope="col"
+                                        className="px-2 py-3 text-xs font-bold text-center text-gray-500  "
+                                    >
+                                         <select name="" id="" className="sel">
+                                            <option value="">...</option>
+                                            <option value="">View Details</option>
+                                            <option value="">Edit Details</option>
+                                            <option value="">Delete Product </option>
+                                            <option value="">Restore Shop Version</option>
+                                            <option value="">Copy Product</option>
+                                         </select>
+                                    </td>
+            
           </tr>
           </tbody>
         ))} 
-                                    
+                                    {/* </td>
+                                   
+                                </tr> */}
+                              
+                                
+                            {/* </tbody> */}
                         </table>
                     </div>
                 </div>
             </div>
         </div>
-   
+      {/* {filtredPokemon &&
+        filtredPokemon.map(type => (
+          <ul key={type.id}>
+            <li>{type.name}</li>
+          </ul>
+        ))} */}
         </div>
                     </div>
     
     )
 }
 
-export default Order
+export default Product

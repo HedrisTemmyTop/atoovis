@@ -55,7 +55,9 @@
     left: 30px;
     top: 12px;
 }
-
+.payet{
+    display: none;
+}
 .pay{
     width: 555px;
     height: 284px;
@@ -170,4 +172,105 @@
 .terms ol{
     list-style-type: number;
     padding-left: 20px;
+}
+iframe{
+    width: 500px;
+    margin-left: 0px;
+}
+
+@media(max-width: 450px){
+    .joint{
+        padding: 20px;
+        width: 360px;
+        background: #FFFFFF;
+        border:none;
+        border-radius: 27px;
+        margin-left: 5px;
+    }
+    .joint p{
+        color: #495454;
+    }
+    .joint form input{
+        width: 315px;
+        height: 66px;
+        
+    }
+    .joint form button{
+        width: 315px;
+    }
+    .terms p{
+        color: #333;
+    }
+    .commission{
+        width: 345px;
+        margin-left: 10px;
+    }
+    .commission p{
+        color: #333;
+    }
+    .hr{
+        width: 300px;
+    }
+    iframe{
+        width: 345px;
+        margin-left: 10px;
+    }
+    .terms{
+        width: 100vw;
+    }
+    .locate{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        width: 200px;
+    }
+    .locate h2{
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 24px;
+        margin-bottom: 20px;
+        
+    }
+    .terms h2{
+        width: 300px;
+    }
+    .locate h1{
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 700;
+        width: auto;
+        font-size: 12px;
+        line-height: 24px;
+        text-align: left;
+        color: #000;
+        margin-bottom: 20px;
+    }
+    .locate span{
+        font-weight: 800;
+    }
+    .ol{
+        width: 325px;
+    }
+    .ol ol{
+        width: 325px;
+    }
+    .payee select{
+        width: 10px;
+    }
+    .payee{
+        display: none;
+    }
+    .payet{
+        display: block;
+        margin-top: 20px;
+        height: auto;
+        margin-bottom: 200px;
+        width: 500px;
+    }
+    .payet p{
+        color: #333;
+        
+    }
 }

@@ -9,6 +9,7 @@ import CustomerReview from '../components/vendor/CustomerReview'
 import Delivery from '../components/vendor/Delivery';
 import Orders from '../components/vendor/Orders';
 import Settings from '../components/vendor/Settings'
+import Product from '../components/vendor/Product';
 import '../styles/vendor/Sidebar.css'
 import {TbWorld} from 'react-icons/tb'
 
@@ -34,7 +35,7 @@ const Sidebar = () => {
                 </li>
                 <li className='link'>
                 <TbWorld/>
-                    <Link to="/sidebar"><p>Products</p></Link>
+                    <Link to="/sidebar/product"><p>Products</p></Link>
                 </li>
                 <li className='link'>
                 <TbWorld/>
@@ -78,7 +79,7 @@ const Sidebar = () => {
             <Routes>
             <Route path='/' element={<Dashboard/>}/>
             <Route path='/getting' element={<Getting/>}/>
-            
+            <Route path='/product' element={<Product/>}/>
             <Route path='/transaction' element={<Transaction/>}/>
             <Route path='/customer-review' element={<CustomerReview/>}/>
             <Route path='/delivery' element={<Delivery/>}/>

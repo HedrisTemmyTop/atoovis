@@ -53,10 +53,7 @@ const defaultSports = [
     date: '24 Feb.',
     identity: 'ID 1234232'
    },
-   
-    // { name: "Swimming", category: "Aquatics" },
-    // { name: "Chess", category: "Indoor" },
-    // { name: "BaseBall", category: "Outdoor" }
+
 ];
 
 useEffect(() => {

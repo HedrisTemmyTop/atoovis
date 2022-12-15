@@ -7,6 +7,11 @@
     display: flex;
     align-items: center;
     margin-top: -10px;
+    padding: 0 20px;
+}
+.topnav p{
+    padding-left: 5px;
+    font-family: lato;
 }
 
 .content{
@@ -61,6 +66,7 @@ font-size: 40px;
     width: 277px;
     height: 164px;
     border-radius: 12px;
+    margin-bottom: 20px;
 }
 .inn p{
     font-weight: 700;
@@ -203,6 +209,7 @@ margin-left: 15%;
     border-radius: 100px;
     padding: 0 10px;
 }
+
 @media (max-width: 1300px) {
     .inn{
         background: #fff;
@@ -226,4 +233,115 @@ margin-left: 15%;
         padding: 20px;
     }
   
+}
+
+@media (max-width: 450px){
+    .pick{
+        display: flex;
+        flex-direction: column;
+    }
+    .line p{
+        color: #000;
+    }
+    .line input{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin-left: 5%;
+    
+    }
+    .line h3{
+        font-size: 18px;
+    }
+    .line p{
+        font-size: 14px;
+    }
+    .square{
+        width: 35px;
+        height: 35px;
+        background: #F4F7F7;
+        border-radius: 10px;
+    
+    }
+    .order{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        padding: 10px;
+        row-gap: 10px;
+     
+    }
+
+    .inn{
+        background: #fff;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 160px;
+        height: 112px;
+        border-radius: 12px;
+        
+    } 
+    .inn p{
+        color: #000;
+        font-size: 14px;
+        text-align: center;
+
+    }
+    .inn h4{
+        font-weight: 300;
+        font-size: 14px;
+        font-family: lato;
+    }
+    .inn h1{
+        font-weight: 800;
+        font-size: 30px;
+    }
+    .content{
+        display: grid;
+        grid-template-columns:  1fr;
+        height: auto;
+    }
+    .sale{
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+        justify-content: space-between;
+        height: 100vh;
+     
+    }
+    .sall{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sall .innn{
+        background: #fff;
+        padding: 10px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        width: 160px;
+        height: 125px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+    }
+    .sall h1{
+        font-size: 20px;
+    }
+    .sal h1{
+        font-size: 20px;
+    }
+    .sal .innn{
+        background: #fff;
+        padding: 30px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        width: 160px;
+        height: 233px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+        margin-left: 10px;
+    }
 }

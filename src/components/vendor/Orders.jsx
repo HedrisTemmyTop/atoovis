@@ -21,6 +21,7 @@ const Orders = () =>{
 
                 <div className='cancel'>
                     <button>Print Return Form</button>
+                    <div className='cancell'>
                     <div className='thirty'>
                         <h3>New Order</h3>
                         <h1>30</h1>
@@ -45,7 +46,9 @@ const Orders = () =>{
                         <p>Items</p>
                     </div>
 
-                    <div className='thirty'>
+                   
+                    </div>
+                    <div className='thirtyy thirty'>
                         <h3>Total Orders</h3>
                         <h1>300</h1>
                         <p>Items</p>

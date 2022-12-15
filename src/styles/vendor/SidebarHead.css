@@ -7,6 +7,9 @@
     flex-direction: row;
     align-items: center;
 }
+.mob-ile{
+    display: none;
+}
 .atoovis{
     width: 15%;
 }
@@ -39,4 +42,22 @@
 .see button{
     background: #4CC5D2;
 border-radius: 20px;
+color: #fff;
+}
+
+@media (max-width: 450px) {
+    .mob-ile{
+        color: #fff;
+        display: block;
+        background: #1B5958;
+        padding:25px 16px;
+        display: flex;
+        justify-content: space-between;
+        width: 100vw;
+        border-bottom: dashed 1px #fff;
+        
+    }
+    .side-head{
+        display: none;
+    }
 }

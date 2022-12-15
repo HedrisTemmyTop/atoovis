@@ -38,7 +38,11 @@ const VendorHeader = () => {
             </div>
         </div>
 
-     
+            {/* mobile  */}
+
+            <div>
+                
+            </div>
        </div>
     )
 }

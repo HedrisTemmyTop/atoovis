@@ -29,6 +29,7 @@
     border: 1px solid #4CC5D2;
     color: #4CC5D2;
     background: #fff;
+    
 }
 .thirty{
     width: 194px;
@@ -58,4 +59,56 @@
     font-style: normal;
     font-weight: 300;
     font-size: 14px;
+}
+
+@media (max-width: 450px){
+    .print{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .cancell{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .thirty{
+        width: 160px;
+        height: 112px;
+        background: #FFFFFF;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+    }
+    .thirtyy{
+        width: 343px;
+        height: 112px;
+        background: #FFFFFF;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+    }
+
+    .name2{
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 150%;
+        width: auto;
+        padding: 0 10px;
+        margin-right: 10px;
+        border-radius: 8px;
+        border: 1px solid #4CC5D2;
+        color: #4CC5D2;
+        background: #fff;
+        
+    }
+    .my{
+
+    }
 }

@@ -47,7 +47,7 @@ const Shipping =()=>{
                                 Excluding Atoovis Express and Standard Shipping Orders to Lagos, Port Harcourt and Abuja where we have full delivery operations on Saturdays.
                              The delivery timelines vary depending on the delivery option chosen.
                             </p>
-                            <div>
+                            <div className="ol">
                                 <h3>Delivery Methods</h3>
                                 <ol>
                                     <li>Door Delivery: Delivery time starts from the day you place your order

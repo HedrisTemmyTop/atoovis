@@ -23,6 +23,7 @@
     font-size: 13px;
     line-height: 16px;
     margin-top: -20px;
+    color: #000;
 }
 .add{
     display: flex;
@@ -37,12 +38,14 @@
     font-size: 12px;
     line-height: 14px;
     padding-left: 10px;
+    color: #000;
 }
 .add h4{
     font-family: 'Lato';
     font-style: normal;
     font-weight: 300;
     font-size: 12px;
+    color: #000;
 }
 .pend{
     width: 77px;
@@ -63,4 +66,15 @@
     justify-content: center;
     color: #fff;
     font-size: 10px;
+}
+
+@media (max-width: 450px){
+    .item-container{
+        background: #F6F8F8;
+        width: 326px;
+        height: auto;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    
 }

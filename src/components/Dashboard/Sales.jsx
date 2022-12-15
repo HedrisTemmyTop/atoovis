@@ -5,6 +5,7 @@ const Sales =()=>{
     return(
         <div>
              <div className={styles.sale}>
+                <div className={styles.sall}>
                 <div className={styles.innn}>
                     <p>Total Balance</p>
                     <h1>₦93,250</h1>
@@ -23,6 +24,9 @@ const Sales =()=>{
                     <h4>Order Details</h4>
                     <h5>Categories of products sold</h5>
                 </div>
+                </div>
+               <div className={styles.sal}>
+               
                 <div className={styles.innn}>
                     <p>Total Balance</p>
                     <h1>₦93,250</h1>
@@ -35,6 +39,7 @@ const Sales =()=>{
                     <h4>Order Details</h4>
                     <h5>Categories of products sold</h5>
                 </div>
+               </div>
             </div>
         </div>
     )

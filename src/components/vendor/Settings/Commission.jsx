@@ -4,7 +4,7 @@ const Commission =()=>{
     return(
         <div >
             <div >
-            <iframe width="500" height="315" style={{borderRadius: 30, marginBottom: 20}}
+            <iframe height="315" style={{borderRadius: 30, marginBottom: 20}}
 src="https://www.youtube.com/embed/tgbNymZ7vqY">
 </iframe>
             </div>

@@ -32,6 +32,35 @@ const Payment =()=> {
                            </div>
                         </div>
                     </div>
+                    <div className="payet">
+                        <div>
+                        <h3>Default Currency</h3>
+                        <div>
+                        <select name="" id="" style={{width: 91, height: 44, borderRadius:8, marginBottom: 20}}>
+                                <option value="">NGN</option>
+                            </select>
+                        </div>
+                        </div>
+                        <div>
+                        <h4>Accept Payments Via</h4>
+                        <div style={{display: 'flex', marginTop: 10}}>
+                           <input type="checkbox" />
+                           <p style={{}}>Bank</p>
+                           </div>
+                           <div style={{display: 'flex', marginTop: 10}}>
+                           <input type="checkbox" />
+                           <p style={{}}>Card</p>
+                           </div>
+                           <div style={{display: 'flex', marginTop: 10}}>
+                           <input type="checkbox" />
+                           <p style={{}}>USSD</p>
+                           </div>
+                           <div style={{display: 'flex', marginTop: 10}}>
+                           <input type="checkbox" />
+                           <p style={{}}>Bank Transfer</p>
+                           </div>
+                        </div>
+                    </div>
             </div>
         </div>
     )
