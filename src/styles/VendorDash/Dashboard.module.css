@@ -26,8 +26,16 @@
 }
 .trans{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr ;
     padding: 10px;
+    margin: 20px;
+ 
+}
+.transs{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 10px;
+    margin: 20px;
  
 }
 .sale{
@@ -57,6 +65,16 @@ font-size: 40px;
     height: 164px;
     border-radius: 12px;
 }
+.inni{
+    background: #fff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 203px;
+    height: 164px;
+    border-radius: 12px;
+}
 .ini{
     display: none;
 }
@@ -71,16 +89,17 @@ font-size: 40px;
     border-radius: 12px;
     margin-bottom: 20px;
 }
-.inn p{
+.inni p{
     font-weight: 700;
     font-size: 14px;
     font-family: lato;
 }
-.inn h4{
+.inni h4{
     font-weight: 300;
     font-size: 14px;
     font-family: lato;
 }
+
 .ini p{
     font-weight: 700;
     font-size: 14px;
@@ -99,6 +118,12 @@ font-size: 40px;
     margin-top: -10px;
 }
 .inn h1{
+    font-weight: 800;
+    font-size: 40px;
+    font-family: lato;
+    color: #4CC5D2;
+}
+.inni h1{
     font-weight: 800;
     font-size: 40px;
     font-family: lato;
@@ -291,6 +316,17 @@ margin-left: 15%;
         border-radius: 12px;
         
     } 
+    .inni{
+        background: #fff;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 160px;
+        height: 112px;
+        border-radius: 12px;
+        
+    }
     .inn p{
         color: #000;
         font-size: 14px;
@@ -303,6 +339,21 @@ margin-left: 15%;
         font-family: lato;
     }
     .inn h1{
+        font-weight: 800;
+        font-size: 30px;
+    }
+    .inni p{
+        color: #000;
+        font-size: 14px;
+        text-align: center;
+
+    }
+    .inni h4{
+        font-weight: 300;
+        font-size: 14px;
+        font-family: lato;
+    }
+    .inni h1{
         font-weight: 800;
         font-size: 30px;
     }

@@ -10,8 +10,8 @@ const CustomerReview = () =>{
              <div className={styles.topnav}>
                 <p> / Transactions</p>
             </div>
-            <div className={styles.trans}>
-                <div className={styles.inn}>
+            <div className={styles.transs}>
+                <div className={styles.inni}>
                     <p>Ratings</p>
                     <div className={styles.port}>
                     <h1>4.2</h1>
@@ -19,7 +19,7 @@ const CustomerReview = () =>{
                     </div>
                     <h4>73k Reviews</h4>
                 </div>
-                <div className={styles.inn}>
+                <div className={styles.inni}>
                     <p>Comments</p>
                     <div className={styles.port}>
                     <h1>14k</h1>
@@ -27,7 +27,7 @@ const CustomerReview = () =>{
                     </div>
                     <h4>Customer Comments</h4>
                 </div>
-                <div className={styles.inn}>
+                <div className={styles.inni}>
                     <p>Products</p>
                     <div className={styles.port}>
                     <h1>37k</h1>
@@ -35,7 +35,7 @@ const CustomerReview = () =>{
                     </div>
                     <h4>Products Reviewed</h4>
                 </div>
-                <div className={styles.inn}>
+                <div className={styles.inni}>
                     <p>Categories</p>
                     <div className={styles.port}>
                     <h1>5</h1>
