@@ -1,9 +1,11 @@
 import React from "react";
 import putin from '../../../assets/images/Header//Group (4).png'
+import '../../../styles/auth/welcome.css'
+import '../../../styles/auth/summary.css'
 const Congrat =()=>{
     return(
-        <div style={{display: 'flex'}}>
-        <div style={{width: 555, height: 'auto', borderRadius:27, background: '#fff', margin: 40, padding: 40, alignItems: 'center', display: 'flex', flexDirection: 'column'}}>
+        <div style={{display: 'flex'}} >
+        <div className="summa" style={{height: 'auto', borderRadius:27, background: '#fff', alignItems: 'center', display: 'flex', flexDirection: 'column'}}>
         
             <img src={putin} alt="" width={64} height={64} />
         <h1 style={{marginBottom: 10, textAlign: 'center', color: '#000', fontSize: 24, fontWeight: 800, marginTop: 20}}>CONGRATULATIONS...</h1>
@@ -23,10 +25,8 @@ const Congrat =()=>{
 
                
             
-           <button onClick={()=> setValue(10)} style={{background: '#4CC5D2',
+           <button  className="savebtn2" onClick={()=> setValue(10)} style={{background: '#4CC5D2',
           color: '#fff',
-          width: 495,
-          height: 66,
           borderRadius: 100,
           marginTop: 20
           }}>Go to Products</button>

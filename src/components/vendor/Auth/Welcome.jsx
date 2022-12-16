@@ -1,9 +1,12 @@
 import React from "react";
 import wel from '../../../assets/images/Header/Group 11967 (1).png'
+import '../../../styles/auth/welcome.css'
 const Welcome = ({setValue})=>{
     return(
         <div>
-           <div style={{width: 555, height: 'auto', borderRadius:27, background: '#fff', margin: 40, padding: 40, alignItems: 'center', display: 'flex', flexDirection: 'column'}}>
+           <div style={{ height: 'auto', borderRadius:27, background: '#fff', alignItems: 'center', display: 'flex', flexDirection: 'column'}}
+           className="start"
+           >
            <h1 style={{marginBottom: 20, textAlign: 'center', color: '#000', fontSize: 20}}>Welcome to Atoovis! 👋🏾</h1>
             <img src={wel} alt="" />
                 <p style={{marginTop: 20, textAlign: 'center'}}>
@@ -15,11 +18,12 @@ const Welcome = ({setValue})=>{
                 </p>
             <button onClick={()=> setValue(2)} style={{background: '#4CC5D2',
              color: '#fff',
-             width: 475,
              height: 60,
              borderRadius: 100,
              marginTop: 20
-             }}>Continue</button>
+             }}
+             className='startbtn'
+             >Continue</button>
            </div>
         </div>
     )

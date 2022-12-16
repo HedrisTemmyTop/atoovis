@@ -1,12 +1,13 @@
 import React from "react";
-
+import '../../../styles/auth/lab.css'
+import '../../../styles/auth/welcome.css'
 const SellerDetail =({setValue})=>{
     return(
         <div style={{display: 'flex'}}>
-        <div style={{width: 555, height: 'auto', borderRadius:27, background: '#fff', margin: 40, padding: 40, alignItems: 'left', display: 'flex', flexDirection: 'column'}}>
+        <div className="start2" style={{ height: 'auto', borderRadius:27, background: '#fff', alignItems: 'left', display: 'flex', flexDirection: 'column'}}>
         <h1 style={{marginBottom: 10, textAlign: 'left', color: '#000', fontSize: 32}}>Seller Details</h1>
          <form action="">
-             <div className="lab">
+             <div className="lab" style={{marginLeft: -20,}}>
                  <label htmlFor="">Country</label>
                  <select name="" id="">
                  <option value=""> Select a Country</option>
@@ -65,21 +66,19 @@ const SellerDetail =({setValue})=>{
            </div>
             </div>
 
-             <button onClick={()=> setValue(4)} style={{
+             <button className="startbtn" onClick={()=> setValue(4)} style={{
           color: '#fff',
-          width: 495,
-          height: 66,
           borderRadius: 100,
           borderColor: '#4CC5D2',
           marginTop: 20,
           color: '#4CC5D2',
+          marginLeft: -20,
           }}>Previous</button>
-           <button onClick={()=> setValue(5)} style={{background: '#4CC5D2',
+           <button onClick={()=> setValue(5)} className="startbtn" style={{background: '#4CC5D2',
           color: '#fff',
-          width: 495,
-          height: 66,
           borderRadius: 100,
-          marginTop: 20
+          marginTop: 20,
+          marginLeft: -20,
           }}>Save and Continue</button>
          </form>
             

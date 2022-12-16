@@ -11,28 +11,35 @@ const Transaction =()=>{
             <div className={styles.content}>
               
                 <div className={styles.trans}>
+
                 <div className={styles.inn}>
                     <p>In Escrow</p>
-                    <h1>9,408</h1>
-                    <h4>Items</h4>
+                    <h1>₦0</h1>
+                    <h4>Amount</h4>
                 </div>
                 <div className={styles.inn}>
                     <p>Paid</p>
-                    <h1>1,004</h1>
-                    <h4>Items</h4>
+                    <h1>₦992,750</h1>
+                    <h4>Last paid: 22/09/2022</h4>
                 </div>
+              
                 <div className={styles.inn}>
                     <p>Pending Orders</p>
-                    <h1>873</h1>
-                    <h4>Items</h4>
+                    <h1>₦992,750</h1>
+                    <h4>All Time</h4>
                 </div>
               
             </div>
+            <div>
+               <div className={styles.ini}>
+                    <p>Pending Orders</p>
+                    <h1>₦992,750</h1>
+                    <h4>All Time</h4>
+                </div>
+               </div>
                
 
-                <div>
-                  
-                </div>
+               
             </div>
             
                    <div>

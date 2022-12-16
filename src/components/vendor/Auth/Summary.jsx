@@ -30,7 +30,7 @@ const Summary =({setValue})=>{
   }
     return(
         <div style={{display: 'flex'}}>
-        <div style={{width: 555, height: 'auto', borderRadius:27, background: '#fff', margin: 40, padding: 40, alignItems: 'left', display: 'flex', flexDirection: 'column'}}>
+        <div className="summa" style={{height: 'auto', background: '#fff',   alignItems: 'left', display: 'flex', flexDirection: 'column'}}>
         <h1 style={{marginBottom: 10, textAlign: 'left', color: '#000', fontSize: 32}}>Summary</h1>
 
             <div className="summary">
@@ -175,20 +175,16 @@ const Summary =({setValue})=>{
             
             </div>
 
-             <button onClick={()=> setValue(7)} style={{
+             <button className="startbtn" onClick={()=> setValue(7)} style={{
           color: '#fff',
-          width: 495,
-          height: 66,
           borderRadius: 100,
           borderColor: '#4CC5D2',
           marginTop: 20,
           color: '#4CC5D2',
           }}>Previous</button>
            
-          <button onClick={openModal} style={{background: '#4CC5D2',
+          <button className="startbtn" onClick={openModal} style={{background: '#4CC5D2',
           color: '#fff',
-          width: 495,
-          height: 66,
           borderRadius: 100,
           marginTop: 20
           }}>Submit</button>
@@ -215,10 +211,8 @@ const Summary =({setValue})=>{
                     <p>We have recieved your information and will 
                         reach out to you for further
                          clarification with 2 working days</p>
-                    <button onClick={()=> setValue(9)} style={{background: '#4CC5D2',
+                    <button className="startbtn" onClick={()=> setValue(9)} style={{background: '#4CC5D2',
           color: '#fff',
-          width: 495,
-          height: 66,
           borderRadius: 100,
           marginTop: 20
           }}>Submit</button>
