@@ -33,11 +33,10 @@ const Header = () => {
     setIsOpen(true);
   }
 
-  
-
   function closeModal() {
     setIsOpen(false);
   }
+  
     return (
        <div>
          <div className="header">
