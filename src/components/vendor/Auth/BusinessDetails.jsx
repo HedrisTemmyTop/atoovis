@@ -1,37 +1,16 @@
-import React from "react";
+import Reac, {useState} from "react";
 import '../../../styles/auth/lab.css'
 import map from'../../../assets/images/Header/Rectangle 9117.png'
 import {MdLocationPin} from 'react-icons/md'
 import '../../../styles/auth/welcome.css';
 
 
-
 const BusinessDetail =({setValue}) => {
-    const [business_name, setBusiness_name] = useState("")
-    const [email, setemail] = useState("")
-    const auth = useSelector((state) => state.auth); //get state
+     const auth = useSelector((state) => state.auth); //get state
     const dispatch = useDispatch(); // call to action
     const { user, isLoading, error } = auth;
 
-    const handleBusinessNameChange = (e) => {
-        setBusiness_name(e.target.value)
-    }
-    const handlePasswordChange = (e) => {
-        setPassword(e.target.value)
-    }
-    const onBusinessSubmit = (e) => {
-        e.preventDefault();
-        const formValues = {
-            email: email,
-            password: password
-        }
-        if (email.trim() === "" || password.trim() === "") {
-          setErr("email or passsword cannot be empty");
-        } else {
-          dispatch(login(formValues));
-        }
-        console.log(formValues);
-      };
+   
 
 
     return(
