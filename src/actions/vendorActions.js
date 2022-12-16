@@ -20,7 +20,7 @@ export const createBusiness = (businessDetails) => async (dispatch) => {
       console.log(response.status, "code")
       console.log(data)
       if (response.status != 200){
-         dispatch(failedLogin(data.msg));
+         dispatch(failedStatus(data.msg));
       }
       else{
         dispatch(createbusinessSucess(data))
