@@ -4,15 +4,7 @@ import map from'../../../assets/images/Header/Rectangle 9117.png'
 import {MdLocationPin} from 'react-icons/md'
 import '../../../styles/auth/welcome.css';
 
-
 const BusinessDetail =({setValue}) => {
-     const auth = useSelector((state) => state.auth); //get state
-    const dispatch = useDispatch(); // call to action
-    const { user, isLoading, error } = auth;
-
-   
-
-
     return(
         <div>
            <div className="start2" style={{ height: 'auto', background: '#fff', alignItems: 'left', display: 'flex', flexDirection: 'column'}}>
@@ -20,7 +12,7 @@ const BusinessDetail =({setValue}) => {
             <form action="">
                 <div className="lab">
                     <label htmlFor="">Business Name</label>
-                    <input type="text" onChange={handleBusinessNameChange} value={business_name} />
+                    <input type="text"/>
                 </div>
                 <div className="lab">
                     <label htmlFor="">Business Type</label>
