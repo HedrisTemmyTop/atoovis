@@ -1,9 +1,10 @@
-import React from "react";
+import Reac, {useState} from "react";
 import '../../../styles/auth/lab.css'
 import map from'../../../assets/images/Header/Rectangle 9117.png'
 import {MdLocationPin} from 'react-icons/md'
-import '../../../styles/auth/welcome.css'
-const BusinessDetail =({setValue})=>{
+import '../../../styles/auth/welcome.css';
+
+const BusinessDetail =({setValue}) => {
     return(
         <div>
            <div className="start2" style={{ height: 'auto', background: '#fff', alignItems: 'left', display: 'flex', flexDirection: 'column'}}>
@@ -11,14 +12,13 @@ const BusinessDetail =({setValue})=>{
             <form action="">
                 <div className="lab">
                     <label htmlFor="">Business Name</label>
-                    <input type="text" />
+                    <input type="text"/>
                 </div>
                 <div className="lab">
                     <label htmlFor="">Business Type</label>
                     <input type="text" />
                 </div>
                 <div className="labb">
-                   
                     <input type="checkbox" />
                     <p>I confirm my business location and type are correct,
                      and I understand that this information cannot be changed later</p>

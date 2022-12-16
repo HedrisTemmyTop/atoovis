@@ -14,7 +14,6 @@ const SignIn = () => {
     const handleEmailChange = (e) => {
         setemail(e.target.value)
     }
-
     const handlePasswordChange = (e) => {
         setPassword(e.target.value)
     }
@@ -31,7 +30,7 @@ const SignIn = () => {
         }
         console.log(formValues);
       };
-      console.log("auth", user, error, isLoading);
+    console.log("auth", user, error, isLoading);
     return(
         <div className="sign">
            <div className="wel">
