@@ -30,7 +30,7 @@ const SignIn = () => {
         }
         console.log(formValues);
       };
-      console.log("auth", user, error, isLoading);
+    console.log("auth", user, error, isLoading);
     return(
         <div className="sign">
            <div className="wel">

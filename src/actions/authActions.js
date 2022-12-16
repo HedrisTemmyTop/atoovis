@@ -36,11 +36,8 @@ export const login = (loginCredentials) => async (dispatch) => {
 
 
 };
-
-
-
-export const signup = (loginCredentials) => async (dispatch) => {
-  const body = JSON.stringify(loginCredentials);
+export const signup = (signupCredentials) => async (dispatch) => {
+  const body = JSON.stringify(signupCredentials);
   try {
     dispatch(signupRequest());
     const requestOptions = {

@@ -4,8 +4,11 @@ import '../styles/vendor/vendor.css';
 import SignIn from '../components/vendor/SignIn'
 import SignUp from '../components/vendor/SignUp'
 import Modal from 'react-modal';
+import { useDispatch, useSelector } from "react-redux";
 
 const Vendor = ()=> {
+  const auth = useSelector((state) => state.auth); //get state
+  const { user, isLoading, error } = auth;
 
 
     const customStyles = {
@@ -59,6 +62,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit
         contentLabel="Example Modal"
         // className=" mode"
       > 
+
       <SignUp/>
      
       </Modal>

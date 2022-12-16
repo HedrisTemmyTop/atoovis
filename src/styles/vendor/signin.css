@@ -45,15 +45,20 @@
     width: 512px;
     height: 66px;  
     border-radius: 30px;
+    color: #040404;
+
     background: #F6F8F8;
     
 }
 .formy2 input{
     border: 0.5px solid #757E7E;
+    color: #040404;
+
     width: 512px;
     height: 66px;  
     border-radius: 30px;
     background: #F6F8F8;
+    
     
 }
 
@@ -98,6 +103,7 @@
     } 
     .formy input{
         border: 0.5px solid #757E7E;
+        color: #040404;
         width: 412px;
         height: 66px;  
         border-radius: 30px;
@@ -149,3 +155,7 @@
                   z-index: 1;
       }
 }
+
+input{
+    color: #040404;
+  }
