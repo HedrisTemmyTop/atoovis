@@ -1,7 +1,9 @@
 import React from 'react'
 import styles from '../../styles/VendorDash/Dashboard.module.css'
 import Order from '../../components/Orders/Order'
-import '../../styles/VendorDash/Order.css'
+import '../../styles/VendorDash/Order.css';
+
+
 const Orders = () =>{
     return(
         <div className={styles.dashboard}>

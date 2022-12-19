@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 import { useSelector, useDispatch } from 'react-redux'
 
 const initialState = {
-    vendorId: null,
+    vendorId: "6383eb20efb496469f340824",
     isLoading: null,
     error:null,
     businessName:null

@@ -5,10 +5,20 @@ import SignIn from '../components/vendor/SignIn'
 import SignUp from '../components/vendor/SignUp'
 import Modal from 'react-modal';
 import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Vendor = ()=> {
   const auth = useSelector((state) => state.auth); //get state
   const { user, isLoading, error } = auth;
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if(localStorage.getItem("access") != null){
+      console.log("checks")
+      navigate('/sidebar')
+    }
+}, [])
 
 
     const customStyles = {
