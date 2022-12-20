@@ -113,7 +113,7 @@ const { username, email, password, password_confirmation, phone_number } = formD
             }
             <div className="account">
               <p className="dont">
-                Don’t have an account?<a href=""> Sign up</a>
+              Already have an account?<a href=""> Sign In</a>
               </p>
             </div>
           </form>

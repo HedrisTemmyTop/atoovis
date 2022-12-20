@@ -10,8 +10,13 @@ import Delivery from '../components/vendor/Delivery';
 import Orders from '../components/vendor/Orders';
 import Settings from '../components/vendor/Settings'
 import Product from '../components/vendor/Product';
+import Wallet from '../components/vendor/Wallet';
+import AddProduct from '../components/vendor/AddProduct/AddProduct';
 import '../styles/vendor/Sidebar.css'
 import {TbWorld} from 'react-icons/tb'
+import Refunds from '../components/vendor/Refund';
+import Payouts from '../components/vendor/Payouts';
+import MyAccount from '../components/vendor/MyAccount';
 
 
 const Sidebar = () => {
@@ -53,7 +58,7 @@ const Sidebar = () => {
                 </li>
                 <li className='link'>
                 <TbWorld/>
-                    <Link to="/sidebar"><p>Wallet</p></Link>
+                    <Link to="/sidebar/wallet"><p>Wallet</p></Link>
                 </li>
                 <li className='link'>
                 <TbWorld/>
@@ -85,6 +90,11 @@ const Sidebar = () => {
             <Route path='/delivery' element={<Delivery/>}/>
             <Route path='/order' element={<Orders/>}/>
             <Route path='/settings/*' element={<Settings/>}/>
+            <Route path='/add-product' element={<AddProduct/>}/>
+            <Route path='/wallet' element={<Wallet/>}/>
+            <Route path='/refunds' element={<Refunds/>}/>
+            <Route path='/payout' element={<Payouts/>}/>
+            <Route path='/my-account' element={<MyAccount/>}/>
             </Routes>
             </div>
             </div>

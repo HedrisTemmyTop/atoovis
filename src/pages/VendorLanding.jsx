@@ -63,7 +63,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit
         // className=" mode"
       > 
 
-      <SignUp/>
+      <SignIn/>
      
       </Modal>
         </div>

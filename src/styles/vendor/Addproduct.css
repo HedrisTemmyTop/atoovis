@@ -1,0 +1,353 @@
+.ppr{
+    display: flex;
+    margin: 20px;
+    width: 80vw;
+    justify-content: space-between;
+}
+.circ{
+    display: none;
+}
+.nave{
+    display: none;
+}
+.upl{
+    background: #F6F8F8;
+    border-radius: 12px;
+    width: 200px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+.opl{
+    display: grid;
+    grid-template-columns   : 1fr 1fr 1fr 1fr;
+}
+.upl select{
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    border: none;
+    position: absolute;
+    margin-top: -9%;
+    margin-left: 4%;
+    
+}
+.upl p{
+    text-align: center;
+}
+.upl img{
+    width: 64px;
+    height: 64px;
+}
+.upl span{
+    color: red;
+}
+.cont{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 53px;
+    width: 900px;
+    height: 60px;
+    background: #4CC5D2;
+    border-radius: 100px;
+    color: #fff;
+    }
+    .contt{
+        width: 270px;
+        height: 66px;
+        border: 0.5px solid #4CC5D2;
+        border-radius: 100px;
+        outline: none;
+        padding: 10px;
+        color: #4CC5D2;
+        margin-right: 0px; 
+    }
+.exist{
+    wiidth: auto;
+    background: #FFFFFF;
+    border: 0.2px solid #4CC5D2;
+    border-radius: 27px;
+    height: auto;
+    padding: 30px;
+}
+.exist h1{
+    width: 495px;
+    text-align: left;
+    color: #000;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+}
+.exist p{
+    width: 495px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 10px 0;
+}
+.exist h4{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+}
+.ssr{
+    display: flex;
+    justify-content: space-between;
+        border: solid 1px #1B5958;
+        background: #fff;
+        width: 495px;
+        height: 58px;
+        border-radius: 20px;
+        color: #333;
+        margin-top: 20px;
+        padding-left: 10px;
+        border: 1px solid #D0D1D1;
+}
+.ssr p{
+    color:#fff;
+    background: #4CC5D2;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    width: 142px;
+}
+.ssr input{
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+.sss{
+    color: #000;
+    width: 20px;
+    height:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.ssr h5{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 20px 0;
+}
+.labe, .labeb{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+.llab{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    width: 495px;
+}
+.labe input, select{
+    width: 495px;
+    height: 66px;
+    border: 0.5px solid #757E7E;
+    border-radius: 20px;
+    outline: none;
+    padding: 10px;
+}
+.labeb input, select{
+    width: 240px;
+    height: 66px;
+    border: 0.5px solid #757E7E;
+    border-radius: 20px;
+    outline: none;
+    padding: 10px;
+}
+.labe label {
+    position: absolute;
+    margin-top: -10px;
+    background: #fff;
+    margin-left: 20px;
+}
+.labee{
+    width: 495px;
+    height: 66px;
+    background: #4CC5D2;
+    border-radius: 100px;
+    outline: none;
+    padding: 10px;
+    color: #fff;
+}
+.labeee{
+    width: 155px;
+    height: 66px;
+    border: 0.5px solid #4CC5D2;
+    border-radius: 100px;
+    outline: none;
+    padding: 10px;
+    color: #4CC5D2;
+    margin-right: 20px;
+}
+.labe span{
+    color: red;
+}
+.labe textarea{
+    width: 495px;
+    height: 150px;
+    background: #F6F8F8;
+    border: 0.5px solid #757E7E;
+    border-radius: 20px;
+    padding: 15px;
+}
+.addv{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 20px;
+}
+.addv input, select{
+    width: 495px;
+    height: 66px;
+    background: #F6F8F8;
+    border: 0.5px solid #757E7E;
+    border-radius: 20px;
+    padding: 0 10px;
+    
+}
+.addv label{
+    position: absolute;
+    margin-top: -2%;
+    background: #fff;
+    margin-left: 20px;
+    padding: 0 5px;
+}
+
+
+@media (max-width: 450px) {
+    .cot{
+        display: none;
+    }
+    .ppr{
+        display: flex;
+        margin: 0px;
+        width: 80vw;
+        justify-content: space-between;
+    }
+    .exist{
+        wiidth: auto;
+        background: #FFFFFF;
+        border: none;
+        border-radius: 0px;
+        height: auto;
+        padding: 10px;
+    }
+  
+    .exist p{
+        width: 340px;
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 500;
+        color: #000;
+    }
+    .labe input, select{
+        width: 343px;
+    }
+    .ses{
+        display: none;
+    }
+   .labee{
+        width: 343px;
+   }
+   .as  {
+    display: none;
+   }
+   .labe textarea{
+    width: 343px;
+    height: 150px;
+}
+.labeb input, select{
+    width: 168px;
+}
+.llab{
+    width: 343px;
+}
+.cont{
+    width: 343px;
+    }
+    .contt{
+        width: 170px;
+    }
+    .waw{
+        width: 343px;
+    }
+    .opl{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 346px;
+    }
+    .upl{
+        background: #F6F8F8;
+        border-radius: 12px;
+        width: 160px;
+        height: 154px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 24px;
+    }
+    .upl select{
+        width: auto;
+        height: auto;
+        border-radius: 0;
+        border: none;
+        position: absolute;
+        margin-top: -30%;
+        margin-left: 4%;
+        
+    }
+    .circ{
+        position: absolute;
+    }
+    .cir{
+        width: 343px;
+        display: block;
+    }
+    .nave{
+        display: flex;
+        width: 100vw    ;
+        overflow-x: scroll;
+        margin-top: -10px;
+    }
+    .nave h2{
+        font-size: 14px;
+        width: 100px;
+        color: #757E7E;
+    }
+    .addv{
+        display: flex;
+        flex-direction: column;
+        margin: 20px 10px;
+    }
+    .addv input, select{
+        width: 303px;
+        height: 66px;
+        background: #F6F8F8;
+        border: 0.5px solid #757E7E;
+        border-radius: 30px;
+        padding: 0 10px;
+        
+        
+    }
+   
+}

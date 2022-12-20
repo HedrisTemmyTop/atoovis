@@ -47,7 +47,7 @@ const Identity =({setValue})=>{
           borderRadius: 100,
           borderColor: '#4CC5D2',
           marginTop: 20,
-          color: '#4CC5D2',
+          color: '#4CC5D2'
           }}>Previous</button>
            <button className="savebtn2" onClick={()=> setValue(10)} style={{background: '#4CC5D2',
           color: '#fff',

@@ -1,52 +1,13 @@
 import React, {useState, useEffect} from "react";
-import  '../../styles/VendorDash/Transaction.css'
-import {buttons} from './Data';
-import { getPokemon, filterPokemon } from "./Services";
-import Toggle from './Toggle'
-import {BiPlus} from 'react-icons/bi'
-import { Link } from "react-router-dom";
-const Product = () =>{
+import { getPokemon, filterPokemon } from "./TableControl";
 
+const Table = ()=>{
     const [filtredPokemon, setFiltredPokemon] = useState(null);
-  useEffect(() => {
-    setFiltredPokemon(getPokemon());
-  }, []);
-
-  function handlePokemon(e) {
-    let typePokemon = e.target.value;
-    typePokemon !== "all"
-      ? setFiltredPokemon(filterPokemon(typePokemon))
-      : setFiltredPokemon(getPokemon());
-  }
-
+    useEffect(() => {
+      setFiltredPokemon(getPokemon());
+    }, []);
     return(
-     
-                    <div className="contain">
-
-        <div className="filter">
-         <div style={{display: 'flex'}}>
-         {buttons &&
-        buttons.map((type, index) => (
-          <>
-            <button key={index} value={type.value} onClick={handlePokemon} className="name">
-              {type.name}
-            </button>
-          </>
-        ))}
-        <div style={{display: 'flex', borderColor: '#4CC5D2', borderRadius: 100, width: 107, height: 40, cursor: 'pointer', color:'#4CC5D2', borderWidth: 1, background: '#fff', alignItems: 'center', justifyContent: 'center'}}>
-            <BiPlus/>
-            <p>Export</p>
-        </div>
-         </div>
-            <div className="filt">
-            <div className="overflow-x-auto">
-                <div style={{display: 'flex', justifyContent: 'space-between'}}>
-                <h1>Product Inventory</h1>
-                <div className="pps">
-                <button className="spp">Promote Products</button>
-                <Link to="/sidebar/add-product"><button className="psp"> <BiPlus/> <p>Add Product</p></button></Link>
-                </div>
-                </div>
+        <div className="overflow-x-auto">
                 <div className="p-1.5 w-full inline-block align-middle">
                     <div className="overflow-hidden border rounded-lg">
                         <table className="min-w-full divide-y divide-gray-200">
@@ -56,25 +17,25 @@ const Product = () =>{
                                         scope="col"
                                         className="px-2 py-1   "
                                     >
-                                        S/N
+                                       Size
                                     </th>
                                     <th
                                         scope="col"
                                         className="px-2 py-1 text-xs font-bold text-center text-gray-500  "
                                     >
-                                        Name
+                                       Seller SKU
                                     </th>
                                     <th
                                         scope="col"
                                         className="px-2 py-3 text-xs font-bold text-center text-gray-500  "
                                     >
-                                        SKU
+                                        EAN/UPC/ISBN
                                     </th>
                                     <th
                                         scope="col"
                                         className="px-2 py-3 text-xs font-bold text-center text-gray-500"
                                     >
-                                        Created
+                                        Quantity
                                     </th>
                                     <th
                                         scope="col"
@@ -86,7 +47,7 @@ const Product = () =>{
                                         scope="col"
                                         className="px-2 py-3 text-xs font-bold text-center text-gray-500 "
                                     >
-                                       Actual Price
+                                        Price
                                     </th>
                                     <th
                                         scope="col"
@@ -98,21 +59,15 @@ const Product = () =>{
                                         scope="col"
                                         className="px-2 py-3 text-xs font-bold text-center text-gray-500 "
                                     >
-                                        Subsidize Price
+                                       Start Date
                                     </th>
                                     <th
                                         scope="col"
                                         className="px-2 py-3 text-xs font-bold text-center text-gray-500 "
                                     >
-                                        Available
+                                        End Date
                                     </th>
-                                    <th
-                                        scope="col"
-                                        className="px-2 py-3 text-xs font-bold text-center text-gray-500  "
-                                    >
-                                         status
-                                    </th>
-                                   
+                                 
                                 </tr>
                             </thead>
                             {filtredPokemon &&
@@ -122,26 +77,23 @@ const Product = () =>{
           <tr >
             <td className="px-2 py-2 text-sm ">
          
-                <input type="checkbox" />
+                <select name="" id="" style={{width: 'auto', height: 20, borderRadius: 0}}>
+                    <option value="">EU 1</option>
+                </select>
                 
    
             </td>
             <td className="px-6 py-2 text-sm font-medium text-center text-gray-800 whitespace-nowrap flex-wrap">
          
              
-           <p className="new">{type.name}</p>
+           <p className="new">{type.sku}</p>
             
             </td>
+          
             <td className="px-6 py-2 text-sm font-medium text-center text-gray-800 whitespace-nowrap">
          
              
-           <p>{type.sku}</p>
-            
-            </td>
-            <td className="px-6 py-2 text-sm font-medium text-center text-gray-800 whitespace-nowrap">
-         
-             
-           <p>{type.created}</p>
+           <p>{type.status}</p>
             
             </td>
             <td className="px-6 py-2 text-sm font-medium text-center text-gray-800 whitespace-nowrap">
@@ -167,64 +119,28 @@ const Product = () =>{
           <td className="px-6 py-2 text-sm font-medium text-center text-gray-800 whitespace-nowrap">
          
              
+         <p>{type.created}</p>
+         
+          
+          </td>
+          <td className="px-6 py-2 text-sm font-medium text-center text-gray-800 whitespace-nowrap">
+         
+             
          <p>{type.delivered}</p>
          
           
           </td>
-          <td className="px-6 py-2 text-sm font-medium text-center text-gray-800 whitespace-nowrap">
-         
-             
-         <p>{type.payout}</p>
-         
-          
-          </td>
         
-          <td className="px-6 py-2 text-sm font-medium text-center text-gray-800 whitespace-nowrap">
-         
-             
-         {/* <p>{type.payout}</p> */}
-         <Toggle/>
-         
-          
-          </td>
-          <td
-                                        scope="col"
-                                        className="px-2 py-3 text-xs font-bold text-center text-gray-500  "
-                                    >
-                                         <select name="" id="" className="sel">
-                                            <option value="">...</option>
-                                            <option value="">View Details</option>
-                                            <option value="">Edit Details</option>
-                                            <option value="">Delete Product </option>
-                                            <option value="">Restore Shop Version</option>
-                                            <option value="">Copy Product</option>
-                                         </select>
-                                    </td>
             
           </tr>
           </tbody>
         ))} 
-                                    {/* </td>
-                                   
-                                </tr> */}
-                              
-                                
-                            {/* </tbody> */}
+                                  
                         </table>
                     </div>
                 </div>
             </div>
-        </div>
-      {/* {filtredPokemon &&
-        filtredPokemon.map(type => (
-          <ul key={type.id}>
-            <li>{type.name}</li>
-          </ul>
-        ))} */}
-        </div>
-                    </div>
-    
     )
 }
 
-export default Product
+export default Table

@@ -51,7 +51,8 @@ const SidebarHeader = () =>{
         </div>
 
         {/* mobile  */}
-        <div className="mob-ile">
+      <div className="file">
+      <div className="mob-ile">
             <div style={{display: 'flex', alignItems: 'center'}}>
                
                 <button onClick={handleToggle}>
@@ -71,6 +72,7 @@ const SidebarHeader = () =>{
                     <img src={profile} alt="" />
                 </div>
             </div>
+            
             <div className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>
                     <div className="rec">
                         <div style={{display:'flex',}}>
@@ -137,6 +139,7 @@ const SidebarHeader = () =>{
                 </li>
 
                 </ul>
+                
 
                 <Routes>
             <Route path='/' element={<Dashboard/>}/>
@@ -149,7 +152,15 @@ const SidebarHeader = () =>{
             <Route path='/settings/*' element={<Settings/>}/>
             </Routes>
             </div>
+            
         </div>
+        <div className="ss">
+        <AiOutlineSearch  className='sss'/>
+            <input type="text" name="" id="" placeholder="Search Products" />
+            <p>Search</p>
+        </div>
+      </div>
+        
         </div>
     )
 }

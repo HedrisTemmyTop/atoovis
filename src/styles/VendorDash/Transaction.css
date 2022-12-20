@@ -5,9 +5,35 @@
     flex-direction: column;
     
 }
+.pps{
+    display: flex;
+}
+.spp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 162px;
+    height: 40px;
+    border:solid 1px #4CC5D2;
+    border-radius: 100px;
+    color: #4CC5D2;
+    margin-right: 10px;
+
+}
+.psp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 162px;
+    height: 40px;
+    background: #4CC5D2;
+    border-radius: 100px;
+    color: #fff;
+
+}
 .sel{
     border: none;
-    width: 10px;
+    width: auto;
 }
 .sel option{
     border: none;

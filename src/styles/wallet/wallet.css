@@ -1,0 +1,54 @@
+.crow{
+    width: 570px;
+    height: 171px;
+    background: #fff;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.jointt{
+    display: flex;
+    justify-content: space-between;
+    width: 70vw;
+    margin: 30px;
+}
+.crow h3{
+    font-size: 16px;
+    line-height: 17px;
+    padding-bottom: 12px;
+}
+.crow h1{
+    color: #4CC5D2;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 30px;
+}
+.bott{
+    background: #9A9FBF;
+    width: 500px;
+    margin-left: 30px;
+    border-radius: 8px;
+    color: #000;
+}a{
+    outline: none;
+    border: none;
+}
+.wit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.wit button{
+    background: #4CC5D2;
+    border-radius: 30px;
+    width: 170px;
+    height: 48px;
+    color: #fff;
+    font-family: lato;
+}

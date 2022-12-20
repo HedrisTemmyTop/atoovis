@@ -86,7 +86,7 @@ selected products</p>
                 </button>
             </form>
             <div className="account">
-                <p>Don’t have an account?<a href="">Sign in</a></p>
+                <p>Already have an account?<a href="">Sign in</a></p> 
             </div>
         </div>
     )
