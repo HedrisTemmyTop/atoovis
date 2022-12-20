@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux'
 const initialState = {
   access: localStorage.getItem("access"),
   refresh: localStorage.getItem("refresh"),
-  isAuthenticated: null || localStorage.getItem("access"),
+  isAuthenticated: null,
   user: null,
   error:null,
   isLoading: null,

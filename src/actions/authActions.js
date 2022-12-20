@@ -8,7 +8,7 @@ import {
 } from "../slices/userSlice";
 import { apiEndpointURL } from "../services/config";
 
-export const login = (loginCredentials) => async (dispatch) => {
+export const login = (loginCredentials, history) => async (dispatch) => {
   const body = JSON.stringify(loginCredentials);
   try {
     dispatch(loginRequest());
@@ -25,10 +25,14 @@ export const login = (loginCredentials) => async (dispatch) => {
       dispatch(failedLogin(data.msg));
     }
     else{
-      dispatch(loginSuccess(data.user)) 
+      dispatch(loginSuccess(data.user))
+      if(loginCredentials.type == 'vendor'){
+        history(`/sidebar`);
+      }
     }
     // dispatch(loginSuccess(data.user));
     localStorage.setItem("access", data.acessToken);
+    localStorage.setItem("userId", data.user._id);
   } catch (error) {
     dispatch(failedLogin(error));
 
@@ -45,7 +49,15 @@ export const signup = (signupCredentials) => async (dispatch) => {
       headers: { 'Content-Type': 'application/json' },
       body: body
     };
-    const response = await fetch(`${apiEndpointURL}/auth/buyer/signup`, requestOptions);
+    let response = null
+    if (signupCredentials.type === 'vendor') {
+      response = await fetch(`${apiEndpointURL}/auth/vendor/signup`, requestOptions);
+    }
+    else{
+      response = await fetch(`${apiEndpointURL}/auth/buyer/signup`, requestOptions);
+    }
+
+
     const data = await response.json();
     console.log(response.status, "code")
     console.log(data)
