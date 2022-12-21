@@ -25,7 +25,7 @@ const MyAccount = ()=> {
             </div> */}
 
             <div className="bott" style={{marginTop: 40}}>
-                <button style={{color: '#4CC5D2', background: 'white'}}><Link to='/sidebar/my-account'>My Account</Link></button>
+                <button style={{color: '#4CC5D2', background: 'white',}}><Link to='/sidebar/my-account'>My Account</Link></button>
                 <button >
                     <Link to='/sidebar/wallet'>Withdrawals</Link>
                 </button>

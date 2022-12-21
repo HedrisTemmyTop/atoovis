@@ -18,8 +18,8 @@ const Refunds = ()=> {
                 </div>
 
                 <div className="crow">
-                    <h3>Escrow Balance</h3>
-                    <h1>₦500,250</h1>
+                    <h3>Wallet Balance</h3>
+                    <h1>₦393,2500</h1>
                 </div>
             </div>
 

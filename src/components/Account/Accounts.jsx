@@ -22,10 +22,16 @@ const Accounts = () =>{
         <div className="filter">
      
             <div className="filt">
-            <div className="overflow-x-auto">
+            <div className="overflow-x-scroll">
+            <div className="wit">
                 <h1>Bank Accounts</h1>
+                <div className="bankd">
+                <button className="buttoon">Add Bank Account</button>
+                <button className="buttonn">Withdraw Money</button>
+                </div>
+                </div>
                 <div className="p-1.5 w-full ">
-                    <div className="overflow-hidden border rounded-lg">
+                    <div className="overflow-scroll border rounded-lg">
                         <table className="min-w-full">
                             <thead className="bg-gray-50">
                                 <tr>

@@ -73,7 +73,7 @@ const NewProduct =({setValue})=>{
                              <form action="">
                              <div className="labe">
                                     <label htmlFor="">Product Line*</label>
-                                    <select name="" id="" required></select>
+                                    <select name="" id="" required className="sell"></select>
                                 </div>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                      Dictum aliquam molestie at neque est. Quam nunc,

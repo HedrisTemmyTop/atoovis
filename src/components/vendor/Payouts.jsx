@@ -36,6 +36,8 @@ const Payouts = ()=> {
             <div>
                 <Payout/>
             </div>
+
+            
         </div>
     )
 }

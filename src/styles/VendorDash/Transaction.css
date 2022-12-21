@@ -109,14 +109,41 @@ font-size: 12px;
 .new{
     color: #337FEF;
 }
-
+.prod {
+    display: flex;
+    align-items: center;
+    background: #4CC5D2;
+    border-radius: 100px;
+    justify-content: center;
+    color: #fff;
+}
+.inet{
+    display: flex;
+    align-items: center;
+    
+}
+.prom{
+    border: solid 1px #4CC5D2;
+    color: #4CC5D2;
+    width: auto;
+    font-size: 12px; 
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    width: 142px;
+    justify-content: center;
+    margin-right: 10px;
+}
 @media (max-width: 450px){
     .filt{
         background: #fff;
         padding: 20px;
         border-radius: 20px;
         margin: 20px;
-        width: 80%;
+        width: 100%;
         overflow-x: scroll;
+    }
+   .filt p{
+        color: #000;
     }
 }

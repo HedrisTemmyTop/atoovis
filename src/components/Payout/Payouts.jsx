@@ -2,7 +2,35 @@ import React, {useState, useEffect} from "react";
 import  '../../styles/VendorDash/Transaction.css'
 import { getPokemon, filterPokemon } from "./Service"; 
 import '../../styles/wallet/wallet.css'
+import Modal from 'react-modal';
+import MakeWithdrawal from "../Withdrawal/MakeWithdrawal";
+import ConfirmWithdrawal from "../Withdrawal/ConfirmWithdrawal";
+import Success from "../Withdrawal/Success"
 const Payouts = () =>{
+    const customStyles = {
+        content: {
+          top: '50%',
+          left: '50%',
+          right: 'auto',
+        padding: 0,
+          bottom: 'auto',
+          borderRadius: 8,
+          marginRight: '-50%',
+         
+          transform: 'translate(-50%, -50%)',
+        },
+      };
+      let subtitle;
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+
+  function closeModal() {
+    setIsOpen(false);
+  }
 
     const [filtredPokemon, setFiltredPokemon] = useState(null);
   useEffect(() => {
@@ -25,12 +53,12 @@ const Payouts = () =>{
             <div className="filt">
             <div className="wit">
                 <h1>Payout</h1>
-                <button>Withdraw Money</button>
+                <button className="buttonn" onClick={openModal}>Withdraw Money</button>
                 </div>
-            <div className="overflow-x-auto">
+            <div className="overflow-x-scroll">
                
                 <div className="p-1.5 w-full ">
-                    <div className="overflow-hidden border rounded-lg">
+                    <div className="overflow-scroll border rounded-lg">
                         <table className="min-w-full">
                             <thead className="bg-gray-50">
                                 <tr>
@@ -114,6 +142,21 @@ const Payouts = () =>{
         </div>
      
         </div>
+        <Modal
+        isOpen={modalIsOpen}
+        // onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+        // className=" mode"
+      > 
+        
+          {/* <MakeWithdrawal/>   */}
+          {/* <ConfirmWithdrawal/>      */}
+          <Success/>   
+     
+     
+      </Modal>
                     </div>
     
     )

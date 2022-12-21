@@ -83,7 +83,7 @@ const Create =({setValue})=>{
                              <form action="">
                              <div className="labe">
                                     <label htmlFor="">Category*</label>
-                                    <select name="" id="" required ></select>
+                                    <select name="" id="" required className="sell" ></select>
                                 </div>
                                 <div className="labe">
                                     <label htmlFor="">Name of Product*</label>

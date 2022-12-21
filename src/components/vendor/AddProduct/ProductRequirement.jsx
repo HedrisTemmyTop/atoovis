@@ -138,7 +138,7 @@ const ProductRequirement =({setValue})=>{
                                     <div className="llab">
                                      <div className="labeb labe">
                                     <label htmlFor="">Gender</label>
-                                    <select name="" id="">
+                                    <select name="" id="" className="selll">
                                         <option value="">Select Gender</option>
                                         <option value="">Male</option>
                                         <option value="">Female</option>
@@ -146,7 +146,7 @@ const ProductRequirement =({setValue})=>{
                                 </div>
                                 <div className="labeb labe">
                                     <label htmlFor="">Heel Type</label>
-                                   <select name="" id="">
+                                   <select name="" id="" className="selll">
                                     <option value="">Select type</option>
                                    </select>
                                 </div>
@@ -155,13 +155,13 @@ const ProductRequirement =({setValue})=>{
                                      <div className="llab">
                                      <div className="labeb labe">
                                     <label htmlFor="">Size Type</label>
-                                    <select name="" id="">
+                                    <select name="" id="" className="selll">
                                     <option value="">Select seasons</option>
                                     </select>
                                 </div>
                                 <div className="labeb labe">
                                     <label htmlFor="">Size Type</label>
-                                    <select name="" id="">
+                                    <select name="" id="" className="selll">
                                         <option value="">Size Type</option>
                                     </select>
                                 </div>
@@ -170,7 +170,7 @@ const ProductRequirement =({setValue})=>{
                                      <div className="llab">
                                      <div className="labeb labe">
                                     <label htmlFor="">Sole Type</label>
-                                    <select name="" id="">
+                                    <select name="" id="" className="selll">
                                         <option value="">Sole Type</option>
                                     </select>
                                 </div>

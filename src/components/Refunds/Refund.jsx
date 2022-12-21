@@ -25,7 +25,7 @@ const Refund = () =>{
             <div className="overflow-x-auto">
                 <h1>Refunds</h1>
                 <div className="p-1.5 w-full ">
-                    <div className="overflow-hidden border rounded-lg">
+                    <div className="overflow-scroll border rounded-lg">
                         <table className="min-w-full">
                             <thead className="bg-gray-50">
                                 <tr>

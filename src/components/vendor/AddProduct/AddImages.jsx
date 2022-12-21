@@ -237,7 +237,7 @@ const AddImages =({setValue, props})=> {
                                     </div>
                            
                              <div>
-                                    <button className="cont" onClick={()=> setValue(5)}>Finish and Sumit</button>
+                                    <button className="cont" onClick={()=> setValue(5)}>Finish and Submit</button>
                                 <div style={{marginTop: 20, display: 'flex', justifyContent: 'space-between'}} className="waw">
                                 <button className="contt as" onClick={()=> setValue(3)}>Previous</button>
                                 <button className="contt">Save as Draft</button>
