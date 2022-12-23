@@ -1,4 +1,4 @@
-import Reac, {useState} from "react";
+import React, {useState} from "react";
 import '../../../styles/auth/lab.css'
 import map from'../../../assets/images/Header/Rectangle 9117.png'
 import {MdLocationPin} from 'react-icons/md'
@@ -27,16 +27,16 @@ const BusinessDetail =({setValue}) => {
                     <label htmlFor="">CAC Registration Number</label>
                     <input type="text" />
                 </div>
-                <div className="lab" style={{marginLeft: -20,}}>
+                <div className="lab" >
                     <label htmlFor="">State / Region</label>
-                   <select name="" id="">
+                   <select name="" id="" className="selecct">
                     <option value=""></option>
                     <option value="">Federal Capital Territory</option>
                    </select>
                 </div>
-                <div className="lab" style={{marginLeft: -20,}}>
+                <div className="lab" >
                     <label htmlFor="">LGA</label>
-                   <select name="" id="">
+                   <select name="" id="" className="selecct">
                     <option value=""></option>
                     <option value="">Gwagwalada</option>
                    </select>
@@ -68,7 +68,7 @@ const BusinessDetail =({setValue}) => {
              color: '#fff',
              borderRadius: 100,
              marginTop: 20,
-             marginLeft: -20,
+             height: 60,
              }}
              className="startbtn"
              >Save and Continue</button>

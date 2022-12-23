@@ -34,13 +34,13 @@ const Verification =({setValue})=>{
           borderColor: '#4CC5D2',
           marginTop: 20,
           color: '#4CC5D2',
-          marginLeft: -20,
+          height: 60,
           }}>Previous</button>
            <button className="startbtn" onClick={()=> setValue(8)} style={{background: '#4CC5D2',
           color: '#fff',
           borderRadius: 100,
           marginTop: 20,
-          marginLeft: -20,
+          height: 60,
           }}>Save and Continue</button>
          </form>
             

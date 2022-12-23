@@ -8,6 +8,11 @@ const Transaction =()=>{
             <div className={styles.topnav}>
                 <p> / Transaction</p>
             </div>
+            <div className={styles.moll}>
+                        <h1 >Transaction</h1>
+                        <button style={{width: 168}} className={styles.thir}>Export</button>
+                    </div>
+            
             <div className={styles.content}>
               
                 <div className={styles.trans}>
@@ -23,11 +28,13 @@ const Transaction =()=>{
                     <h4>Last paid: 22/09/2022</h4>
                 </div>
               
-                <div className={styles.inn}>
+               <div className="thirt">
+               <div className={styles.inn}>
                     <p>Pending Orders</p>
                     <h1>₦992,750</h1>
                     <h4>All Time</h4>
                 </div>
+               </div>
               
             </div>
             <div>

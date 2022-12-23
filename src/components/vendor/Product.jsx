@@ -4,6 +4,7 @@ import {BiCategoryAlt} from 'react-icons/bi'
 import RealProduct from '../../components/Product/RealProduct'
 import { getAllProducts } from "../../slices/productSlice"
 import { useDispatch, useSelector } from "react-redux"
+import Products from '../../components/Product/Products'
 
 const Product =()=>{
     const dispatch = useDispatch()
@@ -21,9 +22,15 @@ const Product =()=>{
              <div className={styles.topnav}>
              <BiCategoryAlt/> <p>  / Products</p>
             </div>
-
-            <div>
+                    <div className={styles.moll}>
+                        <h1 >Product</h1>
+                        <button style={{width: 168}} className={styles.thir}>Export</button>
+                    </div>
+            <div className="duct">
                 <RealProduct products={data.product}/>
+                <div>
+                    <Products/>
+                </div>
             </div>
         </div>
     )

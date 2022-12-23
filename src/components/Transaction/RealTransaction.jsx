@@ -22,19 +22,26 @@ const Transaction = () =>{
                     <div className="contain">
 
         <div className="filter">
-           {buttons &&
-        buttons.map((type, index) => (
-          <>
-            <button key={index} value={type.value} onClick={handlePokemon} className="name">
-              {type.name}
-            </button>
-          </>
-        ))}
+        <div className="ind" style={{width: '100vw'}}>
+         {buttons &&
+            buttons.map((type, index) => (
+              <>
+                <button
+                  key={index}
+                  value={type.value}
+                  onClick={handlePokemon}
+                  className="name"
+                >
+                  {type.name}
+                </button>
+              </>
+            ))}
+         </div>
             <div className="filt">
             <div className="overflow-x-auto">
                 <h1>All Transactions</h1>
                 <div className="p-1.5 w-full inline-block align-middle">
-                    <div className="overflow-hidden border rounded-lg">
+                    <div className="overflow-scroll border rounded-lg">
                         <table className="min-w-full divide-y divide-gray-200">
                             <thead className="bg-gray-50">
                                 <tr>

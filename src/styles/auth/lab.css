@@ -3,6 +3,11 @@
     flex-direction: column;
     margin: 20px 0;
 }
+.laba{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
 .laby{
     display: flex;
     flex-direction: column;
@@ -14,7 +19,18 @@
     margin: 20px 0;
     align-items: center;
 }
-.lab input, select, option{
+.lab input,select{
+    width: 495px;
+    height: 66px;
+    background: #F6F8F8;
+    border: 0.5px solid #757E7E;
+    border-radius: 30px;
+    outline: none;
+    padding: 10px;
+    color: #000;
+
+}
+.selecct{
     width: 495px;
     height: 66px;
     background: #F6F8F8;
@@ -34,7 +50,9 @@
     outline: none;
     padding: 10px;
     color: black;
+    
 }
+
 .lab label{
     position: absolute;
     margin-top: -10px;
@@ -43,6 +61,7 @@
     color: #000;
 
 }
+
 .laby label{
     position: absolute;
     margin-top: -10px;
@@ -107,6 +126,12 @@
         margin-left: -20px;
         
     }
+    .selecct{
+        width: 320px;
+        height: 56px;
+        margin-left: -20px;
+    
+    }
     .labbb input{
         width: 235px;
         height: 56px;
@@ -131,7 +156,19 @@
         font-size: 24px;
     }
     .savebtn{
-        width: 295px;
+        width: 160px;
         height: 56px;
+    }
+    .laby input{
+        width: 160px;
+        height: 66px;
+        background: #F6F8F8;
+        border: 0.5px solid #757E7E;
+        border-radius: 30px;
+        outline: none;
+        padding: 10px;
+        color: black;
+        margin-left: -20px;
+        
     }
 }

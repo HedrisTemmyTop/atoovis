@@ -7,9 +7,9 @@ const SellerDetail =({setValue})=>{
         <div className="start2" style={{ height: 'auto', borderRadius:27, background: '#fff', alignItems: 'left', display: 'flex', flexDirection: 'column'}}>
         <h1 style={{marginBottom: 10, textAlign: 'left', color: '#000', fontSize: 32}}>Seller Details</h1>
          <form action="">
-             <div className="lab" style={{marginLeft: -20,}}>
+             <div className="lab" >
                  <label htmlFor="">Country</label>
-                 <select name="" id="">
+                 <select name="" id="" className="selecct">
                  <option value=""> Select a Country</option>
                  <option value="">Nigeria</option>
                 </select>
@@ -72,13 +72,13 @@ const SellerDetail =({setValue})=>{
           borderColor: '#4CC5D2',
           marginTop: 20,
           color: '#4CC5D2',
-          marginLeft: -20,
+          height: 60,
           }}>Previous</button>
            <button onClick={()=> setValue(5)} className="startbtn" style={{background: '#4CC5D2',
           color: '#fff',
           borderRadius: 100,
           marginTop: 20,
-          marginLeft: -20,
+          height: 60,
           }}>Save and Continue</button>
          </form>
             

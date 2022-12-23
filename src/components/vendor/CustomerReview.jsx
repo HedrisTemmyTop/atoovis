@@ -10,6 +10,10 @@ const CustomerReview = () =>{
              <div className={styles.topnav}>
                 <p> / Transactions</p>
             </div>
+            <div className={styles.moll}>
+                        <h1 >Customer Reviews</h1>
+                        {/* <button style={{width: 168}} className={styles.thir}>Print Return Form</button> */}
+                    </div>
             <div className={styles.transs}>
                 <div className={styles.inni}>
                     <p>Ratings</p>

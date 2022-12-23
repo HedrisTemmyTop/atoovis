@@ -5,6 +5,13 @@
     flex-direction: column;
     
 }
+.contain1{
+    margin:2%;
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    
+}
 .pps{
     display: flex;
 }
@@ -134,16 +141,78 @@ font-size: 12px;
     justify-content: center;
     margin-right: 10px;
 }
+.vent{
+    display: flex;
+    justify-content: space-between;
+}
+.ex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px #4CC5D2;
+    width: 107px;
+    height: 40px;
+    border-radius: 100px;
+    cursor: pointer;
+    background: #fff;
+
+}
+.indi{
+    display: flex;
+    justify-content: space-between;
+    width: 95vw;
+}
+.duct{
+    display: flex;
+}
+
 @media (max-width: 450px){
     .filt{
         background: #fff;
         padding: 20px;
         border-radius: 20px;
-        margin: 20px;
-        width: 100%;
+        margin: 0px;
+        width: 95vw;
         overflow-x: scroll;
     }
    .filt p{
         color: #000;
+    }
+    .vent{
+        display: flex;
+        flex-direction: column;
+    }
+    .name{
+        width: auto;
+        font-size: 10px;
+        width: 100px;
+    }
+   
+    .ind{
+        display: flex;
+        overflow-x: scroll;
+        grid-gap: 10px;
+        font-size: 10px;
+        margin-bottom: 30px;
+    }
+    .indi{
+        display: flex;
+        justify-content: space-between;
+    }
+    .ex{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid 1px #4CC5D2;
+        width: 67px;
+        height: 40px;
+        border-radius: 100px;
+        cursor: pointer;
+        background: #fff;
+    
+    }
+    .duct{
+        display: flex;
+        flex-direction: column-reverse;
     }
 }

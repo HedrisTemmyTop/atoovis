@@ -9,6 +9,9 @@
     margin-top: -10px;
     padding: 0 20px;
 }
+.moll{
+    display: none;
+}
 .topnav p{
     padding-left: 5px;
     font-family: lato;
@@ -318,7 +321,7 @@ margin-left: 15%;
     } 
     .inni{
         background: #fff;
-        padding: 30px;
+        padding: 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -335,7 +338,7 @@ margin-left: 15%;
     }
     .inn h4{
         font-weight: 300;
-        font-size: 14px;
+        font-size: 10px;
         font-family: lato;
     }
     .inn h1{
@@ -374,7 +377,10 @@ margin-left: 15%;
         display: flex;
         flex-direction: column;
     }
-
+    .salle{
+        display: flex;
+        flex-direction: column;
+    }
     .sall .innn{
         background: #fff;
         padding: 10px 10px;
@@ -386,11 +392,15 @@ margin-left: 15%;
         border-radius: 12px;
         margin-bottom: 20px;
     }
+ 
     .sall h1{
         font-size: 20px;
     }
     .sal h1{
         font-size: 20px;
+    }
+    .salle p{
+        color: #fff;
     }
     .sal .innn{
         background: #fff;
@@ -450,4 +460,58 @@ margin-left: 15%;
         .topnav{
             display: none;
         }
+        .nev{
+            display: flex;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .innn p{
+            color: #fff;
+        }
+        .sall{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+        }
+        .sale{
+            display: flex;
+            flex-direction: column;
+         
+        }
+        .sal .inn{
+            width: 343px;
+            margin-top: -100%;
+        }
+        .sal .inn h1{
+            font-size: 32px;
+        }
+        .moll {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .moll h1{
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            text-align: left;
+            color: #000;
+            
+        }
+
+        .thir{
+            border: solid 1px #4CC5D2;
+            border-radius: 100px;
+            color: #4CC5D2;
+        }
+        .transs{
+            display: grid;
+            grid-template-columns:1fr 1fr;
+            padding: 10px;
+            margin: 20px;
+            grid-gap: 10px;
+         
+        }
+        
 }

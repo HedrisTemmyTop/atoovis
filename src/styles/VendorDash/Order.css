@@ -80,6 +80,10 @@
         justify-content: center;
         align-items: center;
         margin: 10px;
+        padding: 10px;
+    }
+    .thirt{
+        display: none;
     }
     .thirtyy{
         width: 343px;
@@ -92,7 +96,10 @@
         align-items: center;
         margin: 10px;
     }
-
+    .thirty p{
+        color: #000;
+        text-align: center
+    }
     .name2{
         font-family: 'Lato';
         font-style: normal;

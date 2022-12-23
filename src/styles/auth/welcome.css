@@ -19,6 +19,9 @@
 .startbtn{
     width: 475px;
 }
+.starttbtn{
+    width: 475px;
+}
 .start1 h1{
     font-size: 32px;
     text-align: left;
@@ -65,9 +68,15 @@ iframe{
         color: #000;
         padding-left: 0px;
     }
+    .starttbtn{
+        width: 320px;
+        height: 56px;
+        margin-left: 10px;
+    }
     .startbtn{
         width: 320px;
         height: 56px;
+        margin-left: -20px;
     }
     .start1 h1{
         font-size: 20px;

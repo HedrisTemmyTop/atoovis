@@ -35,7 +35,8 @@
     border-radius: 8px;
     color: rgba(154, 159, 191, 0.75);
     overflow-x: scroll;
-}a{
+}
+a{
     outline: none;
     border: none;
 }

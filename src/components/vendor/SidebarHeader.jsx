@@ -15,6 +15,7 @@ import Orders from './Orders';
 import Settings from './Settings'
 import Product from './Product';
 import Getting from './Auth/Getting'
+import Wallet from "./Wallet";
 import {AiOutlineDown} from 'react-icons/ai'
 const SidebarHeader = () =>{
 
@@ -119,7 +120,7 @@ const SidebarHeader = () =>{
                 </li>
                 <li className='link'>
                 <TbWorld/>
-                    <Link to="/sidebar"><p>Wallet</p></Link>
+                    <Link to="/sidebar/wallet"><p>Wallet</p></Link>
                 </li>
                 <li className='link'>
                 <TbWorld/>
@@ -150,12 +151,13 @@ const SidebarHeader = () =>{
             <Route path='/delivery' element={<Delivery/>}/>
             <Route path='/order' element={<Orders/>}/>
             <Route path='/settings/*' element={<Settings/>}/>
+            <Route path='/wallet' element={<Wallet/>}/>
             </Routes>
             </div>
             
         </div>
         <div className="ss">
-        <AiOutlineSearch  className='sss'/>
+        <AiOutlineSearch  className='sss' style={{width: 60, height: 60}}/>
             <input type="text" name="" id="" placeholder="Search Products" />
             <p>Search</p>
         </div>

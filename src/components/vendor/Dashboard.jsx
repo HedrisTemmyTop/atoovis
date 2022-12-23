@@ -14,6 +14,9 @@ const Dashboard =()=> {
             <div className={styles.topnav}>
                 <p>/ Dashboard</p>
             </div>
+            <div className={styles.moll}>
+                        <h1 >Dashboard</h1>
+                    </div>
             <div className={styles.content}>
                 <div>
                     <div>

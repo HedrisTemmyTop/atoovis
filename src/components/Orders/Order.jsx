@@ -22,16 +22,21 @@ const Order = () =>{
                     <div className="contain">
 
         <div className="filter">
-           {buttons &&
-        buttons.map((type, index) => (
-          <>
-          
-           <button key={index} value={type.value} onClick={handlePokemon} className="name2">
-              {type.name}
-            </button>
-       
-          </>
-        ))}
+        <div className="ind" style={{width: '100vw'}}>
+         {buttons &&
+            buttons.map((type, index) => (
+              <>
+                <button
+                  key={index}
+                  value={type.value}
+                  onClick={handlePokemon}
+                  className="name"
+                >
+                  {type.name}
+                </button>
+              </>
+            ))}
+         </div>
             <div className="filt">
             <div className="overflow-x-auto">
                 <h1>Orders</h1>

@@ -10,6 +10,10 @@ const Orders = () =>{
              <div className={styles.topnav}>
                 <p> / Orders</p>
             </div>
+            <div className={styles.moll}>
+                        <h1 >Orders</h1>
+                        <button style={{width: 168}} className={styles.thir}>Print Return Form</button>
+                    </div>
 
             <div className='print'>
                 <div>
@@ -22,7 +26,7 @@ const Orders = () =>{
                 </div>
 
                 <div className='cancel'>
-                    <button>Print Return Form</button>
+                    <button className='thirt'>Print Return Form</button>
                     <div className='cancell'>
                     <div className='thirty'>
                         <h3>New Order</h3>

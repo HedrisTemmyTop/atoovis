@@ -19,10 +19,11 @@ const Product = ({ products }) => {
   }
 
   return (
-    <div className="contain">
+    <div className="contain1">
       <div className="filter">
-        <div style={{ display: "flex" }}>
-          {buttons &&
+        <div className="indi">
+         <div className="ind">
+         {buttons &&
             buttons.map((type, index) => (
               <>
                 <button
@@ -35,28 +36,15 @@ const Product = ({ products }) => {
                 </button>
               </>
             ))}
-          <div
-            style={{
-              display: "flex",
-              borderColor: "#4CC5D2",
-              borderRadius: 100,
-              width: 107,
-              height: 40,
-              cursor: "pointer",
-              color: "#4CC5D2",
-              borderWidth: 1,
-              background: "#fff",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <BiPlus />
-            <p>Export</p>
-          </div>
+         </div>
+          {/* <div className="ex">
+            <BiPlus style={{color: '#4CC5D2'}}/>
+            <p style={{color: '#4CC5D2'}}>Export</p>
+          </div> */}
         </div>
         <div className="filt">
           <div className="overflow-x-auto">
-            <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <div className="vent">
               <h1>Product Inventory</h1>
               <div className="inet">
                 <button className="prom">Promote Products</button>
@@ -64,14 +52,14 @@ const Product = ({ products }) => {
                   <Link to="/sidebar/add-product">
                   <button className="prod">
                   {" "}
-                  <BiPlus /> <p>Add Product</p>
+                  <BiPlus /> <p style={{color:'#fff'}}>Add Product</p>
                   </button>
                   </Link>
                 
               </div>
             </div>
             <div className="p-1.5 w-full inline-block align-middle">
-              <div className="overflow-hidden border rounded-lg">
+              <div className="overflow-scroll border rounded-lg">
                 <table className="min-w-full divide-y divide-gray-200">
                   <thead className="bg-gray-50">
                     <tr>
@@ -80,13 +68,13 @@ const Product = ({ products }) => {
                       </th>
                       <th
                         scope="col"
-                        className="px-2 py-1 text-xs font-bold text-center text-gray-500  "
+                        className="px-2 py-1 text-xs font-bold text-center text-gray-500 w-5"
                       >
                         Name
                       </th>
                       <th
                         scope="col"
-                        className="px-2 py-3 text-xs font-bold text-center text-gray-500  "
+                        className="px-2 py-3 text-xs font-bold text-center text-gray-500 w-5 "
                       >
                         SKU
                       </th>

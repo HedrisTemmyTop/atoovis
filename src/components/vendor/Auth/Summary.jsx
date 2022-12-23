@@ -175,18 +175,20 @@ const Summary =({setValue})=>{
             
             </div>
 
-             <button className="startbtn" onClick={()=> setValue(7)} style={{
+             <button className="starttbtn" onClick={()=> setValue(7)} style={{
           color: '#fff',
           borderRadius: 100,
           borderColor: '#4CC5D2',
           marginTop: 20,
           color: '#4CC5D2',
+          height: 60,
           }}>Previous</button>
            
-          <button className="startbtn" onClick={openModal} style={{background: '#4CC5D2',
+          <button className="starttbtn" onClick={openModal} style={{background: '#4CC5D2',
           color: '#fff',
           borderRadius: 100,
-          marginTop: 20
+          marginTop: 20,
+          height: 60
           }}>Submit</button>
         
             
@@ -211,13 +213,14 @@ const Summary =({setValue})=>{
                     <p>We have recieved your information and will 
                         reach out to you for further
                          clarification with 2 working days</p>
-                    <button className="startbtn" onClick={()=> setValue(9)} style={{background: '#4CC5D2',
+                    <button className="starttbtn" onClick={()=> setValue(9)} style={{background: '#4CC5D2',
           color: '#fff',
           borderRadius: 100,
-          marginTop: 20
+          marginTop: 20,
+          height: 60
           }}>Submit</button>
         </div>
-     
+
       </Modal>
      </div>
      
