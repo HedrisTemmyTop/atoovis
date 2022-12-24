@@ -12,7 +12,11 @@ import ForgotPassword from "./Auth/ForgotPassword"
 import ResetPassword from "./Auth/ResetPassword"
 import {BiCart} from 'react-icons/bi'
 import {IoMdNotificationsOutline} from 'react-icons/io'
+import { useDispatch, useSelector } from "react-redux";
+
 const Header = () => {
+  const auth = useSelector((state) => state.auth); //get state
+  const { user, isLoading, error, access } = auth;
 
     const customStyles = {
         content: {
@@ -27,7 +31,8 @@ const Header = () => {
         },
       };
       let subtitle;
-  const [modalIsOpen, setIsOpen] = React.useState(false);
+  
+  const [modalIsOpen, setIsOpen] = React.useState( access ? false : true);
 
   function openModal() {
     setIsOpen(true);
@@ -51,10 +56,10 @@ const Header = () => {
                 <button className="bts">Search</button>
             </div>
             <div className="left">
-                <div style={{display: 'flex', alignItems: 'center', marginRight: 30}} onClick={openModal}>
+                {!access &&<div style={{display: 'flex', alignItems: 'center', marginRight: 30}} onClick={openModal}>
                     <p>Sign In</p>
                     <IoMdNotificationsOutline width={20} height={20}/>
-                </div>
+                </div>}
                 <div style={{display: 'flex', alignItems: 'center'}}>
                     <p>My Cart</p>
                     <BiCart width={20} height={20}/>

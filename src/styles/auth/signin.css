@@ -196,3 +196,9 @@
             padding: 2px;
             z-index: 1;
 }
+
+.error_message{
+  color: red;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
