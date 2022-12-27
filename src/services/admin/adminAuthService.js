@@ -8,7 +8,21 @@ const fetchAllProducts = async () => {
         }
  
 }
+
+const createABusiness = async (data) => {
+    const response = await axios.post(`${apiEndpointURL}/business`, data)
+    console.log(response)
+    if (response.data) {
+        return response.data
+    }
+
+}
+
+
+
+
 const adminAuthService = {
-    fetchAllProducts
+    fetchAllProducts,
+    createABusiness
 }
 export default adminAuthService

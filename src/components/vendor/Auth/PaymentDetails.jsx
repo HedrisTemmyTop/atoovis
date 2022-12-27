@@ -36,16 +36,16 @@ const PaymentDetail = ({ setValue, inputs, onchange }) => {
           </div>
           <div className="lab">
             <label htmlFor="">Bank </label>
-            <select name="" id="" className="selecct">
+            <select name="bank" id="" className="selecct" onChange={onchange}>
               <option value="">Select Bank</option>
-              <option value="">Nigeria</option>
+              <option value="Access Bank">Access Bank</option>
             </select>
           </div>
           <div className="lab">
             <label htmlFor="">Payout Frequency </label>
-            <select name="bank" id="" className="selecct" onSelect={onchange}>
+            <select name="payout_frequency" id="" className="selecct" onChange={onchange}>
               <option value="">Select a payout period</option>
-              <option value="Nigeria">Nigeria</option>
+              <option value="7">7</option>
             </select>
           </div>
 

@@ -68,14 +68,14 @@ const BusinessDetail = ({ setValue, onchange, inputs }) => {
           <div className="lab">
             <label htmlFor="">State / Region</label>
             <select name="state" onChange={onchange} id="" className="selecct">
-              <option value="Lagos">Lagos</option>
+              <option value=""></option>
               <option value="Abuja">Federal Capital Territory</option>
             </select>
           </div>
           <div className="lab">
             <label htmlFor="">LGA</label>
-            <select name="lga" onSelect={onchange} id="" className="selecct">
-              <option value="Ikeja">Ikeja</option>
+            <select name="lga" onChange={onchange} id="" className="selecct">
+              <option value=""></option>
               <option value="Gwagwalada">Gwagwalada</option>
             </select>
           </div>

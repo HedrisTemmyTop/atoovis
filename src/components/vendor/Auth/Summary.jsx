@@ -2,7 +2,14 @@ import React, { useState } from "react";
 import "../../../styles/auth/summary.css";
 import Modal from "react-modal";
 import put from "../../../assets/images/Header/Group 39722 (1).png";
+import { checkCreatedBusiness } from "../../../slices/vendorSlice"
+import { useDispatch, useSelector } from "react-redux"
+
 const Summary = ({ setValue, data, fileData }) => {
+  const dispatch = useDispatch()  
+  const { business, isError, isLoading } = useSelector((state) => state.vendor)
+  const { user } = useSelector((state) => state.auth)
+
   const customStyles = {
     content: {
       top: "50%",
@@ -24,9 +31,6 @@ const Summary = ({ setValue, data, fileData }) => {
   function closeModal() {
     setIsOpen(false);
   }
-
-  console.log("data ====", data);
-  console.log("fileData ====", fileData);
 
   const {
     business_name,
@@ -60,6 +64,49 @@ const Summary = ({ setValue, data, fileData }) => {
     bank_statement,
     additonal_document,
   } = fileData;
+
+
+  const handleSubmitted = () => {
+    const data = {
+      vendorId: user,
+      businessName: business_name,
+      businessType: business_type,
+      cacNumber: cac_number,
+      state: state,
+      lga: lga,
+      country: seller_country,
+      residentialAddress: seller_address,
+      officailEmail: offical_email_address,
+      number:mobile_number,
+      storeName: storeName,
+      ups: ups,  
+     manufacural_or_brandOwnner:owner, 
+     trademark: "YES", 
+     accountNumber: accountNumber,
+     bank: bank,
+     accountName: accountName,
+     payoutFrequency: payout_frequency,
+     card_number: card_number,
+     expaireDate: expireDate,
+     cvv: cvv,
+     cacDocument: cac_document && cac_document[0].name,
+     validIDofBusinessOwner:business_owner_id && business_owner_id[0].name,
+     bankAccountStatement: bank_statement && bank_statement[0].name,
+     additionalDocument: additonal_document && additonal_document[0].name
+  }
+    console.log("data--", data)
+    dispatch(checkCreatedBusiness(data))
+    // setValue(9)
+
+
+  }
+
+  console.log("error", isError)
+  console.log("isLoading", isLoading)
+  console.log("business", business)
+
+  // console.log("data ====", data);
+  // console.log("fileData ====", fileData);
 
   return (
     <div style={{ display: "flex" }}>
@@ -303,13 +350,14 @@ const Summary = ({ setValue, data, fileData }) => {
       >
         <div className="mode1">
           <h1>Thank you for your request</h1>
+          {isError && <p style={{color:"red", marginTop:"1rem", marginBottom:"1rem"}}>{isError}</p>}
           <img src={put} alt="" />
 
           <p>
             We have recieved your information and will reach out to you for
             further clarification with 2 working days
           </p>
-          <button
+          {business && <button
             className="starttbtn"
             onClick={() => setValue(9)}
             style={{
@@ -320,8 +368,36 @@ const Summary = ({ setValue, data, fileData }) => {
               height: 60,
             }}
           >
-            Submit
-          </button>
+          Continue
+          </button>}
+          {business == null  &&<React.Fragment>
+          {isLoading == true ? <button
+            className="starttbtn"
+            style={{
+              background: "#4CC5D2",
+              color: "#fff",
+              borderRadius: 100,
+              marginTop: 20,
+              height: 60,
+            }}
+          >
+            Loading ..
+          </button>:
+          <button
+          className="starttbtn"
+          onClick={handleSubmitted}
+          style={{
+            background: "#4CC5D2",
+            color: "#fff",
+            borderRadius: 100,
+            marginTop: 20,
+            height: 60,
+          }}
+        >
+          Submit
+        </button>}
+          </React.Fragment>
+      }
         </div>
       </Modal>
     </div>

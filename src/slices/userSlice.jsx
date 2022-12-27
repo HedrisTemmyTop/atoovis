@@ -5,7 +5,7 @@ const initialState = {
   access: localStorage.getItem("access"),
   refresh: localStorage.getItem("refresh"),
   isAuthenticated: null,
-  user: localStorage.getItem("user"),
+  user: localStorage.getItem("userId"),
   error:null,
   isLoading: null,
   registered:null

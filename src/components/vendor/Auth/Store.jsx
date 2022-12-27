@@ -1,7 +1,7 @@
 import React from "react";
 
 const Store =({setValue, inputs, onchange})=>{
-    const {storeName, ups, owner, registered_trademark} = inputs
+    const {storeName} = inputs
     return(
         <div style={{display: 'flex'}}>
         <div className="start2" style={{ height: 'auto', background: '#fff',alignItems: 'left', display: 'flex', flexDirection: 'column'}}>
@@ -28,12 +28,12 @@ const Store =({setValue, inputs, onchange})=>{
             <div style={{display: 'flex'}}>
             <div className="labb">
                 
-                <input type="radio" name="ups" value="Yes" onChange={onchange} />
+                <input type="radio" name="ups" value="YES" onChange={onchange} />
                 <p>Yes</p>
             </div>
             <div className="labb" style={{marginLeft: 30}}>
                
-               <input type="radio" name="ups" value="No" onChange={onchange}/>
+               <input type="radio" name="ups" value="NO" onChange={onchange}/>
                <p> No</p>
            </div>
             </div>
@@ -50,12 +50,12 @@ const Store =({setValue, inputs, onchange})=>{
             <div style={{display: 'flex'}}>
             <div className="labb">
                 
-                <input type="radio" name="owner" value="Yes" onChange={onchange} />
+                <input type="radio" name="owner" value="YES" onChange={onchange} />
                 <p>Yes</p>
             </div>
             <div className="labb" style={{marginLeft: 30}}>
                
-               <input type="radio" name="owner" value="No" onChange={onchange}/>
+               <input type="radio" name="owner" value="NO" onChange={onchange}/>
                <p> No</p>
            </div>
            <div className="labb" style={{marginLeft: 30}}>
@@ -77,12 +77,12 @@ const Store =({setValue, inputs, onchange})=>{
             <div style={{display: 'flex'}}>
             <div className="labb">
                 
-                <input type="radio" name="registered_trademark" value="Yes" onChange={onchange} />
+                <input type="radio" name="registered_trademark" value="YES" onChange={onchange} />
                 <p>Yes</p>
             </div>
             <div className="labb" style={{marginLeft: 30}}>
                
-               <input type="radio" name="registered_trademark" value="No" onChange={onchange}/>
+               <input type="radio" name="registered_trademark" value="NO" onChange={onchange}/>
                <p> No</p>
            </div>
            <div className="labb" style={{marginLeft: 30}}>
@@ -93,7 +93,7 @@ const Store =({setValue, inputs, onchange})=>{
             </div>
             </div>
 
-             <button disabled className="startbtn" onClick={()=> setValue(6)} style={{
+             <button  className="startbtn" onClick={()=> setValue(6)} style={{
           color: '#fff',
           borderRadius: 100,
           borderColor: '#4CC5D2',

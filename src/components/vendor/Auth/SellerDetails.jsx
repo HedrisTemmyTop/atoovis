@@ -40,7 +40,7 @@ const SellerDetail = ({ setValue, inputs, onchange }) => {
               name="seller_country"
               id="seller_country"
               className="selecct"
-              onSelect={onchange}
+              onChange={onchange}
             >
               <option value=""> Select a Country</option>
               <option value="Nigeria">Nigeria</option>
@@ -102,11 +102,11 @@ const SellerDetail = ({ setValue, inputs, onchange }) => {
 
           <div style={{ display: "flex" }}>
             <div className="labb">
-              <input type="radio" name="owner" />
+              <input type="radio" name="owner" value="YES" onChange={onchange} />
               <p>Yes</p>
             </div>
             <div className="labb" style={{ marginLeft: 30 }}>
-              <input type="radio" name="owner" />
+              <input type="radio" name="owner" value="NO" onChange={onchange}/>
               <p> No</p>
             </div>
           </div>
