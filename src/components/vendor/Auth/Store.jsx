@@ -1,6 +1,7 @@
 import React from "react";
 
-const Store =({setValue})=>{
+const Store =({setValue, inputs, onchange})=>{
+    const {storeName, ups, owner, registered_trademark} = inputs
     return(
         <div style={{display: 'flex'}}>
         <div className="start2" style={{ height: 'auto', background: '#fff',alignItems: 'left', display: 'flex', flexDirection: 'column'}}>
@@ -8,8 +9,10 @@ const Store =({setValue})=>{
          <form action="">
          
              <div className="lab">
-                 <label htmlFor="">Store Name</label>
-                 <input type="text" placeholder="Enter a name for your store"/>
+                 <label htmlFor="storeName">Store Name</label>
+                 <input name="storeName" id="storeName" value={storeName} type="text" placeholder="Enter a name for your store"
+                 onChange={onchange}
+                 />
              </div>
             
          
@@ -25,12 +28,12 @@ const Store =({setValue})=>{
             <div style={{display: 'flex'}}>
             <div className="labb">
                 
-                <input type="radio" name="product"/>
+                <input type="radio" name="ups" value="Yes" onChange={onchange} />
                 <p>Yes</p>
             </div>
             <div className="labb" style={{marginLeft: 30}}>
                
-               <input type="radio" name="product"/>
+               <input type="radio" name="ups" value="No" onChange={onchange}/>
                <p> No</p>
            </div>
             </div>
@@ -47,12 +50,12 @@ const Store =({setValue})=>{
             <div style={{display: 'flex'}}>
             <div className="labb">
                 
-                <input type="radio" name="brand"/>
+                <input type="radio" name="owner" value="Yes" onChange={onchange} />
                 <p>Yes</p>
             </div>
             <div className="labb" style={{marginLeft: 30}}>
                
-               <input type="radio" name="brand"/>
+               <input type="radio" name="owner" value="No" onChange={onchange}/>
                <p> No</p>
            </div>
            <div className="labb" style={{marginLeft: 30}}>
@@ -74,12 +77,12 @@ const Store =({setValue})=>{
             <div style={{display: 'flex'}}>
             <div className="labb">
                 
-                <input type="radio" name="own"/>
+                <input type="radio" name="registered_trademark" value="Yes" onChange={onchange} />
                 <p>Yes</p>
             </div>
             <div className="labb" style={{marginLeft: 30}}>
                
-               <input type="radio" name="own"/>
+               <input type="radio" name="registered_trademark" value="No" onChange={onchange}/>
                <p> No</p>
            </div>
            <div className="labb" style={{marginLeft: 30}}>
@@ -90,7 +93,7 @@ const Store =({setValue})=>{
             </div>
             </div>
 
-             <button className="startbtn" onClick={()=> setValue(6)} style={{
+             <button disabled className="startbtn" onClick={()=> setValue(6)} style={{
           color: '#fff',
           borderRadius: 100,
           borderColor: '#4CC5D2',
