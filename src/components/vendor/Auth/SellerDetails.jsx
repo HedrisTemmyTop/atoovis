@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../../styles/auth/lab.css";
 import "../../../styles/auth/welcome.css";
 const SellerDetail = ({ setValue, inputs, onchange }) => {
@@ -10,19 +10,47 @@ const SellerDetail = ({ setValue, inputs, onchange }) => {
     manufacural_or_brandOwnner,
     owner,
   } = inputs;
-
+  const [countryErr, setcountryErr] = useState("");
+  const [addressErr, setErradddres] = useState("");
+  const [offErr, setOffErr] = useState("");
+  const [mobileErr, setMobileErr] = useState("");
+  const [ownerErr, setownerErr] = useState("");
 
   const validateform = () => {
-    if(seller_country && seller_address &&
-      offical_email_address && mobile_number && owner
-      ) {
-        return false
-  }
-
-    else{
-      return true
+    if (!seller_country) {
+      setcountryErr("Seller Country is required");
+    } else if (!seller_address) {
+      setErradddres("Residential Address is required");
+    } else if (!offical_email_address) {
+      setOffErr("Offical Email Address required");
+    } else if (!offical_email_address.includes("@")) {
+      setOffErr("Offical Email Address is not valid");
+    } else if (!mobile_number) {
+      setMobileErr("Mobile Number is required");
+    } else if (!owner) {
+      setownerErr("Business owner is required");
+    }else if (offical_email_address.includes("@")) {
+      setOffErr("");
+    }  
+    else {
+      setValue(4);
+      // console.log("ffff");
     }
-}
+  };
+
+  const validateformButton = () => {
+    if (
+      seller_country &&
+      seller_address &&
+      offical_email_address.includes("@") &&
+      mobile_number &&
+      owner
+    ) {
+      return false;
+    } else {
+      return true;
+    }
+  };
 
   return (
     <div style={{ display: "flex" }}>
@@ -47,7 +75,9 @@ const SellerDetail = ({ setValue, inputs, onchange }) => {
         >
           Seller Details
         </h1>
-        {validateform() == true && <h3 style={{"color":"#1675B4"}}>Please Provide Information to all fields below! </h3>}
+        {validateformButton() == true && (
+          <h3 style={{ color: "#1675B4" }}>Please fill all fields below! </h3>
+        )}
 
         <form action="">
           <div className="lab">
@@ -61,6 +91,9 @@ const SellerDetail = ({ setValue, inputs, onchange }) => {
               <option value=""> Select a Country</option>
               <option value="Nigeria">Nigeria</option>
             </select>
+            {!seller_country && (
+              <small style={{ color: "red" }}>{countryErr}</small>
+            )}
           </div>
           <div className="lab">
             <label htmlFor="">Residential Address</label>
@@ -70,6 +103,9 @@ const SellerDetail = ({ setValue, inputs, onchange }) => {
               value={seller_address}
               onChange={onchange}
             />
+            {!seller_address && (
+              <small style={{ color: "red" }}>{addressErr}</small>
+            )}
           </div>
           <div className="labb">
             <p>+</p>
@@ -83,15 +119,17 @@ const SellerDetail = ({ setValue, inputs, onchange }) => {
               value={offical_email_address}
               onChange={onchange}
             />
+            {offErr && <small style={{ color: "red" }}>{offErr}</small>}
           </div>
           <div className="lab">
             <label htmlFor="">Mobile Number</label>
             <input
-              type="number"
+              type="text"
               name="mobile_number"
               value={mobile_number}
               onChange={onchange}
             />
+            {!mobileErr && <small style={{ color: "red" }}>{mobileErr}</small>}
           </div>
           <div className="labb">
             <p>+</p>
@@ -104,9 +142,7 @@ const SellerDetail = ({ setValue, inputs, onchange }) => {
               textAlign: "left",
               fontSize: 14,
             }}
-          >
-     
-          </h1>
+          ></h1>
           <div className="labb">
             <input type="checkbox" />
             <p>Is a beneficial owner of the business</p>
@@ -118,14 +154,20 @@ const SellerDetail = ({ setValue, inputs, onchange }) => {
 
           <div style={{ display: "flex" }}>
             <div className="labb">
-              <input type="radio" name="owner" value="YES" onChange={onchange} />
+              <input
+                type="radio"
+                name="owner"
+                value="YES"
+                onChange={onchange}
+              />
               <p>Yes</p>
             </div>
             <div className="labb" style={{ marginLeft: 30 }}>
-              <input type="radio" name="owner" value="NO" onChange={onchange}/>
+              <input type="radio" name="owner" value="NO" onChange={onchange} />
               <p> No</p>
             </div>
           </div>
+          {!owner && <small style={{ color: "red" }}>{ownerErr}</small>}
 
           <button
             className="startbtn"
@@ -141,20 +183,36 @@ const SellerDetail = ({ setValue, inputs, onchange }) => {
           >
             Previous
           </button>
-          <button
-            disabled={validateform()}
-            onClick={() => setValue(5)}
-            className="startbtn"
-            style={{
-              background: "#4CC5D2",
-              color: "#fff",
-              borderRadius: 100,
-              marginTop: 20,
-              height: 60,
-            }}
-          >
-            Save and Continue
-          </button>
+          {validateformButton() == true ? (
+            <button
+              onClick={validateform}
+              style={{
+                background: "#4CC5D2",
+                color: "#fff",
+                borderRadius: 100,
+                marginTop: 20,
+                height: 60,
+              }}
+              type="button"
+              className="startbtn"
+            >
+              Save and Continue
+            </button>
+          ) : (
+            <button
+              onClick={() => setValue(5)}
+              style={{
+                background: "#4CC5D2",
+                color: "#fff",
+                borderRadius: 100,
+                marginTop: 20,
+                height: 60,
+              }}
+              className="startbtn"
+            >
+              Save and Continue
+            </button>
+          )}
         </form>
       </div>
 

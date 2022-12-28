@@ -16,23 +16,64 @@ const BusinessDetail = ({ setValue, onchange, inputs }) => {
     business_email,
   } = inputs;
 
+  const [nameErr, setErrorName] = useState("");
+  const [typeErr, settypeErr] = useState("");
+  const [cacErr, setErrCac] = useState("");
+  const [stateErr, setStateErr] = useState("");
+  const [lgaErr, setLgaErr] = useState("");
+  const [businessEmailErr, setbusinessEmailErr] = useState("");
+  const [businessAdressErr, setbusinessAdressErr] = useState("");
+
+  const validateformButton = () => {
+    if (
+      business_name &&
+      business_address &&
+      business_email.includes("@") &&
+      state &&
+      lga &&
+      business_type === "Individual"
+    ) {
+      return false;
+    } else if (
+      business_name &&
+      business_address &&
+      business_email.includes("@") &&
+      state &&
+      lga &&
+      business_type === "Registered Business"
+    ) {
+      return false;
+    } else {
+      return true;
+    }
+  };
   const validateform = () => {
-    if(business_name  &&
-      business_address && business_email
-      && state && lga && business_type === 'Individual') {
-        return false
-  }
-  else if(business_name  &&
-    business_address && business_email
-    && state && lga && business_type === 'Registered Business'){
-        return false
-  
+    if (!business_name) {
+      setErrorName("Business name is required");
+    } else if (!business_type) {
+      settypeErr("Business type is required");
+    } else if (!cac_number && business_type == "Registered Business") {
+      setErrCac("Business number is required");
+    } else if (!state) {
+      setStateErr("State is required");
+    } else if (!lga) {
+      setLgaErr("Lga is required");
+    } else if (!business_address) {
+      setbusinessAdressErr("Business Address is required");
+    } else if (!business_email) {
+      setbusinessEmailErr("Business email is required");
+    } else if (!business_email.includes("@")) {
+      setbusinessEmailErr("Business Email is not valid");
+    } else if (business_email.includes("@")) {
+      setbusinessEmailErr("");
+    } else {
+      setValue(4);
+      // console.log("ffff");
     }
-    else{
-      return true
-    }
-}
-  
+  };
+
+  // console.log(nameErr);
+
   return (
     <div>
       <div
@@ -55,7 +96,6 @@ const BusinessDetail = ({ setValue, onchange, inputs }) => {
         >
           Business Details
         </h1>
-        {validateform() == true && <h3 style={{"color":"#1675B4"}}>Please Provide Information to all fields below! </h3>}
         <form action="">
           <div className="lab">
             <label htmlFor="">Business Name</label>
@@ -65,7 +105,11 @@ const BusinessDetail = ({ setValue, onchange, inputs }) => {
               name="business_name"
               onChange={onchange}
             />
+            {!business_name && (
+              <small style={{ color: "red" }}>{nameErr}</small>
+            )}
           </div>
+
           <div className="lab">
             <label htmlFor="business_type">Business Type</label>
             <select
@@ -77,25 +121,33 @@ const BusinessDetail = ({ setValue, onchange, inputs }) => {
               <option value=""> Select a Type</option>
               <option value="Individual">Individual</option>
               <option value="Registered Business">Registered Business</option>
-
             </select>
+            {!business_type && (
+              <small style={{ color: "red" }}>{typeErr}</small>
+            )}
           </div>
 
-          {business_type != "Individual" && <div className="lab">
-            <label htmlFor="">CAC Registration Number</label>
-            <input
-              type="text"
-              value={cac_number}
-              name="cac_number"
-              onChange={onchange}
-            />
-          </div>}
+          {business_type != "Individual" && (
+            <div className="lab">
+              <label htmlFor="">CAC Registration Number</label>
+              <input
+                type="text"
+                value={cac_number}
+                name="cac_number"
+                onChange={onchange}
+              />
+              {!business_type && (
+                <small style={{ color: "red" }}>{cacErr}</small>
+              )}
+            </div>
+          )}
           <div className="lab">
             <label htmlFor="">State / Region</label>
             <select name="state" onChange={onchange} id="" className="selecct">
               <option value=""></option>
               <option value="Abuja">Federal Capital Territory</option>
             </select>
+            {!state && <small style={{ color: "red" }}>{stateErr}</small>}
           </div>
           <div className="lab">
             <label htmlFor="">LGA</label>
@@ -103,6 +155,7 @@ const BusinessDetail = ({ setValue, onchange, inputs }) => {
               <option value=""></option>
               <option value="Gwagwalada">Gwagwalada</option>
             </select>
+            {!lga && <small style={{ color: "red" }}>{lgaErr}</small>}
           </div>
           <div className="labbb">
             <div>
@@ -113,6 +166,9 @@ const BusinessDetail = ({ setValue, onchange, inputs }) => {
                 name="business_address"
                 onChange={onchange}
               />
+              {!business_address && (
+                <small style={{ color: "red" }}>{businessAdressErr}</small>
+              )}
             </div>
             <div className="ic">
               <MdLocationPin style={{ color: "#1B5958" }} />
@@ -137,22 +193,41 @@ const BusinessDetail = ({ setValue, onchange, inputs }) => {
               value={business_email}
               onChange={onchange}
             />
+            {businessEmailErr && (
+              <small style={{ color: "red" }}>{businessEmailErr}</small>
+            )}
           </div>
 
-          <button
-            disabled={validateform()}
-            onClick={() => setValue(4)}
-            style={{
-              background: "#4CC5D2",
-              color: "#fff",
-              borderRadius: 100,
-              marginTop: 20,
-              height: 60,
-            }}
-            className="startbtn"
-          >
-            Save and Continue
-          </button>
+          {validateformButton() == true ? (
+            <button
+              onClick={validateform}
+              style={{
+                background: "#4CC5D2",
+                color: "#fff",
+                borderRadius: 100,
+                marginTop: 20,
+                height: 60,
+              }}
+              type="button"
+              className="startbtn"
+            >
+              Save and Continue
+            </button>
+          ) : (
+            <button
+              onClick={() => setValue(4)}
+              style={{
+                background: "#4CC5D2",
+                color: "#fff",
+                borderRadius: 100,
+                marginTop: 20,
+                height: 60,
+              }}
+              className="startbtn"
+            >
+              Save and Continue
+            </button>
+          )}
         </form>
       </div>
     </div>

@@ -1,12 +1,33 @@
-import React from "react";
+import React, {useState} from "react";
 
 const Store = ({ setValue, inputs, onchange }) => {
   const { storeName, ups, owner, registered_trademark } = inputs;
-  const validateform = () => {
+  const validateformButton = () => {
     if (storeName && ups && owner && registered_trademark) {
       return false;
     } else {
       return true;
+    }
+  };
+
+  const [storeNameErr, setstoreNameErr] = useState("");
+  const [upsErr, setupsErr] = useState("");
+  const [ownerErr, setownerErr] = useState("");
+  const [registered_trademarkErr, setregistered_trademarkErr] = useState("");
+
+
+  const validateform = () => {
+    if (!storeName) {
+      setstoreNameErr("Store  Name is required");
+    } else if (!ups) {
+      setupsErr("Universal Product is required (YES/NO)");
+    } else if (!owner) {
+      setownerErr(" Brand owner is required");
+    } else if (!registered_trademark) {
+      setregistered_trademarkErr("Government-registered trademark is required");
+    } else {
+      setValue(7);
+      // console.log("ffff");
     }
   };
   return (
@@ -31,7 +52,7 @@ const Store = ({ setValue, inputs, onchange }) => {
         >
           Store and Product Information
         </h1>
-        {validateform() == true && <h3 style={{"color":"#1675B4"}}>Please Provide Information to all fields below! </h3>}
+        {validateformButton() == true && <h3 style={{"color":"#1675B4"}}>Please Provide Information to all fields below! </h3>}
 
         <form action="">
           <div className="lab">
@@ -44,6 +65,9 @@ const Store = ({ setValue, inputs, onchange }) => {
               placeholder="Enter a name for your store"
               onChange={onchange}
             />
+            {!storeName && (
+              <small style={{ color: "red" }}>{storeNameErr}</small>
+            )}
           </div>
 
           <div>
@@ -73,6 +97,9 @@ const Store = ({ setValue, inputs, onchange }) => {
                 <p> No</p>
               </div>
             </div>
+            {!ups && (
+              <small style={{ color: "red" }}>{upsErr}</small>
+            )}
           </div>
           <div>
             <h1
@@ -110,7 +137,11 @@ const Store = ({ setValue, inputs, onchange }) => {
                 <input type="radio" name="brand" />
                 <p> Some of the items</p>
               </div>
+
             </div>
+            {!owner && (
+              <small style={{ color: "red" }}>{ownerErr}</small>
+            )}
           </div>
           <div>
             <h1
@@ -148,6 +179,9 @@ const Store = ({ setValue, inputs, onchange }) => {
                 <p> Some of the items</p>
               </div>
             </div>
+            {!registered_trademark && (
+              <small style={{ color: "red" }}>{registered_trademarkErr}</small>
+            )}
           </div>
 
           <button
@@ -164,20 +198,36 @@ const Store = ({ setValue, inputs, onchange }) => {
           >
             Previous
           </button>
-          <button
-          disabled={validateform()}
-            className="startbtn"
-            onClick={() => setValue(7)}
-            style={{
-              background: "#4CC5D2",
-              color: "#fff",
-              borderRadius: 100,
-              marginTop: 20,
-              marginLeft: -20,
-            }}
-          >
-            Save and Continue
-          </button>
+          {validateformButton() == true ? (
+              <button
+                onClick={validateform}
+                style={{
+                  background: "#4CC5D2",
+                  color: "#fff",
+                  borderRadius: 100,
+                  marginTop: 20,
+                  height: 60,
+                }}
+                type="button"
+                className="startbtn"
+              >
+                Save and Continue
+              </button>
+            ) : (
+              <button
+                onClick={() => setValue(7)}
+                style={{
+                  background: "#4CC5D2",
+                  color: "#fff",
+                  borderRadius: 100,
+                  marginTop: 20,
+                  height: 60,
+                }}
+                className="startbtn"
+              >
+                Save and Continue
+              </button>
+            )}
         </form>
       </div>
 
