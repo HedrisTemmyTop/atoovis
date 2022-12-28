@@ -15,6 +15,24 @@ const BusinessDetail = ({ setValue, onchange, inputs }) => {
     business_address,
     business_email,
   } = inputs;
+
+  const validateform = () => {
+    if(business_name  &&
+      business_address && business_email
+      && state && lga && business_type === 'Individual') {
+        return false
+  }
+  else if(business_name  &&
+    business_address && business_email
+    && state && lga && business_type === 'Registered Business'){
+        return false
+  
+    }
+    else{
+      return true
+    }
+}
+  
   return (
     <div>
       <div
@@ -37,6 +55,7 @@ const BusinessDetail = ({ setValue, onchange, inputs }) => {
         >
           Business Details
         </h1>
+        {validateform() == true && <h3 style={{"color":"#1675B4"}}>Please Provide Information to all fields below! </h3>}
         <form action="">
           <div className="lab">
             <label htmlFor="">Business Name</label>
@@ -48,15 +67,21 @@ const BusinessDetail = ({ setValue, onchange, inputs }) => {
             />
           </div>
           <div className="lab">
-            <label htmlFor="">Business Type</label>
-            <input
-              type="text"
-              value={business_type}
+            <label htmlFor="business_type">Business Type</label>
+            <select
               name="business_type"
+              id="business_type"
+              className="selecct"
               onChange={onchange}
-            />
+            >
+              <option value=""> Select a Type</option>
+              <option value="Individual">Individual</option>
+              <option value="Registered Business">Registered Business</option>
+
+            </select>
           </div>
-          <div className="lab">
+
+          {business_type != "Individual" && <div className="lab">
             <label htmlFor="">CAC Registration Number</label>
             <input
               type="text"
@@ -64,7 +89,7 @@ const BusinessDetail = ({ setValue, onchange, inputs }) => {
               name="cac_number"
               onChange={onchange}
             />
-          </div>
+          </div>}
           <div className="lab">
             <label htmlFor="">State / Region</label>
             <select name="state" onChange={onchange} id="" className="selecct">
@@ -115,6 +140,7 @@ const BusinessDetail = ({ setValue, onchange, inputs }) => {
           </div>
 
           <button
+            disabled={validateform()}
             onClick={() => setValue(4)}
             style={{
               background: "#4CC5D2",

@@ -3,6 +3,15 @@ import React from "react";
 const PaymentDetail = ({ setValue, inputs, onchange }) => {
   const { accountNumber, accountName, bank, card_number, expireDate, cvv } =
     inputs;
+  const validateform = () => {
+      if(accountNumber && accountName && bank && 
+        card_number && cvv && expireDate)  {
+          return false
+    }
+      else{
+        return true
+      }
+  }
   return (
     <div style={{ display: "flex" }}>
       <div
@@ -25,14 +34,26 @@ const PaymentDetail = ({ setValue, inputs, onchange }) => {
         >
           Payment Details
         </h1>
+        {validateform() == true && <h3 style={{"color":"#1675B4"}}>Please Provide Information to all fields below! </h3>}
+
         <form action="">
           <div className="lab">
             <label htmlFor="">Account Name</label>
-            <input type="text" name="accountName" value={accountName} onChange={onchange}/>
+            <input
+              type="text"
+              name="accountName"
+              value={accountName}
+              onChange={onchange}
+            />
           </div>
           <div className="lab">
             <label htmlFor="">Account Number</label>
-            <input type="text" name="accountNumber" value={accountNumber} onChange={onchange}/>
+            <input
+              type="text"
+              name="accountNumber"
+              value={accountNumber}
+              onChange={onchange}
+            />
           </div>
           <div className="lab">
             <label htmlFor="">Bank </label>
@@ -43,7 +64,12 @@ const PaymentDetail = ({ setValue, inputs, onchange }) => {
           </div>
           <div className="lab">
             <label htmlFor="">Payout Frequency </label>
-            <select name="payout_frequency" id="" className="selecct" onChange={onchange}>
+            <select
+              name="payout_frequency"
+              id=""
+              className="selecct"
+              onChange={onchange}
+            >
               <option value="">Select a payout period</option>
               <option value="7">7</option>
             </select>
@@ -74,17 +100,35 @@ const PaymentDetail = ({ setValue, inputs, onchange }) => {
           </div>
           <div className="lab">
             <label htmlFor="card_number">Card Number</label>
-            <input type="text" name="card_number" id="card_number" value={card_number} onChange={onchange} />
+            <input
+              type="text"
+              name="card_number"
+              id="card_number"
+              value={card_number}
+              onChange={onchange}
+            />
           </div>
 
           <div style={{ display: "flex" }} className="leff">
             <div className="laby">
               <label htmlFor="expireDate">Expiry Date</label>
-              <input type="text" name="expireDate" id="expireDate" value={expireDate} onChange={onchange} />
+              <input
+                type="text"
+                name="expireDate"
+                id="expireDate"
+                value={expireDate}
+                onChange={onchange}
+              />
             </div>
             <div className="laby" style={{ marginLeft: 20 }}>
               <label htmlFor="cvv">CVV</label>
-              <input type="text" name="cvv" id="cvv" value={cvv} onChange={onchange}/>
+              <input
+                type="text"
+                name="cvv"
+                id="cvv"
+                value={cvv}
+                onChange={onchange}
+              />
             </div>
           </div>
 
@@ -104,6 +148,7 @@ const PaymentDetail = ({ setValue, inputs, onchange }) => {
               Previous
             </button>
             <button
+            disabled={validateform()}
               className="startbtn"
               onClick={() => setValue(6)}
               style={{

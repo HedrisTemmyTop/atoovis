@@ -8,7 +8,21 @@ const SellerDetail = ({ setValue, inputs, onchange }) => {
     offical_email_address,
     mobile_number,
     manufacural_or_brandOwnner,
+    owner,
   } = inputs;
+
+
+  const validateform = () => {
+    if(seller_country && seller_address &&
+      offical_email_address && mobile_number && owner
+      ) {
+        return false
+  }
+
+    else{
+      return true
+    }
+}
 
   return (
     <div style={{ display: "flex" }}>
@@ -33,6 +47,8 @@ const SellerDetail = ({ setValue, inputs, onchange }) => {
         >
           Seller Details
         </h1>
+        {validateform() == true && <h3 style={{"color":"#1675B4"}}>Please Provide Information to all fields below! </h3>}
+
         <form action="">
           <div className="lab">
             <label htmlFor="seller_country">Country</label>
@@ -89,7 +105,7 @@ const SellerDetail = ({ setValue, inputs, onchange }) => {
               fontSize: 14,
             }}
           >
-            John Doe
+     
           </h1>
           <div className="labb">
             <input type="checkbox" />
@@ -126,6 +142,7 @@ const SellerDetail = ({ setValue, inputs, onchange }) => {
             Previous
           </button>
           <button
+            disabled={validateform()}
             onClick={() => setValue(5)}
             className="startbtn"
             style={{

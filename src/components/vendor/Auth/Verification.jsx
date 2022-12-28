@@ -1,7 +1,19 @@
 import React from "react";
 
 const Verification = ({ setValue, inputs, onchange }) => {
-
+  const {
+    cac_document,
+    business_owner_id,
+    bank_statement,
+    additonal_document
+  } = inputs
+  const validateform = () => {
+    if (additonal_document && bank_statement && business_owner_id && cac_document) {
+      return false;
+    } else {
+      return true;
+    }
+  };
   return (
     <div style={{ display: "flex" }}>
       <div
@@ -24,6 +36,7 @@ const Verification = ({ setValue, inputs, onchange }) => {
         >
           Verification
         </h1>
+        {validateform() == true && <h3 style={{"color":"#1675B4"}}>Please Provide Information to all fields below! </h3>}
         <form action="">
           <div className="lab">
             <label htmlFor="">CAC Document</label>
@@ -58,6 +71,7 @@ const Verification = ({ setValue, inputs, onchange }) => {
             Previous
           </button>
           <button
+          disabled={validateform()}
             className="startbtn"
             onClick={() => setValue(8)}
             style={{
