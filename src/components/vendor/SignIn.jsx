@@ -14,14 +14,14 @@ const VendorSignIn = () => {
             <div className="right1">
                 {/* <p>X</p> */}
                 <img src={logo} alt="" />
-                <h1>Login and Continue Selling</h1>
+                <h1>Login and <br /> Continue Selling</h1>
 
                 <form action="">
-                    <div className="formy">
+                    <div className="forma">
                         <label htmlFor="">Email Address</label>
                         <input type="email" />
                     </div>
-                    <div className="formy2">
+                    <div className="formap">
                         <label htmlFor="">Password</label>
                         <input type="password" />
                     </div>

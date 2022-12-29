@@ -15,6 +15,21 @@
 }
 .labb{
     display: flex;
+    width: auto;
+    flex-direction: row;
+    margin: 20px 0;
+    align-items: center;
+}
+.labba{
+    display: flex;
+    width: auto;
+    flex-direction: row;
+    margin: 20px 0;
+    align-items: center;
+}
+.labbaa{
+    display: flex;
+    width: auto;
     flex-direction: row;
     margin: 20px 0;
     align-items: center;
@@ -74,6 +89,24 @@
 
 }
 .labb p{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 150%;
+    color: #000;
+
+}
+.labbaa p{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 150%;
+    color: #000;
+
+}
+.labba p{
     font-family: 'Lato';
     font-style: normal;
     font-weight: 700;
@@ -170,5 +203,17 @@
         color: black;
         margin-left: -20px;
         
+    }
+    .labba{
+        width: 160px;
+    }
+    .labbaa{
+        width: 100px;
+    }
+    .labba p{
+        width: auto;
+    }
+    .labbaa p{
+        width: auto;
     }
 }

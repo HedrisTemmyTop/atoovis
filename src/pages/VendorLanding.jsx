@@ -3,6 +3,7 @@ import Header from '../components/VendorHeader'
 import '../styles/vendor/vendor.css';
 import SignIn from '../components/vendor/SignIn'
 import SignUp from '../components/vendor/SignUp'
+import Otp from "../components/vendor/Otp";
 import Modal from 'react-modal';
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
@@ -74,6 +75,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit
       > 
 
       <SignIn/>
+      {/* <SignUp/> */}
+      {/* <Otp/> */}
      
       </Modal>
         </div>

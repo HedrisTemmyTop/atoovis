@@ -18,7 +18,7 @@ const SellerDetail =({setValue})=>{
                  <label htmlFor="">Residential Address</label>
                  <input type="text" />
              </div>
-             <div className="labb">
+             <div className="labba">
                 
                  <p>+</p>
                  <p>Add another address</p>
@@ -31,7 +31,7 @@ const SellerDetail =({setValue})=>{
                  <label htmlFor="">Mobile Number</label>
                  <input type="number" />
              </div>
-             <div className="labb">
+             <div className="labba">
                 
                  <p>+</p>
                  <p>Add another address</p>
@@ -54,12 +54,12 @@ const SellerDetail =({setValue})=>{
             </div>
             
             <div style={{display: 'flex'}}>
-            <div className="labb">
+            <div className="labba">
                 
                 <input type="radio" name="owner"/>
                 <p>Yes</p>
             </div>
-            <div className="labb" style={{marginLeft: 30}}>
+            <div className="labba" style={{marginLeft: 30}}>
                
                <input type="radio" name="owner"/>
                <p> No</p>

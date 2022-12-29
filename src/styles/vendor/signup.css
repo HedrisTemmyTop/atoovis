@@ -193,14 +193,13 @@
                   z-index: 1;
       }
 }
-@media (max-width: 420px) {
+@media (max-width: 450px) {
     .left1{
         display: none;
     }
     
     .formy input{
         border: 0.5px solid #757E7E;
-        width: 378px;
         height: 64px;  
         border-radius: 30px;
         background: #F6F8F8;
@@ -213,7 +212,7 @@
       }
       .formy4 label{
         position: absolute;
-                  top: 340px;
+                  top: 0px;
                   left: 120px;
       }
       .formy5 label{

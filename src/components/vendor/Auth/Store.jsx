@@ -23,12 +23,12 @@ const Store =({setValue})=>{
              
             
             <div style={{display: 'flex'}}>
-            <div className="labb">
+            <div className="labbaa">
                 
                 <input type="radio" name="product"/>
                 <p>Yes</p>
             </div>
-            <div className="labb" style={{marginLeft: 30}}>
+            <div className="labbaa" style={{marginLeft: 30}}>
                
                <input type="radio" name="product"/>
                <p> No</p>
@@ -45,17 +45,17 @@ const Store =({setValue})=>{
              
             
             <div style={{display: 'flex'}}>
-            <div className="labb">
+            <div className="labbaa">
                 
                 <input type="radio" name="brand"/>
                 <p>Yes</p>
             </div>
-            <div className="labb" style={{marginLeft: 30}}>
+            <div className="labbaa" style={{marginLeft: 30}}>
                
                <input type="radio" name="brand"/>
                <p> No</p>
            </div>
-           <div className="labb" style={{marginLeft: 30}}>
+           <div className="labbaa" style={{marginLeft: 30}}>
                
                <input type="radio" name="brand"/>
                <p> Some of the items</p>
@@ -72,17 +72,17 @@ const Store =({setValue})=>{
              
             
             <div style={{display: 'flex'}}>
-            <div className="labb">
+            <div className="labbaa">
                 
                 <input type="radio" name="own"/>
                 <p>Yes</p>
             </div>
-            <div className="labb" style={{marginLeft: 30}}>
+            <div className="labbaa" style={{marginLeft: 10}}>
                
                <input type="radio" name="own"/>
                <p> No</p>
            </div>
-           <div className="labb" style={{marginLeft: 30}}>
+           <div className="labbaa" style={{marginLeft: 10}}>
                
                <input type="radio" name="own"/>
                <p> Some of the items</p>
