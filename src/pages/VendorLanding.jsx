@@ -11,11 +11,11 @@ import { useNavigate } from "react-router-dom";
 
 const Vendor = ()=> {
   const auth = useSelector((state) => state.auth); //get state
-  const { user, isLoading, error } = auth;
+  const { user, isLoading, error, access } = auth;
   const navigate = useNavigate()
 
   useEffect(() => {
-    if(localStorage.getItem("access") != null){
+    if(access){
       console.log("checks")
       navigate('/sidebar')
     }

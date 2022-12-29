@@ -1,31 +1,51 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice,createAsyncThunk } from '@reduxjs/toolkit'
 import { useSelector, useDispatch } from 'react-redux'
+import adminAuthService from "../services/admin/adminAuthService"
 
 const initialState = {
-    vendorId: "6383eb20efb496469f340824",
+    vendorId: "",
     isLoading: null,
-    error:null,
-    businessName:null
+    isError:null,
+    business:null
 };
 
-export const vendorSlice = createSlice({
-  name: 'vendor',
-  initialState,
-  reducers: {
-    createbusinessRequest: (state) => {
-      state.isLoading = true
-    },
-    createbusinessSucess: (state, action) => {
-      state.businessName = action.payload,
-      state.isLoading = false
-    },
-    failedStatus:(state, action) => {
-        state.error = action.payload
-    },
-  },
+export const checkCreatedBusiness = createAsyncThunk("Post all business", async (data, thunkAPI) => {
+  try {
+      return await adminAuthService.createABusiness(data)
+  } catch (error) {
+      console.log(error)
+      const message =
+          (error.response && error.response.data && error.response.data.msg) || error.message
+      return thunkAPI.rejectWithValue(message)
+  }
 })
 
-// Action creators are generated for each case reducer function
-export const { failedStatus, createbusinessSucess, createbusinessRequest } = vendorSlice.actions
+export const vendorReducer = createSlice({
+  name: "vendor",
+  initialState,
+  reducers: {
+      reset: (state) => {
+          ;(state.isLoading = false), (state.isSuccess = false), (state.isError = false)
+      },
+  },
+  extraReducers: (builder) => {
+      builder
+          .addCase(checkCreatedBusiness.pending, (state) => {
+              state.isLoading = true
+              state.isError = false
+          })
+          .addCase(checkCreatedBusiness.fulfilled, (state, action) => {
+              ;(state.isLoading = false), (state.isSuccess = true), (state.isError = false)
+              state.business = action.payload
+          })
+          .addCase(checkCreatedBusiness.rejected, (state, action) => {
+              ;(state.isLoading = false), (state.isError = action.payload), (state.data = null)
+              state.message = action.payload
+          })
+  },
+})
+export default vendorReducer.reducer
 
-export default vendorSlice.reducer
+
+
+

@@ -1,10 +1,19 @@
-import React from "react";
+import React, {useState} from "react";
 import '../../styles/vendor/signin.css'
 import logo from '../../assets/images/Header/Atoovislogo.png'
 import { Link } from "react-router-dom";
+import SignUp from "./SignUp";
+
 const VendorSignIn = () => {
+    const [fswitch, setSwitch] = useState(true)
+    
+    const handleSwitch = () => {
+        setSwitch(!fswitch)
+    }
+
     return(
-        <div className="container">
+        <React.Fragment>
+          { fswitch ? <div className="container">
             <div className="lefto">
                <h1>Welcome Back</h1>
                <p className="lorem">Lorem ipsum dolor sit amet, consectetur 
@@ -33,11 +42,12 @@ const VendorSignIn = () => {
                 </div>
                     <button className="log"><Link to='/sidebar'>Login</Link></button>
                     <div className="account">
-                <p className="dont">Don’t have an account?<a href=""> Sign up</a></p>
+                <p className="dont">Don’t have an account ? <a onClick={handleSwitch}>Sign Up </a></p>
             </div>
                 </form>
             </div>
-        </div>
+             </div> : <SignUp/>}
+        </React.Fragment>
     )
 }
 

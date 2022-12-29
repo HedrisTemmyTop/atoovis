@@ -2,6 +2,7 @@
     display: flex;
     
 }
+
 .lefto{
     background: url('../mask.png');
     height: 866px;
@@ -12,6 +13,7 @@
    
     
 }
+
 .lefto h1{
     font-size: 48px;
     font-weight: 800;
@@ -21,9 +23,11 @@
     text-align: left;
     
 }
+
 .right1{
     padding: 40px 20px;
 }
+
 .right1 h1{
     font-size: 48px;
     font-weight: 800;
@@ -32,24 +36,29 @@
     margin-top: 40px;
     text-align: left;
 }
+
 .right1 img{
     margin-top: 130px;
 }
+
 .formy{
     display: flex;
     flex-direction: column; 
     margin: 21px 0; 
 }
+
 .forma{
     display: flex;
     flex-direction: column; 
     margin: 21px 0; 
 }
+
 .formap{
     display: flex;
     flex-direction: column; 
     margin: 21px 0; 
 }
+
 .formy input{
     border: 0.5px solid #757E7E;
     width: 512px;
@@ -60,6 +69,7 @@
     background: #F6F8F8;
     
 }
+
 .forma input{
     border: 0.5px solid #757E7E;
     width: 512px;
@@ -70,6 +80,7 @@
     background: #F6F8F8;
     
 }
+
 .formap input{
     border: 0.5px solid #757E7E;
     width: 512px;
@@ -80,6 +91,7 @@
     background: #F6F8F8;
     
 }
+
 .formy2 input{
     border: 0.5px solid #757E7E;
     color: #040404;
@@ -101,6 +113,7 @@
     width: 531px;
     font-size: 22px;
 }
+
 .formy label{
     background: #fff;
     color: #1B5958;
@@ -110,6 +123,7 @@
               padding: 2px;
               z-index: 1;
   }
+
   .forma label{
     background: #fff;
     color: #1B5958;
@@ -119,6 +133,7 @@
               padding: 2px;
               z-index: 1;
   }
+
   .formap label{
     background: #fff;
     color: #1B5958;
@@ -140,6 +155,7 @@
        
         
     } 
+
     .formy input{
         border: 0.5px solid #757E7E;
         color: #040404;
@@ -149,6 +165,7 @@
         background: #F6F8F8;
         
     }
+
     .formy2 input{
         border: 0.5px solid #757E7E;
         width: 412px;
@@ -157,6 +174,7 @@
         background: #F6F8F8;
         
     }
+
     .log{
         color: #fff;
         background-color: #1B5958;
@@ -166,6 +184,7 @@
         width: 412px;
         font-size: 22px;
     }
+
     .lefto h1{
         font-size: 38px;
         font-weight: 800;
@@ -175,6 +194,7 @@
         text-align: left;
         
     }
+
     .formy label{
         background: #fff;
         color: #1B5958;
@@ -184,6 +204,7 @@
                   padding: 2px;
                   z-index: 1;
       }
+
       .forma label{
         background: #fff;
         color: #1B5958;
@@ -193,6 +214,7 @@
                   padding: 2px;
                   z-index: 1;
       }
+      
       .formap label{
         background: #fff;
         color: #1B5958;
@@ -203,11 +225,12 @@
                   z-index: 1;
       }
 
+      input{
+        color: #040404;
+      }
 }
 
-input{
-    color: #040404;
-  }
+
 
   @media (max-width: 450px) {
 
@@ -252,6 +275,7 @@ input{
     label{
         color: red;
     }
+
     .forgot{
         width: 300px;
     }

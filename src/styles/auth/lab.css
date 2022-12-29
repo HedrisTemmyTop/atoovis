@@ -82,6 +82,7 @@
     margin-top: -10px;
     margin-left: 30px;
     background: #fff;
+    color: black;
 }
 .labb input{
    margin-right: 20px;
@@ -125,6 +126,7 @@
     background: #F6F8F8;
     border: 0.5px solid #757E7E;
     border-radius: 30px;
+    color: black;
 }
 .labbb label{
     position: absolute;

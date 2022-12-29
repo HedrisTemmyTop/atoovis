@@ -28,11 +28,16 @@ export const login = (loginCredentials, history) => async (dispatch) => {
       dispatch(loginSuccess(data.user))
       if(loginCredentials.type == 'vendor'){
         history(`/sidebar`);
+      }else{
+        history(`/`);
       }
     }
     // dispatch(loginSuccess(data.user));
     localStorage.setItem("access", data.acessToken);
     localStorage.setItem("userId", data.user._id);
+    localStorage.setItem("vendorId", data.user._id);
+    localStorage.setItem("user", data.user);
+
   } catch (error) {
     dispatch(failedLogin(error));
 
