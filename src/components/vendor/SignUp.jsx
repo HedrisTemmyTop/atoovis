@@ -72,8 +72,8 @@ const VendorSignup = () => {
           {/* <p>X</p> */}
           <img src={logo} alt="" />
           <h1>Become a vendor today, sell online with Atoovis!</h1>
-          {error && <h3>{error}!!</h3>}
-          {err && <h3>{err}!!</h3>}
+          {error && <h4 style={{color:"red"}}>{error}!!</h4>}
+          {err && <h4 style={{color:"red"}}>{err}!!</h4>}
 
 
           <form action="">
