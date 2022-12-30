@@ -4,6 +4,9 @@ import './App.css'
 import Home from './pages/Home'
 import Vendor from './pages/VendorLanding'
 import Sidebar from './pages/Sidebar'
+import FeaturedProducts from './pages/Buyer/FeaturedProduct'
+import RecentlyAdded from './pages/Buyer/RecentlyAdded'
+import FrequentlyPurchased from './pages/Buyer/FrequentlyPurchased'
 import { Route, Routes,  } from 'react-router-dom'
 import Footer from './components/Footer'
 
@@ -15,6 +18,9 @@ function App() {
       <Route path='/' element={<Home/>}/>
       <Route path='vendor' element={<Vendor/>}/>
       <Route path='sidebar/*' element={<Sidebar/>}/>
+      <Route path='featured' element={<FeaturedProducts/>}/>
+      <Route path='recently' element={<RecentlyAdded/>}/>
+      <Route path='frequent' element={<FrequentlyPurchased/>}/>
     </Routes>
     <Footer/>
    </>

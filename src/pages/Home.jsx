@@ -7,6 +7,7 @@ import RecentlyAdded from '../components/AddedProduct'
 import MoreProducts from '../components/MoreProducts'
 import FrequentlyPurchased from '../components/FrequentlyPurchased'
 import Navigation from '../components/Navigation'
+import { Link } from "react-router-dom";
 
 const Home = ()=>{
     return(
@@ -14,10 +15,10 @@ const Home = ()=>{
         <Header/>
         <Navigation/>
         <Swiper/>
-         <FeaturedProduct/>
-         <RecentlyAdded/>
+         <Link to='./featured'><FeaturedProduct/></Link>
+         <Link to='recently'><RecentlyAdded/></Link>
          <MoreProducts/>
-         <FrequentlyPurchased/>
+        <Link to='frequent'> <FrequentlyPurchased/></Link>
         
        </div>
     )
