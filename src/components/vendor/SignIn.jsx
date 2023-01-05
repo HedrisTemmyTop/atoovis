@@ -12,7 +12,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 const VendorSignIn = () => {
     const [fswitch, setSwitch] = useState(true)
-    const auth = useSelector((state) => state.auth); //get state
+    const auth = useSelector((state) => state.auth); 
     const dispatch = useDispatch(); // call to action
     const history = useNavigate();
 
@@ -86,7 +86,7 @@ const VendorSignIn = () => {
                         <p>Forgot password?</p>
                     </div>
                 </div>
-                {isLoading == true ? <button className="log" >Loading...</button> :
+                {isLoading == true ? <button className="log" >Loading.</button> :
                 <button className="log" onClick={onLoginSubmit} >Login</button>}
                     <div className="account">
                 <p className="dont">Don’t have an account ? <a onClick={handleSwitch}>Sign Up </a></p>
