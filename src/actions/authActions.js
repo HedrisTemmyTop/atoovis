@@ -36,7 +36,7 @@ export const login = (loginCredentials, history) => async (dispatch) => {
     localStorage.setItem("access", data.acessToken);
     localStorage.setItem("userId", data.user._id);
     localStorage.setItem("vendorId", data.user._id);
-    localStorage.setItem("user", data.user);
+    localStorage.setItem("user", data.user.fullname);
 
   } catch (error) {
     dispatch(failedLogin(error));

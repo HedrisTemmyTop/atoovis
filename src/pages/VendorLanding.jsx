@@ -15,7 +15,7 @@ const Vendor = ()=> {
   const navigate = useNavigate()
 
   useEffect(() => {
-    if(access){
+    if(access != null){
       console.log("checks")
       navigate('/sidebar')
     }

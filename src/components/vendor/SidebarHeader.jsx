@@ -17,7 +17,11 @@ import Product from './Product';
 import Getting from './Auth/Getting'
 import Wallet from "./Wallet";
 import {AiOutlineDown} from 'react-icons/ai'
+import { useNavigate } from "react-router-dom";
+
 const SidebarHeader = () =>{
+    const navigate = useNavigate()
+
 
     const [navbarOpen, setNavbarOpen] = useState(false)
         const handleToggle = () => {
@@ -26,16 +30,21 @@ const SidebarHeader = () =>{
         const closeMenu = () => {
             setNavbarOpen(false)
           }
+        const logoutButton = () => [
+            navigate('/vendor'),
+            localStorage.clear()
+
+        ]
     return(
         
           
         <div>
-            <div className="side-head">
+            <div className="side-head flex" style={{"display":"flex", "justify-content":"space-around"}}>
             <div className="atoovis">
             <img src={logo} alt="" />
+
             </div>
-            <div>
-                <div  className="box">
+            <div  className="box">
                     <div className='linker'>
                         <TbWorld/>
                         <p>Getting Started</p>
@@ -48,6 +57,13 @@ const SidebarHeader = () =>{
                         </div>
                     </div>
                 </div>
+            <div>
+              
+            </div>
+            <div >
+            <button 
+            onClick={logoutButton}
+            style={{background:"#4CC5D2", marginLeft:"1rem"}} >Logout</button>
             </div>
         </div>
 
