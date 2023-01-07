@@ -1,0 +1,258 @@
+.cart{
+    padding: 30px 128px;
+}
+.sellect{
+    background: #F4F7F7;
+    border-radius: 20px;
+    margin-top: 27px;
+    padding: 20px;
+}
+.sellect input{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 100px;
+}
+.cartt{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 10px;
+}
+.cart-left{
+    
+}
+.item-cart{
+    background: #fff;
+    padding: 18px 24px;
+    height: 224px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+.item-cartt{
+    background: #fff;
+    padding: 18px 24px;
+    height: 160px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+.cart-right{
+    background: #fff;
+    padding: 18px 24px;
+    border-radius: 20px;
+}
+.cart-summ{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.cart-summ h1{
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+}
+.cart-summ p{
+    text-align: right;
+    width: 180px;
+    font-size: 16px;
+}
+.cart-summ h4{
+    text-align: right; 
+}
+.cart-right button{
+    width: 600px;
+    height: 56px;
+    border-radius: 100px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    background: #4CC5D2;
+    justify-content: center;
+}
+.payy{
+    margin: 20px 0;
+    border-bottom: solid .5px #D9D9D9;
+    padding-bottom: 20px;
+}
+.payy h1{
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    text-align: left;   
+}
+
+.buyy h1{
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    text-align: left;   
+}
+.buyy p{
+    font-weight: 400;
+    font-size: 12px;
+}
+.sun{
+    margin-left: 12px;
+}
+.sun h1{
+    width: 281px;
+    height: 56px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    color: #000000;
+    text-align: left;
+}
+.sun h2{
+    width: auto;
+    height: 29px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    text-decoration-line: underline;
+    color: #1B5958;
+}
+.pprr{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+   
+}
+.pprr h3{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #061F1E;
+}
+.pprr h4{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    text-decoration-line: line-through;
+    color: #000000;
+    padding-left: 10px;
+    padding-top: 4px;
+}
+.pprr h5{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: #FFC107;
+    padding-left: 10px;
+    padding-top: 4px;
+}
+.rap{
+    width: 30px;
+    height: 30px;
+    background: #4CC5D2;
+    border-radius: 7.82609px;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 24px;
+}
+.ree{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: right;
+
+}
+.wrr{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: right;
+    text-align: right;
+
+}
+.ppsh h2{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #071717;
+}
+.ppsh h3{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 24px;
+    color: #495454;
+    padding-top: 8px;
+}
+.ppsh p{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000;
+    margin-bottom: 8px;
+}
+.ppsh ul li{
+    list-style-type: disc;
+    width: 732px;
+    font-size:20px;
+    font-weight: 400;
+    font-family: lato;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.wrp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 255px;
+}
+.modcard{
+   
+}
+.paym{
+    border-left: solid 1px #9A9FBF33;
+    padding-left: 20px;
+}
+.paym h3{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #071717;
+    margin-top: 60px;
+}
+.atov{
+    padding-right: 20px;
+}
+.met{
+    display: flex;
+    align-items: center;
+    margin: 36px 0;
+}
+.met p{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #071717;
+    padding-left: 10px;
+}
+
+@media (max-width: 1300px) {
+    .cart-right button{
+        width: 300px;
+       ;
+    } 
+}

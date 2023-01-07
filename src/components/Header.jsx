@@ -10,9 +10,15 @@ import SignIn from "./Auth/SignIn";
 import SignUp from "./Auth/SignUp";
 import ForgotPassword from "./Auth/ForgotPassword"
 import ResetPassword from "./Auth/ResetPassword"
+import Redirect from "./Auth/Redirect";
+import ResetLink from "./Auth/ResetLink";
 import {BiCart} from 'react-icons/bi'
 import {IoMdNotificationsOutline} from 'react-icons/io'
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux"
+import NumberOtp from "./Auth/NumberOtp";
+import EmailOtp from "./Auth/EmailOtp";
+import { Link } from "react-router-dom";
+
 
 const Header = () => {
   const auth = useSelector((state) => state.auth); //get state
@@ -60,10 +66,12 @@ const Header = () => {
                     <p>Sign In</p>
                     <IoMdNotificationsOutline width={20} height={20}/>
                 </div>}
+                <Link to='cart'>
                 <div style={{display: 'flex', alignItems: 'center'}}>
                     <p>My Cart</p>
                     <BiCart width={20} height={20}/>
                 </div>
+                </Link>
             </div>
         </div>
         <div className="mobile2">
@@ -92,7 +100,12 @@ const Header = () => {
         contentLabel="Example Modal"
         // className=" mode"
       > 
-        <SignIn/>
+        {/* <SignIn/> */}
+        {/* <NumberOtp/> */}
+        {/* <EmailOtp/> */}
+        {/* <Redirect/> */}
+        <ResetLink/>
+
      
       </Modal>
        </div>
