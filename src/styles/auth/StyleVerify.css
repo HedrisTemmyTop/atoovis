@@ -35,7 +35,6 @@
     justify-content: center;
   }
   
-
   .ootp button {
     color: #fff;
     font-family: 'Lato';
@@ -49,5 +48,25 @@
     border-radius: 100px;
     cursor: pointer;
     margin-top: 20px;
+  }
+
+  .sub button {
+    color: #fff;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    width: 462px;
+    height: 64px;
+    border: 0px;
+    background: #4CC5D2;
+    border-radius: 100px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+  .lor{
+    width: 425px;
+    text-align:center;
   }
   

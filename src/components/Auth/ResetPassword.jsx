@@ -1,7 +1,7 @@
 import React from "react";
 import '../../styles/auth/signin.css'
 
-const SignIn = () => {
+const ResetPassword = () => {
     return(
         <div className="reset">
            <div className="wel">
@@ -32,4 +32,4 @@ const SignIn = () => {
     )
 }
 
-export default SignIn
+export default ResetPassword

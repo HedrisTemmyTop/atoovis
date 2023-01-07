@@ -6,7 +6,7 @@
     color: #fff;
     justify-content: space-between;
     align-items: center;
-    padding: 0 0px;
+    padding: 0 128px;
     width: 100vw;
     height: 70px;
 }
@@ -147,7 +147,12 @@ li{
 .bot p{
     margin: 0 20px;
 }
-
+@media (max-width: 1300px) {
+    .header{
+        padding: 0 58px;
+     
+    }
+}
 @media (max-width: 450px) {
     .header{
         display: none;
