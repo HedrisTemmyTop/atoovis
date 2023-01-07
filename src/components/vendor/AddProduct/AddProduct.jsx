@@ -12,20 +12,50 @@ const AddProduct =()=>{
    const [value, setValue] = useState(1)
    const { formData, handleInputChange } = useForm({
     // <create/>
-    category: "",
+    product_category: "",
     product_name:"",
     product_brand:"",
     product_model:"",
     product_color:"",
+    // New product
+    product_line:"",
+    product_vendor_type:"",
+    product_type:"",
+    product_material_type:"",
+    product_description:"",
+    product_youtube_id:"",
+    product_keys_features:"",
+    // Product Requirement
+    product_box_inside:"",
+    product_note:"",
+    product_dimension:"",
+    product_warranty:"",
+    product_warrant_type:"",
+    product_warrant_address:"",
+    product_certification:"",
+    product_text_manufacturer:"",
+    product_care_label:"",
+    //products req features
+    gender_type:"",
+    heel_type:"",
+    seasons:"",
+    size_type:"",
+    sole_tpye:"",
+    color_type:""
+    //PRODUCT PRICING
+    // PRODUCT IMAGES
+
+
+
 
 })
     return(
         <ProductLayout valued={value}>
             {value === 1 && <Create InputData={formData} onchange={handleInputChange} setValue={setValue}/>}
-            {value === 2 && <NewProduct setValue={setValue}/>}
-            {value === 3 && <ProductRequirement setValue={setValue}/>}
-            {value === 4 && <ProductPricing setValue={setValue}/>}
-            {value === 5 && <AddImages setValue={setValue}/>}
+            {value === 2 && <NewProduct InputData={formData} onchange={handleInputChange}  setValue={setValue}/>}
+            {value === 3 && <ProductRequirement InputData={formData} onchange={handleInputChange} setValue={setValue}/>}
+            {value === 4 && <ProductPricing InputData={formData} onchange={handleInputChange}setValue={setValue}/>}
+            {value === 5 && <AddImages InputData={formData} onchange={handleInputChange} setValue={setValue}/>}
         </ProductLayout>
     )
 }

@@ -27,7 +27,7 @@ const Product =()=>{
                         <button style={{width: 168}} className={styles.thir}>Export</button>
                     </div>
             <div className="duct">
-                <RealProduct products={data.product}/>
+                <RealProduct products={data?.product}/>
                 <div>
                     <Products/>
                 </div>
