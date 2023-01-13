@@ -8,7 +8,21 @@ const fetchAllProducts = async () => {
         }
  
 }
+const fetchAllReviews = async () => {
+    const response = await axios.get(`${apiEndpointURL}/reviews`)
+    if (response.data) {
+        return response.data
+    }
 
+}
+
+const fetchAllOrders = async () => {
+    const response = await axios.get(`${apiEndpointURL}/orders`)
+    if (response.data) {
+        return response.data
+    }
+
+}
 const createABusiness = async (data) => {
     const response = await axios.post(`${apiEndpointURL}/business`, data)
     console.log(response)
@@ -32,6 +46,8 @@ const createAProduct = async (data) => {
 const adminAuthService = {
     fetchAllProducts,
     createABusiness,
-    createAProduct
+    createAProduct,
+    fetchAllReviews,
+    fetchAllOrders
 }
 export default adminAuthService
