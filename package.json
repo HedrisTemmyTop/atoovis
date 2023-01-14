@@ -9,6 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.11.4",
     "@reduxjs/toolkit": "^1.9.1",
     "axios": "^1.2.1",
     "chart.js": "^4.1.0",
@@ -27,6 +30,7 @@
     "react-responsive-carousel": "^3.2.23",
     "react-slider-swiper": "^2.0.6",
     "reactjs-popup": "^2.0.5",
+    "styled-components": "^5.3.6",
     "swiper": "^6.8.4"
   },
   "devDependencies": {

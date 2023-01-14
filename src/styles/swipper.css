@@ -29,6 +29,9 @@ h1{
 .now{
     margin-top: 10px;
 }
+.now p{
+    padding-top: 10px;
+}
 
 @media (max-width: 1300px) {
     .spread{

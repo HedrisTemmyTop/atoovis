@@ -66,7 +66,7 @@ const Header = () => {
                     <p>Sign In</p>
                     <IoMdNotificationsOutline width={20} height={20}/>
                 </div>}
-                <Link to='cart'>
+                <Link to='/cart'>
                 <div style={{display: 'flex', alignItems: 'center'}}>
                     <p>My Cart</p>
                     <BiCart width={20} height={20}/>
@@ -102,9 +102,9 @@ const Header = () => {
       > 
         {/* <SignIn/> */}
         {/* <NumberOtp/> */}
-        {/* <EmailOtp/> */}
+        <EmailOtp/>
         {/* <Redirect/> */}
-        <ResetLink/>
+        {/* <ResetLink/> */}
 
      
       </Modal>

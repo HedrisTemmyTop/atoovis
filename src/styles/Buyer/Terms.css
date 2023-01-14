@@ -1,0 +1,79 @@
+.bread{
+    padding: 20px 120px;
+    background: #F6F8F8;
+}
+.bread h1{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 150%;
+    text-align: left;
+    color: #071717;
+}
+.intro{
+width: 1256px;  
+padding: 20px;
+font-family: 'Lato';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+display: flex;
+align-items: center;
+color: #071717;
+background: #FFFFFF;
+border-radius: 30px;
+
+}
+
+.faq-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.faq-img img{
+    width: 1706px;
+    height: 487px;
+}
+.faq{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 120px;
+}
+.acr{
+    width: 1000px;
+}
+.write{
+    width: 1000px;
+    height: 64px;
+    background: #FFFFFF;
+    border: 0.5px solid #9A9FBF;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.faq h1{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 150%;
+    text-align: center;
+    color: #071717;
+}
+
+.faq input{
+    outline: none;
+    border: none;
+    background: transparent;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: rgba(0, 0, 0, 0.5);
+    padding-left: 10px;
+}

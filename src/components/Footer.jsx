@@ -16,7 +16,7 @@ const Footer = () => {
            
            <div className="main">
            <div>
-           <img src={logo}/>
+          <Link to= '/'> <img src={logo}/></Link>
            </div>
 
           <div>
@@ -33,9 +33,9 @@ const Footer = () => {
            <div className="list">
                <ul>
                    <li>About Us</li>
-                   <li>FAQs</li>
-                   <li>Privacy Policy</li>
-                   <li>Terms and Conditions</li>
+                   <li><Link to='/faqs'>FAQs</Link></li>
+                   <li><Link to='/privacy-policy'>Privacy Policy</Link></li>
+                   <li><Link to='/term-condition'>Terms and Conditions</Link></li>
                    <li> <Link to='/vendor'>Sell on Atoovis</Link></li>
                </ul>
            </div>
@@ -85,7 +85,7 @@ const Footer = () => {
                <ul>
                    <li>About Us</li>
                    <li>FAQs</li>
-                   <li>Privacy Policy</li>
+                   <li><Link to='/privacy'>Privacy Policy</Link></li>
                    <li>Terms and Conditions</li>
                    <li> <Link to='/vendor'>Sell on Atoovis</Link></li>
                </ul>

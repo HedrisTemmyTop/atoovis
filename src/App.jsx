@@ -12,6 +12,10 @@ import { Route, Routes,  } from 'react-router-dom'
 import Checkout from './pages/Buyer/Checkout'
 import PlaceOrder from './pages/Buyer/PlaceOrder'
 import Footer from './components/Footer'
+import BuyerSidebar from './pages/BuyerSidebar'
+import Privacy from './pages/Privacy'
+import Terms from './pages/Terms'
+import Faqs from './pages/Faqs'
 
 function App() {
 
@@ -27,6 +31,10 @@ function App() {
       <Route path='cart' element={<MyCart/>}/>
       <Route path='checkout' element={<Checkout/>}/>
       <Route path='order/*' element={<PlaceOrder/>}/>
+      <Route path = 'buyer/*' element={<BuyerSidebar/>}/>
+      <Route path='privacy-policy' element={<Privacy/>}/>
+      <Route path='term-condition' element={<Terms/>}/>
+      <Route path='faqs' element={<Faqs/>}/>
     </Routes>
     <Footer/>
    </>

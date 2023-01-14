@@ -1,13 +1,15 @@
 import React from 'react';
 import swipe from '../assets/images/Header/swipe.png'
 import '../styles/swipper.css'
+import MainSwipper from './MainSwipper';
 
 
 const Swipper =()=>{
     return(
         <div className='swipe'>
         <div>
-        <img src={swipe} alt="" className='imag'/>
+            <MainSwipper/>
+        {/* <img src={swipe} alt="" className='imag'/> */}
         </div>
         <div className='leftyy'>
         <h1>Category Overview</h1>
