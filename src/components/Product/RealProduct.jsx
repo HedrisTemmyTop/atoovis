@@ -5,6 +5,9 @@ import { getPokemon, filterPokemon } from "./Services";
 import Toggle from "./Toggle";
 import { BiPlus } from "react-icons/bi";
 import { Link } from "react-router-dom";
+import moment from "moment";
+
+
 const Product = ({ products }) => {
   const [filtredPokemon, setFiltredPokemon] = useState(null);
   useEffect(() => {
@@ -136,7 +139,7 @@ const Product = ({ products }) => {
                             <p>{type?.sku}</p>
                           </td>
                           <td className="px-6 py-2 text-sm font-medium text-center text-gray-800 whitespace-nowrap">
-                            <p>{type.createdAt}</p>
+                          <p> {moment(type.createdAt).format("MMMM Do YYYY")}</p>
                           </td>
                           <td className="px-6 py-2 text-sm font-medium text-center text-gray-800 whitespace-nowrap">
                             <p>{type?.quantity || 6}</p>

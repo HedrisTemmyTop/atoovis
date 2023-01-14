@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import styles from '../../../styles/VendorDash/Dashboard.module.css'
 import { BiCategoryAlt } from 'react-icons/bi'
 import { AiOutlineSearch } from 'react-icons/ai'
@@ -13,7 +13,39 @@ import { MdArrowForward } from 'react-icons/md'
 
 
 const Create = ({ setValue, InputData, onchange }) => {
-    const { category, product_name,product_brand, product_model, product_color } = InputData
+    const { product_category, product_name, product_brand, product_model, product_color } = InputData
+    const [pcategoryErr, setcategpryErr] = useState("");
+    const [pnameErr, setpnameErr] = useState("");
+    const [pbrandErr, setpbrandErr] = useState("");
+
+    const validateform = () => {
+        if (!product_category) {
+            setcategpryErr("Product Category is required");
+        } else if (!product_name) {
+            setpnameErr("Product name is required");
+        } else if (!product_brand) {
+            setpbrandErr("Product brand is required");
+        }
+        else {
+          setValue(2);
+          // console.log("ffff");
+        }
+      };
+    const validateformButton = () => {
+        if (
+        product_category &&
+        product_name &&
+        product_brand
+        ) {
+          return false;
+        }
+        else{
+          return true;
+        }
+      };
+
+     
+
     const percentage = 25;
     return (
 
@@ -79,6 +111,7 @@ const Create = ({ setValue, InputData, onchange }) => {
                         <div style={{ display: 'flex' }}>
                             <AiOutlineSearch className='sss' />
                             <input type="text" name="" id="" placeholder="Enter product name, EAN, ISBN " />
+                            
                         </div>
                         <p className="ses">Search</p>
                     </div>
@@ -87,26 +120,36 @@ const Create = ({ setValue, InputData, onchange }) => {
                         <div className="labe">
                             <label htmlFor="">Category*</label>
                             <select name="product_category" id="" required className="sell" onChange={onchange} >
-                            <option value="">Select Category</option>
-                            <option value="gadgets">Gadgets</option>
+                                <option value="">Select Category</option>
+                                <option value="gadgets">Gadgets</option>
 
                             </select>
+                            {!product_category && (
+                            <small style={{ color: "red" }}>{pcategoryErr}</small>
+                             )}
                         </div>
                         <div className="labe">
                             <label htmlFor="">Name of Product*</label>
                             <input type="text" name="product_name" value={product_name} onChange={onchange} required />
+                            {!product_name && (
+                            <small style={{ color: "red" }}>{pnameErr}</small>
+                             )}
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum aliquam molestie at neque est. Quam nunc,
                             donec sagittis diam purus. Est odio lectus volutpat.</p>
                         <div className="labe">
                             <label htmlFor="">Brand of Product</label>
                             <input type="text" name="product_brand" value={product_brand} onChange={onchange} required />
+                            {!product_brand && (
+                            <small style={{ color: "red" }}>{pbrandErr}</small>
+                             )}
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum aliquam molestie at neque est.
                             Quam nunc, donec sagittis diam purus. Est odio lectus volutpat.</p>
                         <div className="labe">
                             <label htmlFor="">Model of Product</label>
                             <input type="text" name="product_model" value={product_model} onChange={onchange} required />
+            
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum aliquam molestie at neque est.
                             Quam nunc, donec sagittis diam purus. Est odio lectus volutpat.</p>
@@ -114,7 +157,21 @@ const Create = ({ setValue, InputData, onchange }) => {
                             <label htmlFor="">Color</label>
                             <input type="text" name="product_color" value={product_color} onChange={onchange} required />
                         </div>
-                        <button className="labee" onClick={() => setValuzaaaaaaaaaaaaaaaaaze(2)}>Save and Continue</button>
+                        {validateformButton() == true ? (
+                        <button
+                            onClick={validateform}
+                            className="labee"
+                            >   
+                            Save and Continue
+                        </button>
+                    ) : (
+                        <button
+                            onClick={() => setValue(2)}
+                            className="labee"
+                            >
+                            Save and Continue
+                        </button>
+                    )}
                         <div style={{ marginTop: 20, }}>
                             <button className="labeee as">Previous</button>
                             <button className="labeee ">Save as Draft</button>
