@@ -1,50 +1,35 @@
-import React, { useState } from "react";
-import ReactDOM from "react-dom";
-import Carousel from "react-elastic-carousel";
+
 import swipe from '../assets/images/Header/swipe.png'
-import Item from "./item";
-import "./item/items.css";
-
-const breakPoints = [
-  { width: 1, itemsToShow: 1 },
-  { width: 550, itemsToShow: 2, itemsToScroll: 2 },
-  { width: 768, itemsToShow: 3 },
-  { width: 1200, itemsToShow: 4 }
-];
-
-function MainSwipper() {
-  const [items, setItems] = useState([1, 2, 3, 4, 5, 6, 7, 8]);
-
-//   const addItem = () => {
-//     const nextItem = Math.max(1, items.length + 1);
-//     setItems([...items, nextItem]);
-//   };
-
-//   const removeItem = () => {
-//     const endRange = Math.max(0, items.length - 1);
-//     setItems(items.slice(0, endRange));
-//   };
-
-  return (
-    <div className="App">
-      <div className="controls-wrapper">
-        {/* <button onClick={removeItem}>Remove Item</button> */}
-        {/* <button onClick={addItem}>Add Item</button> */}
-      </div>
-      <hr className="seperator" />
-      <div className="carousel-wrapper">
-        <Carousel breakPoints={breakPoints}>
-          {/* {items.map((item) => (
-            <Item key={item}>{item}</Item>
-          ))} */}
-          <img src={swipe} alt="" />
-        </Carousel>
-      </div>
-    </div>
-  );
+import swipe2 from '../assets/images/Header/Frame 39909.png'
+import swipe3 from '../assets/images/Header/Frame 39910.png'
+import '../styles/Buyer/Terms.css'
+import React, { Component } from 'react';  
+import ReactDOM from 'react-dom';  
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader  
+import { Carousel } from 'react-responsive-carousel';  
+   
+class MainSwipper extends Component {  
+    render() {  
+        return (  
+            <Carousel
+            autoPlay = {true}
+            infiniteLoop = {true}
+            showThumbs = {false}
+            swipeable = {false}
+            width = {'90%'}
+            >  
+                <div className=''>  
+                    <img src={swipe}/>  
+                </div>  
+                <div>  
+                <img src={swipe2} />   
+                </div>  
+                <div>  
+                <img src={swipe3} />   
+                </div>  
+            </Carousel>  
+        );  
+    }  
 }
-
-// const rootElement = document.getElementById("root");
-// ReactDOM.render(<App />, rootElement);
 
 export default MainSwipper
