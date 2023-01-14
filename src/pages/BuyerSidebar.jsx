@@ -9,6 +9,7 @@ import WishList from "../components/BuyerSide/WishList";
 import Wallet from "../components/BuyerSide/Wallet";
 import PrivacyPolicy from '../components/BuyerSide/PrivacyPolicy'
 import TrackOrder from "../components/BuyerSide/TrackOrder";
+import MyOrder from "../components/BuyerSide/MyOrder";
 const BuyerSidebar =()=>{
     return(
         <div>
@@ -47,7 +48,7 @@ const BuyerSidebar =()=>{
                                     <AiOutlineHeart/>
                                     <p>Favourite</p>
                                 </li></Link>
-                                <Link to=''>
+                                <Link to='/buyer/order'>
                                <li>
                                     <AiOutlineHeart/>
                                     <p>My Orders</p>
@@ -116,6 +117,7 @@ const BuyerSidebar =()=>{
                         <Route path="/wallet/*" element={<Wallet/>}/>
                         <Route path="/privacy" element={<PrivacyPolicy/>}/>
                         <Route path="/track" element={<TrackOrder/>}/>
+                        <Route path="/order" element={<MyOrder/>}/>
                     </Routes>
                 </div>
                 </div>
