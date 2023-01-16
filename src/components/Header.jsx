@@ -46,7 +46,8 @@ const Header = () => {
   function closeModal() {
     setIsOpen(false);
   }
-
+  
+     
   return (
     <div>
       <div className="header">
@@ -113,12 +114,17 @@ const Header = () => {
       >
         {/* <SignIn/> */}
         {/* <NumberOtp/> */}
-        {/* <EmailOtp/> */}
+        <EmailOtp/>
         {/* <Redirect/> */}
-        <ResetLink />
+        {/* <ResetLink/> */}
+
+     
       </Modal>
     </div>
+       
   );
 };
 
 export default Header;
+
+

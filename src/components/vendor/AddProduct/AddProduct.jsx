@@ -6,10 +6,14 @@ import ProductRequirement from './ProductRequirement'
 import ProductPricing from './ProductPricing'
 import AddImages from './AddImages'
 import useForm from "../../../hooks/useForm";
-
+import useFilesForm from "../../../hooks/useFilesForm";
 
 const AddProduct =()=>{
    const [value, setValue] = useState(1)
+   const {fileData, handleFileUpload} = useFilesForm({
+    product_image:"",
+   
+  })
    const { formData, handleInputChange } = useForm({
     // <create/>
     product_category: "",
@@ -29,7 +33,8 @@ const AddProduct =()=>{
     product_box_inside:"",
     product_note:"",
     product_dimension:"",
-    product_warranty:"",
+    product_weight:"",
+    product_warrant:"",
     product_warrant_type:"",
     product_warrant_address:"",
     product_certification:"",
@@ -41,8 +46,16 @@ const AddProduct =()=>{
     seasons:"",
     size_type:"",
     sole_tpye:"",
-    color_type:""
+    color_type:"",
     //PRODUCT PRICING
+    product_size_price:"",
+    product_seller_sku:"",
+    product_ean_upc_isbn:"",
+    product_quantity:"",
+    product_price:"",
+    product_sale_price:"",
+    startdate:"",
+    end_date:"",
     // PRODUCT IMAGES
 
 
@@ -55,7 +68,7 @@ const AddProduct =()=>{
             {value === 2 && <NewProduct InputData={formData} onchange={handleInputChange}  setValue={setValue}/>}
             {value === 3 && <ProductRequirement InputData={formData} onchange={handleInputChange} setValue={setValue}/>}
             {value === 4 && <ProductPricing InputData={formData} onchange={handleInputChange}setValue={setValue}/>}
-            {value === 5 && <AddImages InputData={formData} onchange={handleInputChange} setValue={setValue}/>}
+            {value === 5 && <AddImages fileData={fileData} InputData={formData} onchange={handleFileUpload} setValue={setValue}/>}
         </ProductLayout>
     )
 }

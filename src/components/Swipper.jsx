@@ -1,17 +1,19 @@
 import React from 'react';
 import swipe from '../assets/images/Header/swipe.png'
 import '../styles/swipper.css'
+import MainSwipper from './MainSwipper';
 
 
 const Swipper =()=>{
     return(
         <div className='swipe'>
         <div>
-        <img src={swipe} alt="" className='imag'/>
+            <MainSwipper/>
+        {/* <img src={swipe} alt="" className='imag'/> */}
         </div>
         <div className='leftyy'>
         <h1>Category Overview</h1>
-        <div className='grid grid-flow-row-dense grid-cols-3 md:grid-cols-2 grid-rows-3 gap-2'>
+        <div className='grid grid-flow-row-dense grid-cols-3 md:grid-cols-3 grid-rows-3 gap-3'>
             <div className='now'>
             <img src="https://res.cloudinary.com/mindset/image/upload/v1668808104/mobile_1_2_j2ay9e.png" alt="" />
             <p>Mobile</p>

@@ -35,8 +35,6 @@ const NewProduct = ({ setValue,InputData, onchange }) => {
         if (
         product_line &&
         product_vendor_type &&
-        product_type &&
-        product_material_type &&
         product_description &&
         product_keys_features
         ) {
@@ -52,12 +50,7 @@ const NewProduct = ({ setValue,InputData, onchange }) => {
             setproduct_lineErr("Product Line is required");
         } else if (!product_vendor_type) {
             setproduct_vendor_typeErr("Vendor Type is required");
-        } else if (!product_type) {
-            setproduct_typeErr("Product type is required");
         }
-        else if (!product_material_type) {
-            setproduct_material_typeErr("Material type is required");
-        } 
         else if (!product_description) {
             setproduct_descriptionErr("Product description is required");
         }
@@ -155,9 +148,7 @@ const NewProduct = ({ setValue,InputData, onchange }) => {
                         <div className="labe">
                             <label htmlFor="">Type</label>
                             <input type="text" name="product_type" value={product_type} onChange={onchange}  required />
-                            {!product_type && (
-                            <small style={{ color: "red" }}>{product_typeErr}</small>
-                             )}
+                         
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum aliquam molestie at neque est.
                             Quam nunc, donec sagittis diam purus. Est odio lectus volutpat.</p>

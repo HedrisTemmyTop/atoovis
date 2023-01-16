@@ -17,8 +17,6 @@ const Create = ({ setValue, InputData, onchange }) => {
     const [pcategoryErr, setcategpryErr] = useState("");
     const [pnameErr, setpnameErr] = useState("");
     const [pbrandErr, setpbrandErr] = useState("");
-    const [pmodelErr, setpmodelErr] = useState("");
-    const [pcolorErr, setpcolorErr] = useState("");
 
     const validateform = () => {
         if (!product_category) {
@@ -27,12 +25,6 @@ const Create = ({ setValue, InputData, onchange }) => {
             setpnameErr("Product name is required");
         } else if (!product_brand) {
             setpbrandErr("Product brand is required");
-        }
-        else if (!product_model) {
-            setpmodelErr("Product Model is required");
-        } 
-        else if (!product_color) {
-            setpcolorErr("Product color is required");
         }
         else {
           setValue(2);
@@ -43,9 +35,7 @@ const Create = ({ setValue, InputData, onchange }) => {
         if (
         product_category &&
         product_name &&
-        product_brand &&
-        product_model &&
-        product_color
+        product_brand
         ) {
           return false;
         }
@@ -159,18 +149,13 @@ const Create = ({ setValue, InputData, onchange }) => {
                         <div className="labe">
                             <label htmlFor="">Model of Product</label>
                             <input type="text" name="product_model" value={product_model} onChange={onchange} required />
-                            {!product_model && (
-                            <small style={{ color: "red" }}>{pmodelErr}</small>
-                             )}
+            
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum aliquam molestie at neque est.
                             Quam nunc, donec sagittis diam purus. Est odio lectus volutpat.</p>
                         <div className="labe">
                             <label htmlFor="">Color</label>
                             <input type="text" name="product_color" value={product_color} onChange={onchange} required />
-                            {!product_color && (
-                            <small style={{ color: "red" }}>{pcolorErr}</small>
-                             )}
                         </div>
                         {validateformButton() == true ? (
                         <button
