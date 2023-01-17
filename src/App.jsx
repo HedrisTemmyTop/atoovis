@@ -18,6 +18,8 @@ import Header from "./components/Header";
 import Wallet from "./components/vendor/Wallet";
 import Order from "./components/Orders/Order";
 import Product from "./components/vendor/Product";
+import Buyer from './pages/BuyerSidebar'
+import BuyerSidebar from "./pages/BuyerSidebar";
 function App() {
   return (
     <>
@@ -36,6 +38,7 @@ function App() {
         <Route path="wallet" element={<Wallet />} />
         <Route path="orders" element={<Order />} />
         <Route path="product" element={<Product />} />
+        <Route path="buyer/*" element={<BuyerSidebar/>}/>
       </Routes>
       <Footer />
     </>
