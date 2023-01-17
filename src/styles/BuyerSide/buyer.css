@@ -286,3 +286,150 @@ color: #1B5958;
     border-radius: 30px;
     outline: none;
 }
+.ser{
+    display: flex;
+    align-items: center;
+}
+.ser input{
+    border: none;
+    background: transparent;
+    outline: none;
+}
+.sort{
+    display: flex;
+    width: 974px;
+}
+.bow-content{
+    background: #fff;
+    width: 100%;
+    padding: 24px;
+}
+.pare{
+    border-bottom: solid 1px #D0D1D180;
+    padding-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+.paren h1{
+    font-family: 'Lato';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+width:281px;
+text-align: left;
+color: #000;
+}
+.paren h2{
+    font-family: 'Lato';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+text-decoration-line: underline;
+padding: 10px 0;
+}
+.paren h3{
+
+font-family: 'Lato';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 22px;
+}
+.pay-now button{
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+width: 165px;
+height: 48px;
+background: #4CC5D2;
+border-radius: 100px;
+}
+.pay-now{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.pay-bottom{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 0;
+}
+.pay-bottom h2{
+    font-family: 'Lato';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+}
+.pay-bottom h3{
+    font-family: 'Lato';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+padding-bottom: -20px;
+}
+.pay-bottom h4{
+    font-family: 'Lato';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+color: #4CC5D2;
+padding-top: 5px;
+}
+
+.pay-modal{
+width: 586px;
+height: auto;
+background: #fff;
+border-radius: 24px;
+padding: 24px;
+}
+.pay-modal h6{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43px;
+    color: #071717;
+    padding: 17px 0;
+    text-align: left;
+}
+.track-modal{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.track-modal h2{
+
+font-family: 'Lato';
+font-style: normal;
+font-weight: 800;
+font-size: 16px;
+line-height: 19px;
+color: #071717;
+padding: 10px;
+}
+
+.cancel-item{
+    border: 1px solid #C4D3DA;
+border-radius: 8px;
+}
+.track-item{
+    background: #4CC5D2;
+border-radius: 8px;
+color: #fff;
+margin-left: 10px;
+}
+.track-modal h3{
+    font-family: 'Lato';
+font-style: normal;
+font-weight: 800;
+font-size: 10px;
+line-height: 12px;
+text-transform: uppercase;
+padding: 0 10px;
+}

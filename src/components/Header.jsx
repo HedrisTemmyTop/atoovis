@@ -100,7 +100,7 @@ const Header = () => {
         contentLabel="Example Modal"
         // className=" mode"
       > 
-        {/* <SignIn/> */}
+        {/* <SignUp/> */}
         {/* <NumberOtp/> */}
         <EmailOtp/>
         {/* <Redirect/> */}
