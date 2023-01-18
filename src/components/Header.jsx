@@ -114,7 +114,7 @@ const Header = () => {
         // className=" mode"
       >
         {/* <SignIn /> */}
-        <SignUp />
+        {/* <SignUp /> */}
         {/* <NumberOtp/> */}
         {/* <EmailOtp/> */}
         {/* <Redirect/> */}
