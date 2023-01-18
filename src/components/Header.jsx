@@ -46,25 +46,26 @@ const Header = () => {
   function closeModal() {
     setIsOpen(false);
   }
-  
-     
+
   return (
     <div>
       <div className="header">
         <div>
-          <img src={logo} />
+          <img src={logo} className="logo" />
         </div>
-        <div className="mid">
-          <div className="search">
-            <img src={search} alt="" />
-            <input type="text" placeholder="Search Products" />
+        <div className="mid mid2">
+          <div className="mid">
+            <div className="search">
+              <img src={search} alt="" />
+              <input type="text" placeholder="Search Products" />
+            </div>
+            <button className="bts">Search</button>
           </div>
-          <button className="bts">Search</button>
         </div>
         <div className="left">
           {!access && (
             <div
-              style={{ display: "flex", alignItems: "center", marginRight: 30 }}
+              style={{ display: "flex", alignItems: "center", marginRight: 10 }}
               onClick={openModal}
             >
               <p>Sign In</p>
@@ -112,19 +113,15 @@ const Header = () => {
         contentLabel="Example Modal"
         // className=" mode"
       >
-        {/* <SignIn/> */}
+        {/* <SignIn /> */}
+        <SignUp />
         {/* <NumberOtp/> */}
-        <EmailOtp/>
+        {/* <EmailOtp/> */}
         {/* <Redirect/> */}
-        {/* <ResetLink/> */}
-
-     
+        {/* <ResetLink /> */}
       </Modal>
     </div>
-       
   );
 };
 
 export default Header;
-
-
