@@ -40,7 +40,7 @@ h1 {
   .spread {
     display: grid;
     grid-template-columns: repeat(2, 2fr);
-    flex-gaps: 5px;
+    grid-gap: 5px;
   }
 
   .imag {
@@ -89,7 +89,7 @@ h1 {
     display: grid;
     grid-template-columns: auto auto;
     flex-wrap: wrap;
-    flex-gaps: 2px;
+    grid-gap: 2px;
     width: 0px;
   }
   .swipe {
