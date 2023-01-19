@@ -433,3 +433,10 @@ line-height: 12px;
 text-transform: uppercase;
 padding: 0 10px;
 }
+.track-modal button{
+    width: 127px;
+    height: 42px;
+    background: #4CC5D2;
+    border-radius: 12px;
+    color: #fff;
+}
