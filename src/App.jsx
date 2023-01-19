@@ -20,6 +20,7 @@ import Order from "./components/Orders/Order";
 import Product from "./components/vendor/Product";
 import Buyer from './pages/BuyerSidebar'
 import BuyerSidebar from "./pages/BuyerSidebar";
+import TrackOrder from "./pages/Buyer/TrackOrder";
 function App() {
   return (
     <>
@@ -39,6 +40,7 @@ function App() {
         <Route path="orders" element={<Order />} />
         <Route path="product" element={<Product />} />
         <Route path="buyer/*" element={<BuyerSidebar/>}/>
+        <Route path="track-order/*" element={<TrackOrder/>}/>
       </Routes>
       <Footer />
     </>
