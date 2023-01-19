@@ -1,15 +1,28 @@
-.navi{
-    background: #4CC5D2;
-    height: 51px;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    color: #fff;
-    justify-content: space-between;
+.navi {
+  background: #4cc5d2;
+  height: 51px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  justify-content: space-between;
+  padding: 0 20px;
+  line-height: 19.2px;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: lato;
+  padding: 0 120px;
+}
+@media only screen and (max-width: 1200px) {
+  .navi {
     padding: 0 20px;
-    line-height: 19.2px;
-    font-size: 16px;
-    font-weight: 400;
-    font-family: lato;
-    padding: 0 120px;
+    overflow-x: scroll;
+  }
+  .navi::-webkit-scrollbar {
+    display: none;
+  }
+  .navi p {
+    flex-shrink: 0;
+    margin-left: 10px;
+  }
 }
