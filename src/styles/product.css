@@ -1,116 +1,136 @@
-.cover{
-    background: #F4F7F7;
-    margin:20px 20px;
-    align-items: center;
-    padding: 20px;
-    border-radius: 20px;
-    
+.cover {
+  background: #f4f7f7;
+  margin: 20px 40px;
+  align-items: center;
+  padding: 20px;
+  border-radius: 20px;
 }
 
-.inner{
-    background: #FFFFFF;
-    width: 150px;
-    height:auto;
+.inner {
+  background: #ffffff;
+  width: 150px;
+  height: auto;
+  border-radius: 15.85px;
+  padding: 10px;
+}
+.inner button {
+  background: #4cc5d2;
+  width: 132px;
+  height: 39px;
+  border-radius: 9px;
+  text-align: center;
+  color: #fff;
+  margin-top: 10px;
+}
+.cover h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1b5958;
+  text-align: left;
+  padding: 20px 0;
+}
+.inner p {
+  color: #000;
+  width: 220px;
+}
+.till {
+  font-weight: 300;
+  font-size: 12px;
+  text-align: left;
+  max-width: 100px;
+  line-height: 15px;
+  margin-top: 10px;
+}
+.little {
+  font-size: 20px;
+  font-weight: 700;
+}
+.lit {
+  font-size: 12px;
+  font-weight: 400;
+  text-decoration: line-through;
+  opacity: 0.5px;
+}
+.contain1 {
+  width: 130px;
+}
+.Products__Wrapper {
+  max-width: 100vw;
+}
+.FeaturedProduct__Container {
+  display: flex;
+  overflow-x: scroll;
+  scrollbar-width: 0;
+  max-width: 100vw;
+}
+.FeaturedProduct__Container::-webkit-scrollbar {
+  display: none;
+}
+.inner {
+  margin-right: 20px;
+}
+@media only screen and (max-width: 700px) {
+  .cover {
+    margin: 20px 20px;
+    border-radius: 10px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .cover h1 {
+    font-size: 16px;
+  }
+}
+/* @media (max-width: 450px) {
+  .inner {
+    background: #ffffff;
+    width: 100px;
+    height: auto;
     border-radius: 15.85px;
     padding: 10px;
-
-}
-.inner button{
-    background: #4CC5D2;
-    width:132px;
+  }
+  .inner button {
+    background: #4cc5d2;
+    width: 82px;
     height: 39px;
+    font-size: 15px;
     border-radius: 9px;
     text-align: center;
     color: #fff;
     margin-top: 10px;
-}
-.cover h1{
-    font-size: 24px;
+  }
+  .cover h1 {
+    font-size: 14px;
     font-weight: 700;
-    color: #1B5958;
+    color: #1b5958;
     text-align: left;
     padding: 20px 0;
-}
-.inner p{
+  }
+  .inner p {
     color: #000;
     width: 220px;
-}
-.till{
+  }
+  .till {
     font-weight: 300;
-    font-size: 12px;
+    font-size: 8px;
+    line-height: 10px;
     text-align: left;
-    max-width: 100px;
-    line-height: 15px;
+    max-width: 70px;
     margin-top: 10px;
-}
-.little{
-    font-size: 20px;
+  }
+  .little {
+    font-size: 15px;
     font-weight: 700;
-}
-.lit{
-    font-size: 12px;
+  }
+  .lit {
+    font-size: 8px;
     font-weight: 400;
     text-decoration: line-through;
-    opacity: .5px;
-    
-}
-.contain1{
-    width: 130px;
-}
-
-@media (max-width: 450px) {
-    .inner{
-        background: #FFFFFF;
-        width: 100px;
-        height:auto;
-        border-radius: 15.85px;
-        padding: 10px;
-    
-    }
-    .inner button{
-        background: #4CC5D2;
-        width:82px;
-        height: 39px;
-        font-size: 15px;
-        border-radius: 9px;
-        text-align: center;
-        color: #fff;
-        margin-top: 10px;
-    }
-    .cover h1{
-        font-size: 14px;
-        font-weight: 700;
-        color: #1B5958;
-        text-align: left;
-        padding: 20px 0;
-    }
-    .inner p{
-        color: #000;
-        width: 220px;
-    }
-    .till{
-        font-weight: 300;
-        font-size: 8px;
-        line-height: 10px;
-        text-align: left;
-        max-width: 70px;
-        margin-top: 10px;
-    }
-    .little{
-        font-size: 15px;
-        font-weight: 700;
-    }
-    .lit{
-        font-size: 8px;
-        font-weight: 400;
-        text-decoration: line-through;
-        opacity: .5px;
-        
-    }
-    .contain1{
-        max-width: 60px;
-    }
-    .love{
-        display: none;
-    }
-}
+    opacity: 0.5px;
+  }
+  .contain1 {
+    max-width: 60px;
+  }
+  .love {
+    display: none;
+  }
+} */

@@ -1,119 +1,138 @@
-.swipe{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    padding: 20px 120px;
-   
+.swipe {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 20px 120px;
 }
-@media (max-width: 1440px){
-    
+.carousel {
+  width: 100% !important;
 }
-
-.imag{
-    height: 500px;
-    margin-right: 5px;
+.imag {
+  height: 500px;
+  margin-right: 5px;
 }
-.leftyy{
-    background: #F4F7F7;
-    padding: 20px;
-    margin-left: 80px;
-    border-radius: 20px; 
+.leftyy {
+  background: #f4f7f7;
+  padding: 20px;
+  margin-left: 80px;
+  border-radius: 20px;
 }
-.spread{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-   
+.spread {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
 }
-.leftyy p, h1{
-    margin-top: -10px;
-    text-align: center;
+.leftyy p,
+h1 {
+  margin-top: -10px;
+  text-align: center;
 }
-h1{
-    color: #1B5958;
+h1 {
+  color: #1b5958;
 }
-.now{
-    margin-top: 10px;
+.now {
+  margin-top: 10px;
 }
-.now p{
-    padding-top: 10px;
+.now p {
+  padding-top: 10px;
 }
 
 @media (max-width: 1300px) {
-    .spread{
-        display: grid;
-        grid-template-columns: repeat(2, 2fr);
-        flex-gaps: 5px;
-    }
-  
+  .spread {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    flex-gaps: 5px;
+  }
 
-    .imag{
-        width: 700px;
-        height: 500px;
-        margin-right: 1px;
-    }
-   .leftyy p, h1{
-        margin-top: -10px;
-        text-align: center;
-    }
-    h1{
-        font-size: 24px;
-    }
-    .now{
-        margin-top: 10px;
-        text-align: center;
-    }
+  .imag {
+    width: 700px;
+    height: 500px;
+    margin-right: 1px;
+  }
+  .leftyy p,
+  h1 {
+    margin-top: -10px;
+    text-align: center;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  .now {
+    margin-top: 10px;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .swipe {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-inline: 60px;
+  }
+  .leftyy {
+    flex-basis: 100%;
+    margin-top: 20px;
+    margin-left: 0;
+    width: 100%;
+  }
+  .imag {
+    margin-right: 0;
+    background-color: green;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .swipe {
+    padding-inline: 20px;
+  }
 }
 @media (max-width: 450px) {
-    .spread{
-        display: grid;
-        grid-template-columns: auto auto;
-        flex-wrap: wrap;
-        flex-gaps: 2px;
-        width: 0px;
-       
-    }
-    .swipe{
-        display: flex;
-        flex-direction: column;
-        padding: 20px;
-    }
-    .imag{
-        width: 400px;
-        height: 250px;
-        margin-right: 5px;
-    }
-    h1{
-        text-align: center;
-    }
-    .now p{
-        color: #1B5958;
-        text-align: left;
-        padding-left: 0px;
-        font-size: 16px;
-        margin-top: 0px;
-        font-weight: 300;
-    }
-    .now{
-        display: flex;
-        flex-direction: column;
-        color: #000;
-    }
-   
- 
-    .leftyy{
-        background: #F4F7F7;
-        padding: 20px;
-        margin-left: 10px;
-        border-radius: 20px; 
-        margin-bottom: 20px;
-        margin-top: 20px;
-    }
+  .spread {
+    display: grid;
+    grid-template-columns: auto auto;
+    flex-wrap: wrap;
+    flex-gaps: 2px;
+    width: 0px;
+  }
+  .swipe {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  .imag {
+    width: 400px;
+    height: 250px;
+    margin-right: 5px;
+  }
+  h1 {
+    text-align: center;
+  }
+  .now p {
+    color: #1b5958;
+    text-align: left;
+    padding-left: 0px;
+    font-size: 16px;
+    margin-top: 0px;
+    font-weight: 300;
+  }
+  .now {
+    display: flex;
+    flex-direction: column;
+    color: #000;
+  }
 
-    @media (max-width: 350px) { 
-        .imag{
-            width: 350px;
-            height: 200px;
-            margin-right: 5px;
-        } 
+  .leftyy {
+    background: #f4f7f7;
+    padding: 20px;
+    margin-left: 10px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  @media (max-width: 350px) {
+    .imag {
+      width: 350px;
+      height: 200px;
+      margin-right: 5px;
     }
+  }
 }
