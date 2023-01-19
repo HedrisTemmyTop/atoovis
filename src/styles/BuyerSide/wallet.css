@@ -69,11 +69,11 @@
     background: #fff;
 }
 .boxss select,input{
-    width: 464px;
+    /* width: 464px;
     height: 66px;
     background: #F6F8F8;
     border: 0.5px solid #1B5958;
-    border-radius: 30px;
+    border-radius: 30px; */
 }
 .mem{
     margin: 24px 0;
