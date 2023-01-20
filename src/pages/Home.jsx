@@ -13,6 +13,7 @@ const Home = () => {
   return (
     <div>
       <Header />
+
       <Navigation />
       <Swiper />
       <div className="Wrapper">
