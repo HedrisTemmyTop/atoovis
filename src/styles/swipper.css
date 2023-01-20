@@ -3,9 +3,9 @@
   grid-template-columns: 2fr 1fr;
   padding: 20px 120px;
 }
-.carousel {
-  width: 100% !important;
+@media (max-width: 1440px) {
 }
+
 .imag {
   height: 500px;
   margin-right: 5px;
@@ -40,7 +40,7 @@ h1 {
   .spread {
     display: grid;
     grid-template-columns: repeat(2, 2fr);
-    grid-gap: 5px;
+    flex-gaps: 5px;
   }
 
   .imag {
@@ -61,35 +61,12 @@ h1 {
     text-align: center;
   }
 }
-@media only screen and (max-width: 1200px) {
-  .swipe {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-inline: 60px;
-  }
-  .leftyy {
-    flex-basis: 100%;
-    margin-top: 20px;
-    margin-left: 0;
-    width: 100%;
-  }
-  .imag {
-    margin-right: 0;
-    background-color: green;
-  }
-}
-@media only screen and (max-width: 1200px) {
-  .swipe {
-    padding-inline: 20px;
-  }
-}
 @media (max-width: 450px) {
   .spread {
     display: grid;
     grid-template-columns: auto auto;
     flex-wrap: wrap;
-    grid-gap: 2px;
+    flex-gaps: 2px;
     width: 0px;
   }
   .swipe {

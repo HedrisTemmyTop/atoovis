@@ -13,18 +13,19 @@ const Home = () => {
   return (
     <div>
       <Header />
-
       <Navigation />
       <Swiper />
-      <div className="Wrapper">
+      <Link to="./featured">
         <FeaturedProduct />
-
+      </Link>
+      <Link to="recently">
         <RecentlyAdded />
-
-        <MoreProducts />
-
+      </Link>
+      <MoreProducts />
+      <Link to="frequent">
+        {" "}
         <FrequentlyPurchased />
-      </div>
+      </Link>
     </div>
   );
 };
