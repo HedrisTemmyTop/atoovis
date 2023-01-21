@@ -51,21 +51,19 @@ const Header = () => {
     <div>
       <div className="header">
         <div>
-          <img src={logo} className="logo" />
+          <img src={logo} />
         </div>
-        <div className="mid mid2">
-          <div className="mid">
-            <div className="search">
-              <img src={search} alt="" />
-              <input type="text" placeholder="Search Products" />
-            </div>
-            <button className="bts">Search</button>
+        <div className="mid">
+          <div className="search">
+            <img src={search} alt="" />
+            <input type="text" placeholder="Search Products" />
           </div>
+          <button className="bts">Search</button>
         </div>
         <div className="left">
           {!access && (
             <div
-              style={{ display: "flex", alignItems: "center", marginRight: 10 }}
+              style={{ display: "flex", alignItems: "center", marginRight: 30 }}
               onClick={openModal}
             >
               <p>Sign In</p>
@@ -113,12 +111,11 @@ const Header = () => {
         contentLabel="Example Modal"
         // className=" mode"
       >
-        {/* <SignIn /> */}
-        {/* <SignUp /> */}
+        {/* <SignIn/> */}
         {/* <NumberOtp/> */}
-        {/* <EmailOtp/> */}
+        <EmailOtp />
         {/* <Redirect/> */}
-        {/* <ResetLink /> */}
+        {/* <ResetLink/> */}
       </Modal>
     </div>
   );
