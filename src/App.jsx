@@ -18,9 +18,10 @@ import Header from "./components/Header";
 import Wallet from "./components/vendor/Wallet";
 import Order from "./components/Orders/Order";
 import Product from "./components/vendor/Product";
-import Buyer from './pages/BuyerSidebar'
+import Buyer from "./pages/BuyerSidebar";
 import BuyerSidebar from "./pages/BuyerSidebar";
 import TrackOrder from "./pages/Buyer/TrackOrder";
+import ProductDetails from "./pages/ProductPage";
 function App() {
   return (
     <>
@@ -39,8 +40,9 @@ function App() {
         <Route path="wallet" element={<Wallet />} />
         <Route path="orders" element={<Order />} />
         <Route path="product" element={<Product />} />
-        <Route path="buyer/*" element={<BuyerSidebar/>}/>
-        <Route path="track-order/*" element={<TrackOrder/>}/>
+        <Route path="buyer/*" element={<BuyerSidebar />} />
+        <Route path="track-order/*" element={<TrackOrder />} />
+        <Route path="product/:id" element={<ProductDetails />} />
       </Routes>
       <Footer />
     </>
