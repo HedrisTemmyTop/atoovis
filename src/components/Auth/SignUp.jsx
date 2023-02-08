@@ -3,24 +3,33 @@ import "../../styles/auth/signin.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { useEffect } from "react";
-import { registerBuyer, sendOtp } from "../../slices/buyerSlice";
+import { resetRegisterState } from "../../slices/buyerSlice";
 import { useNavigate } from "react-router-dom";
-const SignIn = () => {
-  //   const auth = useSelector((state) => state.auth); //get state
+import axios from "axios";
+const SignUp = (props) => {
   const buyer = useSelector((state) => state.buyers); //Get buyer state from redux
+  console.log(buyer);
   const dispatch = useDispatch(); // call to action
-  const navigate = useNavigate();
 
-  //   const { user, isLoading, error } = auth;
+  useEffect(() => {
+    dispatch(resetRegisterState());
+  }, []);
+
   const [fullname, setFullname] = useState("");
   const [email, setemail] = useState("");
   const [password, setPassword] = useState("");
   const [number, setnumber] = useState("");
-  useEffect(() => {
-    if (buyer.registered) navigate("/sign-in");
-  }, [buyer.registered]);
-  const handlePasswordChange = (e) => {
-    setFullname(e.target.value);
+  const [lastname, setLastName] = useState("");
+  const signInWithGoogleHandler = async () => {
+    try {
+      const response = await axios.get(
+        "https://atoovis-be.herokuapp.com/auth/google"
+      );
+
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const handleEmailChange = (e) => {
@@ -38,20 +47,27 @@ const SignIn = () => {
   const handleNumberChange = (e) => {
     setnumber(e.target.value);
   };
+  const handlelastnameChange = (e) => {
+    setLastName(e.target.value);
+  };
 
   const onSignUpSubmit = (e) => {
     e.preventDefault();
     const formValues = {
       email: email,
       password: password,
-      fullname: fullname,
+      firstname: fullname,
+      lastname: lastname,
       number: number,
     };
     if (email.trim() === "" || password.trim() === "") {
       setErr("email or passsword cannot be empty");
     } else {
+      // props.register(formValues);
       //   dispatch(login(formValues));
-      dispatch(sendOtp({ number: number }));
+      props.register(formValues);
+
+      // dispatch(sendOtp({ number: number }));
       //   dispatch(registerBuyer(formValues));
 
       console.log(formValues);
@@ -67,35 +83,60 @@ const SignIn = () => {
       </div>
       <form action="" onSubmit={onSignUpSubmit}>
         <div className="signin">
+          <div className="new2">
+            {/* <label htmlFor="">Full name</label> */}
+            <input
+              type="text"
+              onChange={handleFullnameChange}
+              placeholder="first name"
+            />
+          </div>
+          <div className="new2">
+            {/* <label htmlFor="">Full name</label> */}
+            <input
+              type="text"
+              onChange={handlelastnameChange}
+              placeholder="last name"
+            />
+          </div>
           <div className="new">
-            <label htmlFor="">Email Address</label>
-            <input type="text" onChange={handleEmailChange} />
+            {/* <label htmlFor="">Email Address</label> */}
+            <input
+              type="text"
+              onChange={handleEmailChange}
+              placeholder="Email"
+            />
           </div>
           <div className="new2">
-            <label htmlFor="">Phone Number</label>
-            <input type="number" onChange={handleNumberChange} />
+            {/* <label htmlFor="">Phone Number</label> */}
+            <input
+              type="number"
+              onChange={handleNumberChange}
+              placeholder="Phone number"
+            />
           </div>
-          <div className="new2">
-            <label htmlFor="">Full name</label>
-            <input type="text" onChange={handleFullnameChange} />
-          </div>
+
           <div className="new3">
-            <label htmlFor="">Password</label>
-            <input type="password" onChange={handlePassChange} />
+            {/* <label htmlFor="">Password</label> */}
+            <input
+              type="password"
+              onChange={handlePassChange}
+              placeholder="password"
+            />
           </div>
         </div>
 
-        <button className="btn1" disabled={buyer.isLoading}>
-          {buyer.isLoading ? "Connecting..." : "Sign upn"}
+        <button className="btn1" disabled={buyer.isLoading ? true : false}>
+          {buyer.isLoading ? "Connecting..." : "Sign up"}
         </button>
         <div className="or">
           <p>OR</p>
         </div>
-        <button className="btn2">
-          <img src="" alt="" />
-          <p>Sign in with google</p>
-        </button>
       </form>
+      <button className="btn2" onClick={signInWithGoogleHandler}>
+        <img src="" alt="" />
+        <p>Sign in with google</p>
+      </button>
       <div className="account">
         <p>
           Already have an account?<a href="">Sign in</a>
@@ -105,4 +146,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default SignUp;

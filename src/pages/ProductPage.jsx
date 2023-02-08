@@ -12,13 +12,56 @@ import SellerInfo from "../components/ProductDetails/SellerInformation";
 import OtherProduct from "../components/ProductDetails/OtherProduct";
 import CustomerReview from "../components/ProductDetails/CustomerReview";
 import Question from "../components/ProductDetails/Question";
-
+import axios from "axios";
 import VectorLeft from "../assets/VectorLeft.png";
+import { useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { apiEndpointURL } from "../services/config";
+import { useState } from "react";
+import Loader from "../components/Loder/Loader";
 const ProductDetails = () => {
+  const { id } = useParams();
   const data = [{}, {}, {}, {}, {}];
-  return (
-    <React.Fragment>
-      <Header />
+  const [product, setProduct] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    axios
+      .get(apiEndpointURL + "/products/" + id)
+      .then((response) => {
+        setLoading(false);
+        setProduct(response.data.product);
+        console.log(response.data.product);
+      })
+      .catch((err) => {
+        setLoading(false);
+        setError(err.response.message);
+        console.log(err);
+      });
+  }, []);
+  const customStyles = {
+    content: {
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      borderRadius: "30px",
+      padding: 40,
+      transform: "translate(-50%, -50%)",
+    },
+  };
+  const openModalHandler = () => {
+    setModal(true);
+  };
+  const closeModal = () => {
+    setModal(false);
+  };
+  let content = null;
+  if (loading) content = <Loader />;
+  if (product)
+    content = (
       <div className={classes.ProductPage}>
         <div className={classes.Hero}>
           <header className={classes.ProductPath}>
@@ -32,11 +75,27 @@ const ProductDetails = () => {
             <img src={nextIcon} alt="icon" />
             <span>100% original ps4 pad </span>
           </header>
-          <ProductDisplay />
+          <ProductDisplay
+            discountPrice={product.variation[0].price.toLocaleString()}
+            name={product.productName}
+            price={product.variation[0].salePrice
+              .replace(/[a-z]+/g, "")
+              .toLocaleString()}
+            store={product.vendor}
+            productId={id}
+            productQuantity={product.variation[0].quantity}
+            openModal={openModalHandler}
+          />
           <SubProduct />
           <Buttons />
-          <Details />
-          <Features />
+          <Details
+            name={product.productName}
+            details={product.productDescription}
+          />
+          <Features
+            features={product.productKeyFeatures}
+            keyFeatures={product.requirement}
+          />
           <ReturnPolicy />
           <SellerInfo />
         </div>
@@ -125,6 +184,12 @@ const ProductDetails = () => {
           </div>
         </div>
       </div>
+    );
+  if (error) content = <div>Product not found</div>;
+  return (
+    <React.Fragment>
+      <Header />
+      {content}
     </React.Fragment>
   );
 };

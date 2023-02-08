@@ -48,8 +48,17 @@ import { Link } from "react-router-dom";
 
 // export default Items
 
-const Items = () => {
-  const [quantityVal, setquantityVal] = useState(1);
+const Items = ({ item }) => {
+  const productQuantity = item.productId.variation[0].quantity;
+  const [quantity, setQuantity] = useState(item.quantity);
+  const increaseQuatity = () => {
+    if (quantity === productQuantity) return;
+    setQuantity(quantity + 1);
+  };
+  const decreaseQuantity = () => {
+    if (quantity === 1) return;
+    setQuantity(quantity - 1);
+  };
   return (
     <div className="item__container">
       <div className="item__main">
@@ -60,15 +69,21 @@ const Items = () => {
           <img src={game} alt="game" />
         </div>
         <div className="item__description">
-          <div className="item__des">
-            Sunlight Dishwashing Liquid Green 400ml
-          </div>
+          <div className="item__des">{item.productId.productName}</div>
           <div className="item__store">
-            <Link to="/">KYC store</Link>
+            <Link to={"/" + item.productId.vendor._id}>KYC store</Link>
           </div>
           <div className="item__price">
-            <span className="item__real">₦54,000</span>
-            <span className="item__fake">₦60,0000</span>
+            <span className="item__real">
+              ₦
+              {(
+                item.productId.variation[0].salePrice.replace(/[a-z]+/g, "") *
+                quantity
+              ).toLocaleString()}
+            </span>
+            <span className="item__fake">
+              ₦{item.productId.variation[0].price.toLocaleString()}
+            </span>
             <span className="item__discount">-61%</span>
           </div>
         </div>
@@ -84,25 +99,17 @@ const Items = () => {
           </div>
           <div className="item__quantity">
             <span className="item__quantity--btn">
-              <span
-                onClick={() => {
-                  quantityVal === 100
-                    ? setquantityVal(1)
-                    : setquantityVal((prev) => prev + 1);
-                }}
-              >
-                +
-              </span>
+              <span onClick={increaseQuatity}>+</span>
             </span>
-            <input type="number" value={quantityVal} />
-            <span
-              className="item__quantity--btn"
-              onClick={() => {
-                quantityVal === 1
-                  ? setquantityVal(1)
-                  : setquantityVal((prev) => prev - 1);
+            <input
+              type="number"
+              value={quantity}
+              onChange={(e) => {
+                if (+e.target.value <= productQuantity)
+                  setQuantity(e.target.value);
               }}
-            >
+            />
+            <span className="item__quantity--btn" onClick={decreaseQuantity}>
               <span>-</span>
             </span>
           </div>

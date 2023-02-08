@@ -15,13 +15,40 @@ import ResetLink from "./Auth/ResetLink";
 import { BiCart } from "react-icons/bi";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { useDispatch, useSelector } from "react-redux";
-import NumberOtp from "./Auth/NumberOtp";
-import EmailOtp from "./Auth/EmailOtp";
+
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { loginBuyer, registerBuyer } from "../slices/buyerSlice";
+import { useEffect } from "react";
+import axios from "axios";
+import { getUserData } from "../slices/getUser";
 
 const Header = () => {
-  const auth = useSelector((state) => state.auth); //get state
-  const { user, isLoading, error, access } = auth;
+  const accessToken = localStorage.getItem("accessToken");
+  const registered = localStorage.getItem("registered");
+  const authenticated = localStorage.getItem("authenticated");
+  const userId = localStorage.getItem("userId");
+  // const state = useSelector((state) => state.user);
+  const [user, setUser] = useState(null);
+
+  const [activeModal, setActiveModal] = useState({
+    SignUp: true,
+    SignIn: false,
+    email: false,
+  });
+  const dispatch = useDispatch();
+  useEffect(() => {
+    if (accessToken && authenticated === "true" && userId) {
+      axios
+        .get("https://atoovis-be.herokuapp.com/users/" + userId, {
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
+          },
+        })
+        .then((response) => setUser(response.data.user))
+        .catch((error) => console.log(error));
+    }
+  }, []);
 
   const customStyles = {
     content: {
@@ -37,7 +64,7 @@ const Header = () => {
   };
   let subtitle;
 
-  const [modalIsOpen, setIsOpen] = React.useState(access ? false : true);
+  const [modalIsOpen, setIsOpen] = React.useState(accessToken ? false : true);
 
   function openModal() {
     setIsOpen(true);
@@ -46,7 +73,13 @@ const Header = () => {
   function closeModal() {
     setIsOpen(false);
   }
-
+  const registerUserHandler = (formValues) => {
+    dispatch(registerBuyer(formValues));
+  };
+  const loginUserHandler = (formValues) => {
+    console.log(formValues);
+    dispatch(loginBuyer(formValues));
+  };
   return (
     <div>
       <div className="header">
@@ -61,7 +94,11 @@ const Header = () => {
           <button className="bts">Search</button>
         </div>
         <div className="left">
-          {!access && (
+          {user ? (
+            <Link to="buyer" style={{ marginRight: 30 }}>
+              Hello, {user.firstname.toLowerCase()}
+            </Link>
+          ) : (
             <div
               style={{ display: "flex", alignItems: "center", marginRight: 30 }}
               onClick={openModal}
@@ -70,6 +107,7 @@ const Header = () => {
               <IoMdNotificationsOutline width={20} height={20} />
             </div>
           )}
+
           <Link to="cart">
             <div style={{ display: "flex", alignItems: "center" }}>
               <p>My Cart</p>
@@ -102,21 +140,29 @@ const Header = () => {
           </div>
         </div>
       </div>
-
-      <Modal
-        isOpen={modalIsOpen}
-        // onAfterOpen={afterOpenModal}
-        onRequestClose={closeModal}
-        style={customStyles}
-        contentLabel="Example Modal"
-        // className=" mode"
-      >
-        {/* <SignIn/> */}
-        {/* <NumberOtp/> */}
-        <EmailOtp />
-        {/* <Redirect/> */}
-        {/* <ResetLink/> */}
-      </Modal>
+      {!accessToken ? (
+        <Modal
+          isOpen={modalIsOpen}
+          // onAfterOpen={afterOpenModal}
+          onRequestClose={closeModal}
+          style={customStyles}
+          contentLabel="Example Modal"
+          // className=" mode"
+        >
+          {registered !== "true" ? (
+            <SignUp
+              register={(formValues) => registerUserHandler(formValues)}
+            />
+          ) : null}
+          {registered === "true" ? (
+            <SignIn
+              login={(formValues) => {
+                loginUserHandler(formValues);
+              }}
+            />
+          ) : null}
+        </Modal>
+      ) : null}
     </div>
   );
 };

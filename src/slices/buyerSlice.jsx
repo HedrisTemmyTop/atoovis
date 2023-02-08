@@ -8,112 +8,172 @@ const initialState = {
   authenticated: false,
   user: null,
   error: null,
-  otp: null,
-  // buyerId: null,
 };
-// SEND OTP
 
-const sendOtpRequest = async (number) => {
-  const response = await axios.post(
-    "https://atoovis77.herokuapp.com/api/v1/otp",
-    number
-  );
-  console.log(response);
-  if (response.ok) return response.data.message;
+// get the current time in milliseconds
+const deleteAccessToken = () => {
+  setTimeout(() => {
+    localStorage.removeItem("accessToken");
+    localStorage.removeItem("userId");
+    localStorage.setItem("authenticated", false);
+  }, 100000000);
 };
-export const sendOtp = createAsyncThunk(
-  "send otp",
-  async (number, thunkAPI) => {
-    try {
-      return await sendOtpRequest(number);
-    } catch (err) {
-      console.log(err);
-      thunkAPI.rejectWithValue(err);
-    }
-  }
-);
-
-/// REGISTER BUYER
-const createBuyer = async (data) => {
-  const response = await axios.post(
-    "https://atoovis77.herokuapp.com/api/v1/auth/buyer/signup",
-    data
+// REGISTER WITH GOOGLE
+const createBuyerWithGoogle = async (data) => {
+  const response = await axios.get(
+    "https://atoovis-be.herokuapp.com/auth/google"
   );
 
   console.log(response.data);
   if (response.ok) return response.data;
 };
+export const registerWithGoogle = createAsyncThunk(
+  "sign in with google",
+  async () => {
+    try {
+      return await createBuyerWithGoogle();
+    } catch (error) {
+      thunkAPI.rejectWithValue(error);
+    }
+  }
+);
+
+/// REGISTER BUYER
 export const registerBuyer = createAsyncThunk(
   "create a new buyer",
   async (data, thunkAPI) => {
     try {
-      return await createBuyer(data);
+      const response = await axios.post(
+        "https://atoovis-be.herokuapp.com/auth/user/signup",
+        data
+      );
+      if (response.status >= 200 && response.status < 300) {
+        alert("you have successfully created your account, check your mail");
+        return response.data;
+      }
     } catch (error) {
       console.log(error);
       thunkAPI.rejectWithValue(error);
+      throw new Error(error);
     }
   }
 );
 // LOGIN BUYER
 const loginBuyerAPI = async (data) => {
   const response = await axios.post(
-    "https://atoovis77.herokuapp.com/api/v1/auth/login",
+    "https://atoovis-be.herokuapp.com/auth/login",
     data
   );
-  console.log(response.data);
-  return response.data;
+  if (response.status >= 200 && response.status < 300) {
+    alert("you have successfully logged in your account");
+    return response.data;
+  }
 };
 export const loginBuyer = createAsyncThunk("login the buyer", async (data) => {
   try {
     const userData = await loginBuyerAPI(data);
-    console.log(userData);
+
     return userData;
   } catch (err) {
     console.log(err);
-    thunkAPI.rejectWithValue(data);
+    thunkAPI.rejectWithValue(err);
   }
 });
 export const buyerSlice = createSlice({
   name: "buyers",
   initialState,
-  reducer: {},
-  extraReducers: (builder) => {
-    builder
-      .addCase(registerBuyer.pending, (state) => {
-        state.isLoading = true;
-      })
-      .addCase(registerBuyer.fulfilled, (state) => {
-        state.registered = true;
-        state.isLoading = false;
-      })
-      .addCase(registerBuyer.rejected, (state, action) => {
-        state.isLoading = false;
-        state.error = action.payload;
-      })
-      .addCase(loginBuyer.pending, (state) => {
-        state.isLoading = true;
-      })
-      .addCase(loginBuyer.fulfilled, (state, action) => {
-        console.log(action.payload);
-        state.isLoading = false;
-        state.user = action.payload;
-      })
-      .addCase(loginBuyer.rejected, (state, action) => {
-        state.isLoading = false;
-        state.error = action.payload;
-      })
-      .addCase(sendOtp.fulfilled, (state, action) => {
-        console.log(action.payload);
-        state.isLoading = false;
-        state.otp = action.payload;
-      })
-      .addCase(sendOtp.rejected, (state, action) => {
-        state.isLoading = false;
-        state.error = action.payload;
-      });
+  reducers: {
+    resetLoginState: (state) => {
+      state.isLoading = false;
+      state.authenticated = false;
+      state.user = null;
+      state.error = null;
+      state.otp = null;
+    },
+    resetRegisterState: (state) => {
+      state.registered = false;
+      state.isLoading = false;
+      state.authenticated = false;
+      state.user = null;
+      state.error = null;
+      state.otp = null;
+    },
   },
-});
+  extraReducers: {
+    [registerBuyer.pending]: (state) => {
+      state.isLoading = true;
+    },
+    [registerBuyer.fulfilled]: (state, action) => {
+      console.log(action);
+      localStorage.setItem("accessToken", action.payload.acessToken);
+      localStorage.setItem("userId", action.payload.user._id);
+      localStorage.setItem("registered", true);
+      localStorage.setItem("authenticated", true);
 
+      state.registered = true;
+      state.isLoading = false;
+      window.location.reload();
+      deleteAccessToken();
+    },
+    [registerBuyer.rejected]: (state, action) => {
+      console.log(state, action);
+      state.isLoading = false;
+      state.error = action.payload;
+    },
+    [loginBuyer.pending]: (state) => {
+      state.isLoading = true;
+    },
+    [loginBuyer.fulfilled]: (state, action) => {
+      localStorage.setItem("accessToken", action.payload.acessToken);
+      localStorage.setItem("userId", action.payload.userId);
+      localStorage.setItem("authenticated", true);
+      window.location.reload();
+      deleteAccessToken();
+      // localStorage.setItem("accessToken", action.payload.accessToken);
+      console.log(action);
+      // localStorage.setItem("userId", action.payload.userId)
+      state.isLoading = false;
+      state.user = action.payload;
+    },
+    [loginBuyer.rejected]: (state, action) => {
+      state.isLoading = false;
+      state.error = action.payload;
+    },
+  },
+  // extraReducers: (builder) => {
+  //   builder
+  //     (registerBuyer.pending, (state) => {
+  //       state.isLoading = true;
+  //     })
+  //     .addCase(registerBuyer.fulfilled, (state, action) => {
+  //       // localStorage.setItem("accessToken", action.payload.accessToken);
+  //       // localStorage.setItem("userId", payload.userId)
+  //       console.log(action);
+  //       state.registered = true;
+  //       state.isLoading = false;
+  //     })
+  //     .addCase(registerBuyer.rejected, (state, action) => {
+  //       state.isLoading = false;
+  //       state.error = action.payload;
+  //     })
+  //     .addCase(loginBuyer.pending, (state) => {
+  //       state.isLoading = true;
+  //     })
+  //     .addCase(loginBuyer.fulfilled, (state, action) => {
+  //       // localStorage.setItem("accessToken", action.payload.accessToken);
+  //       console.log(action);
+  //       // localStorage.setItem("userId", action.payload.userId)
+  //       state.isLoading = false;
+  //       state.user = action.payload;
+  //     })
+  //     .addCase(loginBuyer.rejected, (state, action) => {
+  //       state.isLoading = false;
+  //       state.error = action.payload;
+  //     })
+
+  // },
+});
+export const { resetRegisterState, resetLoginState } = buyerSlice.actions;
 export default buyerSlice.reducer;
 
 // Action creators are generated for each case reducer function

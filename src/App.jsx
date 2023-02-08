@@ -22,11 +22,13 @@ import Buyer from "./pages/BuyerSidebar";
 import BuyerSidebar from "./pages/BuyerSidebar";
 import TrackOrder from "./pages/Buyer/TrackOrder";
 import ProductDetails from "./pages/ProductPage";
+import AuthCallBack from "./components/Auth/AuthCallBack";
 function App() {
   return (
     <>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/auth/:token" element={<AuthCallBack />} />
         <Route path="vendor" element={<Vendor />} />
         <Route path="sidebar/*" element={<Sidebar />} />
         <Route path="featured" element={<FeaturedProducts />} />

@@ -2,12 +2,43 @@ import React from "react";
 import productImage from "../../assets/images/productImage.png";
 import classes from "../../styles/ProductDetails.module.css";
 import subImage from "../../assets/images/subImage.png";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { BsStarFill } from "react-icons/bs";
 import { FiStar } from "react-icons/fi";
 import { AiFillHeart } from "react-icons/ai";
 import { AiOutlineTwitter, AiFillInstagram } from "react-icons/ai";
-const ProductDisplay = () => {
+import addToCart from "../../services/addToCart";
+import { useState } from "react";
+import { useEffect } from "react";
+
+const ProductDisplay = (props) => {
+  const [quantity, setQuantity] = useState(1);
+  const token = localStorage.getItem("accessToken");
+  const { discountPrice, name, price, store, productId, productQuantity } =
+    props;
+  const navigate = useNavigate();
+  const increaseQuatity = () => {
+    if (quantity === productQuantity) return;
+    setQuantity(quantity + 1);
+  };
+  const decreaseQuantity = () => {
+    if (quantity === 1) return;
+    setQuantity(quantity - 1);
+  };
+  const addCartHandler = () => {
+    if (!token) {
+      localStorage.setItem("authenticated", false);
+      navigate("/");
+      return;
+    }
+    const data = {
+      productId: productId,
+      quantity: quantity,
+    };
+
+    addToCart(data, token);
+  };
+  useEffect(() => {}, []);
   return (
     <main className={classes.ProductMain}>
       <div className={classes.ProductImages}>
@@ -23,9 +54,9 @@ const ProductDisplay = () => {
         </div>
       </div>
       <div className={classes.ProductDetails}>
-        <h2 className={classes.Name}>PS4 Pad Official Controller</h2>
+        <h2 className={classes.Name}>{name}</h2>
         <span>
-          <Link to="/" className={classes.Store}>
+          <Link to={"/" + store} className={classes.Store}>
             KYC Stores
           </Link>
         </span>
@@ -37,18 +68,20 @@ const ProductDisplay = () => {
           <FiStar className={classes.Rated} />
         </div>
         <div className={classes.Price}>
-          <h2 className={classes.Real}>₦54,500</h2>
+          <h2 className={classes.Real}>₦{discountPrice}</h2>
           <div className={classes.Fake}>
-            <span className={classes.FakePrice}>₦64,500</span>
+            <span className={classes.FakePrice}>
+              ₦{Number(price).toLocaleString()}
+            </span>
             <span className={classes.Percent}>-41%</span>
           </div>
         </div>
         <div className={classes.Quantity}>
-          <button className={classes.BtnQuantity}>
+          <button className={classes.BtnQuantity} onClick={increaseQuatity}>
             <span>+</span>
           </button>
-          <span className={classes.Val}>1</span>
-          <button className={classes.BtnQuantity}>
+          <span className={classes.Val}>{quantity}</span>
+          <button className={classes.BtnQuantity} onClick={decreaseQuantity}>
             <span>-</span>
           </button>
         </div>
@@ -56,7 +89,7 @@ const ProductDisplay = () => {
           <button className={classes.Buy}>
             <span>Buy now</span>
           </button>
-          <button className={classes.Cart}>
+          <button className={classes.Cart} onClick={addCartHandler}>
             <span>Add to Cart</span>
           </button>
         </div>
@@ -86,7 +119,7 @@ const ProductDisplay = () => {
               marginTop: "16px",
             }}
           >
-            <Link to="/" className={classes.Store}>
+            <Link to={"/" + store} className={classes.Store}>
               KYC Stores
             </Link>
           </span>

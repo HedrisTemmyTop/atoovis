@@ -65,6 +65,7 @@
 .Name {
   font-size: 30px;
   margin-bottom: 8px;
+  text-transform: capitalize;
 }
 .Store {
   text-decoration: underline;
